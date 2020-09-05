@@ -4,3 +4,12 @@
 main{
     margin-bottom: 40px;
 }
+
+div.uk-navbar-left{
+    width: 20%;
+    height: 15%;
+}
+
+.uk-background-primary {
+    height: auto;
+}
