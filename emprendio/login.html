@@ -60,13 +60,24 @@
     </header>
 
     <main>
+        <p>
+            <h1>Iniciar Sesión</h1>
+        </p>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
+                <form action="" class="Formulario" method="POST">
+        
+                    <p>
+                        <label for="nombre de usuario"> Nombre de usuario: </label>
+                        <input type="text" id="nombre_de_usuario" value="" placeholder="Nombre de usuario">
+                    </p>
 
+                    <p>
+                        <label for="contraseña"> Contraseña: </label>
+                        <input type="password" id="contraseña" value="" placeholder="Contraseña">
+                    </p>
 
-                    <h2>(Formulario de login)</h2>
-                
+                    <button>Enviar</button>
                 
                 </form>
             </div>

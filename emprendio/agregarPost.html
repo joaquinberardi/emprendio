@@ -59,13 +59,52 @@
     </header>
 
     <main>
+        <p>
+            <h1> Agregar Post</h1>
+        </p>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex">
-                <form action="">
-                    <h2>(Formulario para agregar un post)</h2>
+                <form  class= "formulario" action="" method="POST">
+                    <p>
+                        <label for="nombre"> Nombre del producto: </label>
+                        <input type="text" id="nombre" value="" placeholder="Nombre" required>
+                    </p>
+
+                    <p>
+                        <label for="precio">Precio: </label>
+                        <input type="number" id="precio" value="" placeholder="Precio" required>
+                    </p>
+                    <p>
+                        <label for="Foto"> Foto del producto: </label>
+                        <input type="file" id="foto" value="" required>
+                    </p>
+                    <p>
+                        <label for="descripcion"> Descripción del producto: </label>
+                        <textarea id="descripcion" cols="30" rows="8" required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="colores"> ¿Qué colores o variedades tiene? </label>
+                        <input type="text" id="colores" value="" required>
+                    </p>
+                    <p>
+                        <label for="personalizacion"> ¿Tiene personalización? </label>
+                        <select name="personalizacion" id="personalizacion">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="envio"> Opciones de envio: </label>
+                        <textarea id="envio" cols="30" rows="8" required></textarea>
+                    </p>
+                    <p>
+                        <label for="pago"> Opciones de pago: </label>
+                        <textarea id="pago" cols="30" rows="8" required></textarea>
+                    </p>
+                    <button>Enviar</button>
 
                 </form>
-
             </div>
         </div>
     </main>
