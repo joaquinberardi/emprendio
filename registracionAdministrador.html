@@ -60,12 +60,43 @@
     </header>
 
     <main>
+        <h1>Formulario de registración: Administrador</h1>
+        <h2>Si sos un administrador de Emprendio, dejá los siguientes datos para crear tu cuenta.</h2>
+
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
+                <form  class= "formulario" action="" method="POST">
+                    <p>
+                        <label for="nombre"> Nombre: </label>
+                        <input type="text" id="nombre" value="" placeholder="Nombre">
+                    </p>
+
+                    <p>
+                        <label for="apellido"> Apellido: </label>
+                        <input type="text" id="apellido" value="" placeholder="Apellido">
+                    </p>
+
+                    <p>
+                        <label for="mail"> Mail: </label>
+                        <input type="email" id="mail" value="" placeholder="Mail">
+                    </p>
+
+                    <p>
+                        <label for="nombre de usuario"> Nombre de Usuario: </label>
+                        <input type="text" id="nombre_de_usuario" value="" placeholder="Nombre de usuario">
+                    </p>
+
+                    <p>
+                        <label for="contraseña"> Contraseña: </label>
+                        <input type="password" id="contraseña" value="" placeholder="Contraseña">
+                    </p>
                     
-                    <h2>(Formulario de registración)</h2>
-            
+                    <!-- Botón para enviar -->
+                    <p>
+                        <button> Enviar </button>
+                    </p>
+                    
+
                 </form>
             </div>
         </div>

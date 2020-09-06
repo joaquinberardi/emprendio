@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprendio</title>
+    <link rel="icon"
+    href="imagenes/logo.png"
+        type="image/png">
+
+    <link rel="stylesheet" href="css/registracion.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/general.css">
+
+    <!-- UiKit -->
+    <!-- <link rel="stylesheet" href="css/uikit.min.css">
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script> -->
+    <!-- UiKit -->
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <header class="uk-background-primary">
+        <section class=" uk-container uk-container-large">
+            <div class="">
+                <nav class="" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="home.html"><img src="imagenes/titulologo.png" alt=""></a>
+                    </div>
+                    <div class="uk-navbar-center">
+                        <ul class="uk-flex uk-flex-between uk-flex-middle">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="addPost.html">Postear</a></li>
+                            <li><a href="registracion">Registración</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-flex uk-flex-between uk-flex-middle">
+                            <li>
+                                <form action="" class="uk-search uk-search-default">
+                                    <span uk-search-icon></span>
+                                    <input type="search" class="uk-search-input" placeholder="Buscar...">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <h1>Formulario de registración: Vendedor</h1>
+        <h2>Si estás interesado en vender tus productos a través de Emprendio, dejá los siguientes datos y nos comunicaremos a la brevedad para confirmarte la aprobación de tu cuenta.</h2>
+
+        <div class="uk-section uk-section-small">
+            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+                <form  class= "formulario" action="" method="POST">
+                    <p>
+                        <label for="nombre"> Nombre: </label>
+                        <input type="text" id="nombre" value="" placeholder="Nombre">
+                    </p>
+
+                    <p>
+                        <label for="apellido"> Apellido: </label>
+                        <input type="text" id="apellido" value="" placeholder="Apellido">
+                    </p>
+
+                    <p>
+                        <label for="mail"> Mail: </label>
+                        <input type="email" id="mail" value="" placeholder="Mail">
+                    </p>
+
+                    <p>
+                        <label for="nombre de usuario"> Nombre de usuario: </label>
+                        <input type="text" id="nombre_de_usuario" value="" placeholder="Nombre de usuario">
+                    </p>
+
+                    <p>
+                        <label for="contraseña"> Contraseña: </label>
+                        <input type="password" id="contraseña" value="" placeholder="Contraseña">
+                    </p>
+
+                    <p>
+                        <label for="Foto Perfil"> Foto de perfil: </label>
+                        <input type="file" id="foto perfil" value="">
+                    </p>
+
+                    <p>
+                        <label for="nombre marca"> Nombre de tu marca: </label>
+                        <input type="nombre marca" id="mail" value="" placeholder="Nombre de tu marca">
+                    </p>
+
+                    <p>
+                        <label for="tiempo creación"> ¿Hace cuánto creaste tu marca? </label>
+                        <input type="radio" id="tiempo_creación" value="Menos de 1 año"> Menos de un año.
+                        <input type="radio" id="tiempo_creación" value="Entre 1 y 3 años"> Entre 1 y 3 años.
+                        <input type="radio" id="tiempo_creación" value="Más de 3 años"> Más de 3 años.
+                    </p>
+
+                    <p>
+                        <label for="historia"> Historia de tu marca: ¿Cómo surgió? </label>
+                        <textarea id="historia" cols="30" rows="8"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="productos"> ¿Qué productos vendes? </label>
+                        <input type="text" id="productos" value="">
+                    </p>
+
+                    <p>
+                        <label for="integrantes"> ¿Quiénes forman parte de tu emprendimiento? </label>
+                        <input type="text" id="integrantes" value="">
+                    </p>
+
+                    <p>
+                        <label for="empleados"> ¿Tenés empleados? </label>
+                        <input type="checkbox" id="empleados" value="Si"> Si
+                        <input type="checkbox" id="empleados" value="No"> No
+                    </p>
+
+                    <p>
+                        <label for="red social"> Red social de tu marca </label>
+                        <input type="text" id="red social" value="" placeholder="Red social">
+                    </p>
+
+                    <button>Enviar</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="uk-position-bottom uk-position-fixed uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+        <ul class="uk-width-1-6 uk-flex uk-flex-middle uk-flex-around uk-height-1-1 uk-margin-remove uk-padding-remove">
+            <li><a href="" uk-icon="instagram"></a></li>
+            <li><a href="" uk-icon="facebook"></a></li>
+            <li><a href="" uk-icon="twitter"></a></li>
+        </ul>
+        <ul class="uk-width-1-3 uk-flex uk-flex-middle uk-flex-between uk-height-1-1 uk-margin-remove uk-padding-remove">
+            <li>Martin Hernandez</li>
+            <li>Lucia Perez</li>
+            <li>Gaston Sanchez</li>
+        </ul>
+    </footer>
+
+
+</body>
+
+</html>
