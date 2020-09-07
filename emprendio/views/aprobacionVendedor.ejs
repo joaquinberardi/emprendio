@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprendio</title>
+    <link rel="icon"
+    href="imagenes/logo.png"
+        type="image/png">
+
+    <link rel="stylesheet" href="css/registracion.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/general.css">
+
+    <!-- UiKit -->
+    <!-- <link rel="stylesheet" href="css/uikit.min.css">
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script> -->
+    <!-- UiKit -->
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <header class="uk-background-primary">
+        <section class=" uk-container uk-container-large">
+            <div class="">
+                <nav class="" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="home.html"><img src="imagenes/titulologo.png" alt=""></a>
+                    </div>
+                    <div class="uk-navbar-center">
+                        <ul class="uk-flex uk-flex-between uk-flex-middle">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="addPost.html">Postear</a></li>
+                            <li><a href="registracion">Registración</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-flex uk-flex-between uk-flex-middle">
+                            <li>
+                                <form action="" class="uk-search uk-search-default">
+                                    <span uk-search-icon></span>
+                                    <input type="search" class="uk-search-input" placeholder="Buscar...">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <h1>Aprobación de emprendedores:</h1>
+    <div class="aprobacionFormulario">
+                <p>Nombre: Agustina</p>
+                <p>Apellido: Garcia</p>
+                <p>Mail: agustinagarcia@gmail.com</p>
+                <p>Nombre de usuario: agustingarcia</p>
+                <p>Nombre de la marca: Plumas</p>
+                <p>Tiempo de creación: 3 meses </p>
+                <p>Historia: En la pandemia empece a ver videos de como hacer almohadones ya que siempre me gusto, asi que decidi comenzar este emprendimiento </p>
+                <p>Productos: Almohadones</p>
+                <p>Integrantes: 1</p>
+                <p>Empleados: 0</p>
+                <p>Red social: plumas.almohadones</p>
+         <form action="aprobacion" action="" method="POST"></form>
+         <label for="aprobacion">
+             ¿Aprobado?
+            <input type="radio" name="aprobacion" value="Si"> Si
+            <input type="radio" name="aprobacion" value="No"> No
+        <button>Enviar</button>
+        </label>
+        </form>
+        <div class="aprobacionFormulario">
+            <p>Nombre: Laura </p>
+            <p>Apellido: Guzman </p>
+            <p>Mail: lauraguzman@gmail.com</p>
+            <p>Nombre de usuario: lauraguzman</p>
+            <p>Nombre de la marca: diseñando</p>
+            <p>Tiempo de creación: 2 años</p>
+            <p>Historia: No me gusta la ropa basica entonces desde siempre cada vez que compraba un jean o una campera, le dibujaba con pinturas, asi que decidi comenzar este emprendimiento con mi hermana </p>
+            <p>Productos: Ropa </p>
+            <p>Integrantes: 2</p>
+            <p>Empleados: 0</p>
+            <p>Red social: diseñando </p>
+    <form action="aprobacion" action="" method="POST">
+      <label for="aprobacion">
+          ¿Aprobado?
+            <input type="radio" name="aprobacion" value="Si"> Si
+            <input type="radio" name="aprobacion" value="No"> No
+        <button>Enviar</button>
+    </label>
+    </form>
+    </div>
+    </main>
+
+    <footer class="uk-position-bottom uk-position-fixed uk-background-primary uk-flex uk-flex-between uk-flex-middle">
+        <ul class="uk-width-1-6 uk-flex uk-flex-middle uk-flex-around uk-height-1-1 uk-margin-remove uk-padding-remove">
+            <li><a href="" uk-icon="instagram"></a></li>
+            <li><a href="" uk-icon="facebook"></a></li>
+            <li><a href="" uk-icon="twitter"></a></li>
+        </ul>
+        <ul class="uk-width-1-3 uk-flex uk-flex-middle uk-flex-between uk-height-1-1 uk-margin-remove uk-padding-remove">
+            <li>Martin Hernandez</li>
+            <li>Lucia Perez</li>
+            <li>Gaston Sanchez</li>
+        </ul>
+    </footer>
+
+
+</body>
+
+</html>
