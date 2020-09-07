@@ -1,59 +1,26 @@
 let emprendioControllers= {
     home: function(req,res){
-     
-    },
-    productos: function(req,res){
-
-    },
-    detalle: function(req,res){
-
-    },
-    detalleId: function(req,res){
-        var idProductos= req.params.id
-
-    },
-    buscarProductos: function(req,res){
-
-    },
-    buscarPerfiles: function(req,res){
-
-    },
-    agregarPost: function(req,res){
-
-    },
-    perfiles: function(req,res){
-
-    },
-    miperfil: function(req,res){
-
+        res.render ("home")
     },
     login: function(req,res){
-
+        res.render ("login")
     },
     registroAdmin: function(req,res){
-
+        res.render ("registroAdmin")
     },
     registroComprador: function(req,res){
-
+        res.render ("registroComprador")
     },
     registroVendedor: function(req,res){
-
-    },
-    editarProducto: function(req,res){
-
+        res.render ("registroVendedor")
     },
     carrito: function(req,res){
-
-    },
-    comprarProductos: function(req,res){
-
+        res.render ("carrito")
     },
     preguntasFrecuentes: function(req,res){
-
+        res.render ("preguntasFrecuentes")
     },
-    favoritos: function(req,res){
 
-    },
 }
 
 module.exports= emprendioControllers;
