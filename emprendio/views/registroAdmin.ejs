@@ -1,32 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprendio</title>
-    <link rel="icon"
-    href="imagenes/logo.png"
-        type="image/png">
-
-    <link rel="stylesheet" href="css/registracion.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/general.css">
-
-    <!-- UiKit -->
-    <!-- <link rel="stylesheet" href="css/uikit.min.css">
-    <script src="js/uikit-icons.min.js"></script>
-    <script src="js/uikit.min.js"></script> -->
-    <!-- UiKit -->
-
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
-</head>
+    <%- include('./partials/head') %> 
 
 <body>
     <header class="uk-background-primary">
@@ -34,7 +9,7 @@
             <div class="">
                 <nav class="" uk-navbar>
                     <div class="uk-navbar-left">
-                        <a href="home.html"><img src="imagenes/titulologo.png" alt=""></a>
+                        <a href="home.html"><img src="/images/titulologo.png" alt=""></a>
                     </div>
                     <div class="uk-navbar-center">
                         <ul class="uk-flex uk-flex-between uk-flex-middle">
@@ -60,9 +35,8 @@
     </header>
 
     <main>
-
-        <h1>Formulario de registración: Vendedor</h1>
-        <h2>Si estás interesado en comprar productos a través de Emprendio, completá tus datos y creá tu cuenta al instante para comenzar a comprar.</h2>
+        <h1>Formulario de registración: Administrador</h1>
+        <h2>Si sos un administrador de Emprendio, dejá los siguientes datos para crear tu cuenta.</h2>
 
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
@@ -83,7 +57,7 @@
                     </p>
 
                     <p>
-                        <label for="nombre de usuario"> Nombre de usuario: </label>
+                        <label for="nombre de usuario"> Nombre de Usuario: </label>
                         <input type="text" id="nombre_de_usuario" value="" placeholder="Nombre de usuario">
                     </p>
 
@@ -91,30 +65,24 @@
                         <label for="contraseña"> Contraseña: </label>
                         <input type="password" id="contraseña" value="" placeholder="Contraseña">
                     </p>
-
-                    <button>Enviar</button>
+                    
+                    <!-- Botón para enviar -->
+                    <p>
+                        <button> Enviar </button>
+                    </p>
 
                     <p>
-                        <h3> ¡Muchas gracias! Ya podés comprar a través de Emprendio. </h3 >
+                        <h3> ¡Muchas gracias! </h3 >
                     </p>
+                    
 
                 </form>
             </div>
         </div>
     </main>
 
-    <footer class="uk-position-bottom uk-position-fixed uk-background-primary uk-flex uk-flex-between uk-flex-middle">
-        <ul class="uk-width-1-6 uk-flex uk-flex-middle uk-flex-around uk-height-1-1 uk-margin-remove uk-padding-remove">
-            <li><a href="" uk-icon="instagram"></a></li>
-            <li><a href="" uk-icon="facebook"></a></li>
-            <li><a href="" uk-icon="twitter"></a></li>
-        </ul>
-        <ul class="uk-width-1-3 uk-flex uk-flex-middle uk-flex-between uk-height-1-1 uk-margin-remove uk-padding-remove">
-            <li>Martin Hernandez</li>
-            <li>Lucia Perez</li>
-            <li>Gaston Sanchez</li>
-        </ul>
-    </footer>
+    <%- include('./partials/footer') %> 
+
 
 
 </body>

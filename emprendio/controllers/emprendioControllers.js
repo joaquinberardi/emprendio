@@ -1,24 +1,24 @@
 let emprendioControllers= {
-    home: function(req,res){
-        res.render ("home")
+    home: function(req,res){ 
+        res.render ("home") //LISTO  *(href)
     },
     login: function(req,res){
-        res.render ("login")
+        res.render ("login") //LISTO  *(href)
     },
     registroAdmin: function(req,res){
-        res.render ("registroAdmin")
+        res.render ("registroAdmin") // LISTO  *(href)
     },
     registroComprador: function(req,res){
-        res.render ("registroComprador")
+        res.render ("registroComprador") // LISTO *(href)
     },
-    registroVendedor: function(req,res){
-        res.render ("registroVendedor")
+    registroVendedor: function(req,res){ 
+        res.render ("registroVendedor") // LISTO *(href)
     },
     carrito: function(req,res){
-        res.render ("carrito")
+        res.render ("carrito") // A donde conecta?
     },
     preguntasFrecuentes: function(req,res){
-        res.render ("preguntasFrecuentes")
+        res.render ("preguntasFrecuentes") // A donde conecta?
     },
 
 }

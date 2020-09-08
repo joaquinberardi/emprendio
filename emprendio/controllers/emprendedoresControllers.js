@@ -1,12 +1,12 @@
 let emprendedoresControllers= {
     buscarPerfiles: function(req,res){
-        res.render ("buscarPerfiles")
+        res.render ("buscarPerfiles") // A donde conecta?
     },
     agregarPost: function(req,res){
-        res.render ("agregarPost")
+        res.render ("agregarPost") // Working
     },
     perfiles: function(req,res){
-        res.render ("perfiles")
+        res.render ("perfiles") // 
     },
     miperfil: function(req,res){
         res.render ("miPerfil")
