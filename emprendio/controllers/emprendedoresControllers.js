@@ -1,15 +1,12 @@
 let emprendedoresControllers= {
-    buscarPerfiles: function(req,res){
-        res.render ("buscarPerfiles") // A donde conecta?
-    },
     agregarPost: function(req,res){
-        res.render ("agregarPost") // Working
+        res.render ("agregarPost") // LISTO *(href)
     },
     perfiles: function(req,res){
-        res.render ("perfiles") // 
+        res.render ("detalleUsuario") // LISTO *(href)
     },
-    miperfil: function(req,res){
-        res.render ("miPerfil")
+    miperfil: function(req,res){ 
+        res.render ("miPerfil") // LISTO *(href)
     }
 }
 

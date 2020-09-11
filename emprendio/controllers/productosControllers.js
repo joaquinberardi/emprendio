@@ -1,25 +1,25 @@
 let productosControllers= {
     productos: function(req,res){
-        res.render ("productos")
+        res.render ("productos") // Que tiene que mostrar?
     },
     detalle: function(req,res){
-        res.render ("detalle")
+        res.render ("detallePost") // LISTO *(href)
     },
     detalleId: function(req,res){
         var idProductos= req.params.id
-        res.render ("detalleId")
+        res.render ("detalleId") // Que tiene que mostrar?
     },
     buscarProductos: function(req,res){
-        res.render ("buscarProductos")
+        res.render ("resultadoBusqueda") // LISTO *(href)
     },
     editarProducto: function(req,res){
-        res.render ("editarProductos")
+        res.render ("editarProductos") // Que tiene que mostrar?
     },
     comprarProductos: function(req,res){
-        res.render ("comrparPorductos")
+        res.render ("comprarProductos") // Que tiene que mostrar?
     },
     favoritos: function(req,res){
-        res.render ("favoritos")
+        res.render ("favoritos") // Que tiene que mostrar?
     },
 }
 

@@ -12,6 +12,12 @@ var app = express();
 //HOME
 var homeRuta= require('./routes/home');
 app.use('/home', homeRuta);
+//EMPRENDEDORES
+var emprendedoresRuta = require('./routes/emprendedores');
+app.use('/emprendedores' , emprendedoresRuta);
+//PRODUCTOS
+var productosRuta = require('./routes/productos');
+app.use('/productos' , productosRuta);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

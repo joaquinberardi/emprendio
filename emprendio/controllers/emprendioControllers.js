@@ -18,9 +18,11 @@ let emprendioControllers= {
         res.render ("carrito") // A donde conecta?
     },
     preguntasFrecuentes: function(req,res){
-        res.render ("preguntasFrecuentes") // A donde conecta?
+        res.render ("faqs") // LISTO *(href)
     },
-
+    buscar: function(req,res){
+        res.render ("resultadoBusqueda")  // LISTO *(href)
+    },
 }
 
 module.exports= emprendioControllers;
