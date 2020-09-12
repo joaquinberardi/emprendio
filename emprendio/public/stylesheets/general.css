@@ -12,4 +12,9 @@ div.uk-navbar-left{
 
 .uk-background-primary {
     height: auto;
+    font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+.uk-background-primary {
+    background-color: seagreen;
 }

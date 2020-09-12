@@ -65,3 +65,9 @@ article.post div.post-comentarios ul li p{
 div.uk-navbar-left{
     width: 20%;
 }
+h4 {
+    font-family: Roboto,sans-serif;
+}
+.post uk-card-default uk-flex uk-flex-column {
+    font-family: Roboto,sans-serif
+}

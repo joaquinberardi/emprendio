@@ -18,6 +18,10 @@ app.use('/emprendedores' , emprendedoresRuta);
 //PRODUCTOS
 var productosRuta = require('./routes/productos');
 app.use('/productos' , productosRuta);
+//CARRITO
+var productosRuta = require('./routes/carrito');
+app.use('/carrito' , productosRuta);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
