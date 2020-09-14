@@ -3,14 +3,14 @@ let productosControllers= {
         res.render ("productos") // Que tiene que mostrar?
     },
     detalle: function(req,res){
-        res.render ("detallePost") // LISTO *(href)
+        res.render ("detallePost") // LISTO 
     },
     detalleId: function(req,res){
         var idProductos= req.params.id
         res.render ("detalleId") // Que tiene que mostrar?
     },
     buscarProductos: function(req,res){
-        res.render ("resultadoBusqueda") // LISTO *(href)
+        res.render ("resultadoBusqueda") // LISTO 
     },
     editarProducto: function(req,res){
         res.render ("editarProductos") // Que tiene que mostrar?
