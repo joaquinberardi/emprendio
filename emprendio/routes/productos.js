@@ -2,7 +2,12 @@ var express = require('express');
 var router = express.Router();
 var productosControllers = require('../controllers/productosControllers')
 
-router.get('/productos', productosControllers.productos);
+
+
+// ACA SOLO PUEDO ENTRAR CON EL PREFIJO "PRODUCTOS"
+
+// localhsot:3000/productos/
+router.get('/', productosControllers.productos);
 router.get('/detalle', productosControllers.detalle);
 router.post('/detalle/:id', productosControllers.detalleId);
 router.get('/buscarProductos', productosControllers.buscarProductos);
