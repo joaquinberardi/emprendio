@@ -1,4 +1,4 @@
-footer{
+footer.uk-background-primary{
     height: 40px;
     color: white;
     padding: 0 10px;
@@ -8,10 +8,14 @@ footer{
 footer ul{
     list-style: none;
     font-family: 'Source Sans Pro',sans-serif;
-    
+    background-color: seagreen;
 }
 
 footer ul li{
     margin-top: 0;
 }
-
+footer{
+background-color: seagreen;
+height: auto;
+color: white;
+}
