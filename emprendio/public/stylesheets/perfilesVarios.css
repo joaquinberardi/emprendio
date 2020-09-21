@@ -16,3 +16,12 @@
     color: gray;
     text-decoration: none;
 }
+h1{
+    text-align: center;
+    color: gray;
+    font-family: sans-serif;
+  }
+  .uk-section-small {
+    padding-top: 10px;
+    padding-bottom: none;
+}

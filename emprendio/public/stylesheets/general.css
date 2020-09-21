@@ -15,3 +15,19 @@ div.uk-navbar-left{
     font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
 
+
+div.carrito {
+   width: 70%;
+   margin-left: 15%;
+   margin-top: 20%;
+   border-radius: 1%;
+   font-family: sans-serif; 
+   font-size: 18px; 
+   font-weight: 400; 
+   padding-top: 20px;
+   padding-right: 20px;
+   padding-bottom: 20px;
+   padding-left: 20px;
+   border: 2px solid darkgray;
+   height: 50%;
+}
