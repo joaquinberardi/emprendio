@@ -1,5 +1,6 @@
 .info-usuario .foto-perfil{
-    border-radius: 50%;
+    border-radius: 60%;
+    width: 190px;
 }
 
 .info-usuario .red-usuario{
@@ -15,4 +16,17 @@
 .muro .link-detalle{
     color: gray;
     text-decoration: none;
+}
+h3{
+    font-family: cursive;
+    font-size: 35px;
+}
+.solofoto{
+    max-width: 100%;
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+}
+.link-detalle .foto-perfil{
+    width:100%;
 }
