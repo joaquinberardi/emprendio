@@ -5,7 +5,7 @@ var emprendedoresControllers = require('../controllers/emprendedoresControllers'
 
 router.get('/', emprendedoresControllers.perfiles);
 router.get('/agregarpost', emprendedoresControllers.agregarPost); // LISTO *(href)
-router.get('/perfiles', emprendedoresControllers.perfiles); // LISTO *(href)
+router.get('/perfilesVarios', emprendedoresControllers.perfiles); // LISTO *(href)
 router.get('/miperfil', emprendedoresControllers.miperfil); // LISTO *(href)
 
 module.exports= router;

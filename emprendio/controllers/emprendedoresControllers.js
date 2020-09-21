@@ -3,7 +3,7 @@ let emprendedoresControllers= {
         res.render ("agregarPost") // LISTO *(href)
     },
     perfiles: function(req,res){
-        res.render ("detalleUsuario") // LISTO *(href)
+        res.render ("perfilesVarios") // LISTO *(href) 
     },
     miperfil: function(req,res){ 
         res.render ("miPerfil") // LISTO *(href)
