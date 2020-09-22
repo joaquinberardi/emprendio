@@ -13,6 +13,8 @@ article.post div.info-usuario img{
     border-radius: 50px;
     padding: 1px;
     border: 1.5px solid red;
+    width: 40px;
+    height: 40px;
 }
 article.post div.info-usuario h4{
    margin: 8px 10px;
@@ -68,6 +70,11 @@ div.uk-navbar-left{
 h4 {
     font-family: Roboto,sans-serif;
 }
-.post uk-card-default uk-flex uk-flex-column {
+.post.uk-card-default.uk-flex.uk-flex-column {
     font-family: Roboto,sans-serif
+}
+.post-body.uk-flex.uk-flex-center.foto1{
+    width: 500px;
+    height: 600px;
+    align-content: center;
 }
