@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/stylesheets/header.css">
         <link rel="stylesheet" href="/stylesheets/footer.css">
         <link rel="stylesheet" href="/stylesheets/general.css">
+        <link rel="stylesheet" href="/stylesheets/registracion.css">
     
         <!-- UiKit -->
         <!-- <link rel="stylesheet" href="css/uikit.min.css">
@@ -31,15 +32,18 @@
     <%- include('./partials/header') %> 
     <main>
 
-        <h1>Formulario de registración: Vendedor</h1>
-        <h2>Si estás interesado en comprar productos a través de Emprendio, completá tus datos y creá tu cuenta al instante para comenzar a comprar.</h2>
+        <h1 class="formu">Formulario de registración: Vendedor</h1>
+        <h2 class="siestas">Si estás interesado en comprar productos a través de Emprendio, completá tus datos y creá tu cuenta al instante para comenzar a comprar.</h2>
 
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                 <form  class= "formulario" action="" method="POST">
+
+                 <div class="ajuste">
                     <p>
                         <label for="nombre"> Nombre: </label>
                         <input type="text" id="nombre" value="" placeholder="Nombre">
+                       
                     </p>
 
                     <p>
@@ -61,8 +65,13 @@
                         <label for="contraseña"> Contraseña: </label>
                         <input type="password" id="contraseña" value="" placeholder="Contraseña">
                     </p>
+                </div>
 
-                    <button>Enviar</button>
+                    <div class="boton"> 
+                        <button>Enviar</button>
+                    </div>
+
+                    
 
                     <p>
                         <h3> ¡Muchas gracias! Ya podés comprar a través de Emprendio. </h3 >

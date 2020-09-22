@@ -1,0 +1,68 @@
+h1.formu{
+font-family: Impact, Charcoal, sans-serif;
+padding-top: 30px;
+text-align: center;
+margin: auto;
+}
+h2.siestas{
+    font-size: 20px;
+    text-align: center;
+}
+.formulario{
+    align-content: center;
+
+}
+.ajuste{
+    object-position: center;
+background-color: lightgrey;
+  width: 400px;
+  border: 10px solid seagreen;
+  padding: 40px;
+  margin: 20px;
+  text-align: center;
+  margin-top: 15px;
+  margin: auto;
+}
+button{
+    background-color: seagreen;
+    border-radius: 10px;
+    color: white;
+    padding: 10px  35px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+  border-radius: 4px;
+  }
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+  border-radius: 4px;
+
+  }
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+  border-radius: 4px;
+  }
+  h3{
+      padding-bottom: 50px;
+      padding-top: 25px;
+  }
+  .boton{
+      align-content: center;
+  }
