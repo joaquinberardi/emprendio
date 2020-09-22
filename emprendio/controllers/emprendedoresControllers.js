@@ -1,6 +1,6 @@
 let emprendedoresControllers= { 
     perfiles: function(req,res){      // ESTE ES EL MAIN */*
-        res.render ("detalleUsuario") // LISTO 
+        res.render ("perfilesVarios") // LISTO 
     },
     agregarPost: function(req,res){
         res.render ("agregarPost") // LISTO 

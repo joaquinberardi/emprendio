@@ -76,5 +76,37 @@ h4 {
 .post-body.uk-flex.uk-flex-center.foto1{
     width: 500px;
     height: 600px;
-    align-content: center;
+    margin: auto;
+    max-width: 100%;
+}
+.post-body.uk-flex.uk-flex-center.foto2{
+    width: 550px;
+    height: 600px;
+    margin: auto;
+    max-width: 100%;
+}.post-body.uk-flex.uk-flex-center.foto3{
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    max-width: 100%;
+}.post-body.uk-flex.uk-flex-center.foto4{
+    width: 450px;
+    height: 600px;
+    margin: auto;
+    max-width: 100%;
+}.post-body.uk-flex.uk-flex-center.foto5{
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    max-width: 100%;
+}.post-body.uk-flex.uk-flex-center.foto6{
+    width: 550px;
+    height: 600px;
+    margin: auto;
+    max-width: 100%;
+}.post-body.uk-flex.uk-flex-center.foto7{
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    max-width: 100%;
 }

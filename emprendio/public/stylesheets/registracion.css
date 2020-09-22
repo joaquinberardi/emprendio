@@ -32,6 +32,7 @@ button{
     margin: 4px 2px;
     cursor: pointer;
     margin-top: 30px;
+    
 
 }
 input[type=text] {
@@ -64,5 +65,8 @@ input[type=text] {
       padding-top: 25px;
   }
   .boton{
-      align-content: center;
+    padding-left: 253px;
+  }
+  .nombre:focus{
+    z-index: 2;
   }
