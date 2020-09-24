@@ -1,6 +1,6 @@
 h1.formu{
 font-family: Impact, Charcoal, sans-serif;
-padding-top: 30px;
+padding-top: 48px;
 text-align: center;
 margin: auto;
 }
@@ -8,6 +8,13 @@ h2.siestas{
     font-size: 20px;
     text-align: center;
 }
+
+h2.okoka{
+  font-size: 28px;
+  text-align: center;
+  padding-top: 30px;
+}
+
 .formulario{
     align-content: center;
 
@@ -70,3 +77,20 @@ input[type=text] {
   .nombre:focus{
     z-index: 2;
   }
+  p.vende{
+    max-width: 60%;
+    margin: auto;
+    padding-top: 20px;
+  }
+  h3 {
+    font-family: Impact, Charcoal, sans-serif;
+padding-top: 48px;
+text-align: center;
+margin: auto;
+}
+.boton2{
+  
+}
+  
+ 
+  
