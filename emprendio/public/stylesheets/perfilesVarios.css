@@ -12,10 +12,7 @@
     padding-top: 20px;
     border-top: 1px solid lightgray;
 }
-.muro .link-detalle{
-    color: gray;
-    text-decoration: none;
-}
+
 h1{
     text-align: center;
     color: gray;
@@ -25,3 +22,19 @@ h1{
     padding-top: 10px;
     padding-bottom: none;
 }
+a{
+    max-width: 100%;
+}
+img.foto-perfil1{
+    padding-top: 38px;
+}
+.uk-text-center-ok{
+    padding-top: 26px;
+    padding-left: 29%;
+}
+.uk-text-center-2{
+    margin-top: 20px;
+    padding-left: 16%;
+}
+
+

@@ -13,7 +13,7 @@ var app = express();
 var homeRuta= require('./routes/home');
 app.use('/home', homeRuta);
 //EMPRENDEDORES
-var emprendedoresRuta = require('./routes/emprendedores');
+var emprendedoresRuta= require('./routes/emprendedores');
 app.use('/emprendedores', emprendedoresRuta);
 //PRODUCTOS
 var productosRuta = require('./routes/productos');

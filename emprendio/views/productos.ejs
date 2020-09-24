@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %> 
+    <link rel="stylesheet" href="/stylesheets/productos.css">
+
+<body>
+    <header class="uk-background-primary">
+        <section class=" uk-container uk-container-large">
+            <div class="">
+                <nav class="" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="home.html"><img src="/images/titulologo.png" alt=""></a>
+                       
+                    </div>
+                    <div class="uk-navbar-center">
+                        <ul class="uk-flex uk-flex-between uk-flex-middle">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="addPost.html">Postear</a></li>
+                            <li><a href="registracion">Registración</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="uk-navbar-right">
+                        <ul class="uk-flex uk-flex-between uk-flex-middle">
+                            <li>
+                                <form action="" class="uk-search uk-search-default">
+                                    <span uk-search-icon></span>
+                                    <input type="search" class="uk-search-input" placeholder="Buscar...">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <h1>PRODUCTOS</h1>
+    <main>
+        <div class="uk-section uk-section-small">
+            <div class="uk-container uk-container-small">
+                
+
+               <section class="muro uk-flex uk-flex-middle uk-flex-center">
+                    <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
+                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+                            <a href="" class="link-detalle">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSjqNgnJGtdevH3NhIPRt7wgCBaBJT8nlfwI_QSw9RMiUU9TiKXXOnBcz33fQ&usqp=CAc" alt="foto de perfil" class="foto-perfil">
+                                <p class="uk-text-center">Vasos Vidrio 250ml</p>
+                            </a>
+                        </div>
+                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+                            <a href="" class="link-detalle">
+                                <img src="data:image/jpeg;base64,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">
+                                <p class="uk-text-center">Pulseras Hilo</p>
+                            </a>
+                        </div>
+                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+                            <a href="" class="link-detalle">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIK-aaT_8xaSPNcSGgN07tufj1SiTX6vgBhVUuSet8Ji8ys74cRjgSKPD20cvNtR4AtVV8iDqm&usqp=CAc" alt="foto de perfil" class="foto-perfil">
+                                <p class="uk-text-center">Vinos Artesanales Mendoza</p>
+                            </a>
+                        </div>
+                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+                            <a href="" class="link-detalle">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhhwMn33AuRWyQs93-FWv0BynAtusNXrvjYg&usqp=CAU" class="foto-perfil">
+                                <p class="uk-text-center">Cenicero Argentino</p>
+                            </a>
+                        </div>
+                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center mike">
+                            <a href="" class="link-detalle">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_yU18e4hgLLhwqaN9jzRapnmGqyjmLrjvAPcFX_tHvSc9cNeqA38FY6qKs0rvQYtx-LvSV1Y&usqp=CAc" class="foto-perfil">
+                                <p class="uk-text-center-si">Lampara Hecha a Mano</p>
+                            </a>
+                        </div>
+                        
+                    
+                      
+                        
+                    </div>
+               </section>
+            </div>
+        </div>
+    </main>
+
+
+    <%- include('./partials/footer') %> 
+
+</body>
+
+</html>
