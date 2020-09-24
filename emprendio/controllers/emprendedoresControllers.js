@@ -1,3 +1,5 @@
+const { favoritos } = require("./productosControllers");
+
 let emprendedoresControllers= { 
     perfiles: function(req,res){      // ESTE ES EL MAIN */*
         res.render ("perfilesVarios") // LISTO 
@@ -7,6 +9,9 @@ let emprendedoresControllers= {
     },
     miperfil: function(req,res){ 
         res.render ("miPerfil") // LISTO
+    },
+    favoritos: function(req,res){
+        res.render ("favoritos")
     }
 }
 

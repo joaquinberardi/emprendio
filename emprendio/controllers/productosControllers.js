@@ -4,7 +4,7 @@ let productosControllers= {
     },
     detalleId: function(req,res){
        // var idProductos= req.params.id
-        return res.render ("detallePost") // Que tiene que mostrar?
+        return res.render ("detallePost") // Diseñar
     },
     buscarProductos: function(req,res){
         return res.render ("resultadoBusqueda") // LISTO 
