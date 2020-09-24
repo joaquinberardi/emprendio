@@ -8,8 +8,7 @@ var productosControllers = require('../controllers/productosControllers')
 
 // localhsot:3000/productos/
 router.get('/', productosControllers.productos);
-router.get('/detalle', productosControllers.detalle);
-router.post('/detalle/:id', productosControllers.detalleId);
+router.get('/detalle/:id', productosControllers.detalleId);
 router.get('/buscarProductos', productosControllers.buscarProductos);
 router.get('/editarProducto', productosControllers.editarProducto);
 router.get('/comprarProductos', productosControllers.comprarProductos);
