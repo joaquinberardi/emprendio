@@ -3,7 +3,9 @@ font-family: Impact, Charcoal, sans-serif;
 padding-top: 48px;
 text-align: center;
 margin: auto;
+text-decoration-line: underline;
 }
+
 h2.siestas{
     font-size: 20px;
     text-align: center;
@@ -67,6 +69,16 @@ input[type=text] {
     border: 2px solid;
   border-radius: 4px;
   }
+  input[type=file] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+  border-radius: 4px;
+  }
+  
+
   h3{
       padding-bottom: 50px;
       padding-top: 25px;
@@ -80,17 +92,31 @@ input[type=text] {
   p.vende{
     max-width: 60%;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 27px;
   }
   h3 {
     font-family: Impact, Charcoal, sans-serif;
-padding-top: 48px;
+padding-top: 7px;
 text-align: center;
 margin: auto;
 }
 .boton2{
-  
+  padding-left: 44%;
+  padding-top: 44px;
 }
-  
- 
+  div.uk-section.uk-section-small.jaja{
+    padding-top: 12px;
+  }
+#foto.perfil{
+  padding-left: 15px;
+}
+#historia {
+display: flex;
+width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+  border-radius: 4px;
+}
   
