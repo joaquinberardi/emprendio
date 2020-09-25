@@ -21,7 +21,9 @@ app.use('/productos', productosRuta);
 //CARRITO
 // var productosRuta = require('./routes/carrito');
 // app.use('/carrito' , productosRuta);
-
+//USUARIO
+var usuarioRuta = require('./routes/usuario');
+app.use('/usuario', usuarioRuta);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
