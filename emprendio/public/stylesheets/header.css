@@ -52,3 +52,7 @@ header.uk-background-primary{
     background-color: seagreen;
     height: auto;
 }
+
+a.loguito {
+    margin-right: 10px;
+}

@@ -5,7 +5,7 @@
     margin: auto;
     margin-top: 6%;
     object-position: center;
-    background-color: lightgrey;
+    background-color: whitesmoke;
       width: 400px;
       border: 10px solid seagreen;
       padding: 40px;
@@ -13,6 +13,7 @@
       text-align: center;
       margin-top: 15px;
       margin: auto;
+      border-radius: 2%;
   }
   .formulario .checkbox {
     font-weight: 400;
@@ -55,7 +56,7 @@
 
   .btn-primary {
     color: #fff;
-    background-color: seagreen;
+    background-color: limegreen;
     border-color: seagreen;
     width: 63%;
     font-weight: 400;

@@ -23,7 +23,7 @@ h2.okoka{
 }
 .ajuste{
     object-position: center;
-background-color: lightgrey;
+background-color: whitesmoke;
   width: 400px;
   border: 10px solid seagreen;
   padding: 40px;
@@ -31,9 +31,10 @@ background-color: lightgrey;
   text-align: center;
   margin-top: 15px;
   margin: auto;
+  border-radius: 2%;
 }
 button{
-    background-color: seagreen;
+    background-color: limegreen;
     border-radius: 10px;
     color: white;
     padding: 10px  35px;
