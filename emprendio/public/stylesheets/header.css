@@ -49,7 +49,7 @@ header nav form input, header nav form ::placeholder, header nav form span{
     color: white !important;
 }
 header.uk-background-primary{
-    background-color: seagreen;
+    background-color: rgb(25, 110, 99);
     height: auto;
 }
 

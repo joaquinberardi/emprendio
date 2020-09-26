@@ -110,3 +110,47 @@ h4 {
     margin: auto;
     max-width: 100%;
 }
+
+div.uk-container.uk-container-large.uk-flex.uno {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.uk-container.uk-container-large.uk-flex.uno img.im {
+    width: 100%;
+}
+
+div.uk-section.uk-section-small {
+    width: 100%;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+div.uk-container.uk-container-large.uk-flex.uno h1{
+    position: absolute;
+    color: whitesmoke;
+    top: 40%;
+    margin-left: 10%;
+}
+
+div.uk-container.uk-container-large.uk-flex.uno h3{
+    position: absolute;
+    color: whitesmoke;
+    top: 50%;
+    margin-left: 40%;
+}
+
+div.uk-container.uk-container-large.uk-flex.uno button{
+    position: absolute;
+    top: 65%;
+    margin-left: 45%;
+    color: #fff;
+    background-color: rgb(40, 179, 40);
+    border-color: rgb(40, 179, 40);
+    width: 15%;
+    height: 6%;
+    font-weight: 400;
+    margin-top: 25px;
+    border-radius: 3%;
+}
