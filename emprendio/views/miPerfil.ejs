@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="/stylesheets/header.css">
         <link rel="stylesheet" href="/stylesheets/footer.css">
         <link rel="stylesheet" href="/stylesheets/general.css">
+        <link rel="stylesheet" href="/stylesheets/miPerfil.css">
     
         <!-- UiKit -->
         <!-- <link rel="stylesheet" href="css/uikit.min.css">
@@ -43,9 +44,9 @@
                             <a href="" uk-icon="icon:cog; ratio: 1.2" class="uk-margin-left"></a>
                         </div>
                         <div>
-                            <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
+                            <ul class="red-usuario uk-flex uk-flex-between ">
                               <li>Historia de la marca: Nació cuando descubrimos que había una necesidad de crear fundas para celulares de cuero que sean antirobo. Es un emprendimiento que formé con mi novio hace menos de un año. ¡Espero que les gusten!</li>
-                              <li>Ubicación: San Isidro</li>
+                              <li class="sani">Ubicación: San Isidro</li>
                             </ul>
                         </div>
                     </div>
@@ -56,7 +57,11 @@
                     <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="/productos/detalle/:id" class="link-detalle">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
                              
                               <div class="solofoto">
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg">
@@ -67,35 +72,55 @@
                         </div>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="/productos/detalle/:id" class="link-detalle">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center">Celpouch cutomized style</p>
                             </a>
                         </div>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="/productos/detalle/:id" class="link-detalle">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center">Celpouch summer edition</p>
                             </a>
                         </div>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="/productos/detalle/:id" class="link-detalle">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center">Celpouch cosmic</p>
                             </a>
                         </div>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="/productos/detalle/:id" class="link-detalle">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center">Celpouch onetouch</p>
                             </a>
                         </div>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
+                            <a href="/productos/detalle/:id" class="link-detalle">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center">Celpouch urban</p>
                             </a>
@@ -106,7 +131,9 @@
                     </div>
                 </section>
             </div>
+            <a href="">  <button> Agregar Post </button></a>
         </div>
+
     </main>
 
     <%- include('./partials/footer') %> 

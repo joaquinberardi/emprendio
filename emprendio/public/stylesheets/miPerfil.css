@@ -1,16 +1,18 @@
 .info-usuario .foto-perfil{
     border-radius: 60%;
-    width: 190px;
+    width: 220px;
 }
 
 .info-usuario .red-usuario{
     list-style: none;
     padding: 0  ;
+    max-width: 80%;
 }
-
+.sani{
+    margin-left: 1px;
+    padding-left: 19px;
+}
 .muro{
-    margin-top: 20px;
-    padding-top: 20px;
     border-top: 1px solid lightgray;
 }
 .muro .link-detalle{
@@ -29,4 +31,7 @@ h3{
 }
 .link-detalle .foto-perfil{
     width:100%;
+}
+.vemo{
+margin-left: 191px;
 }
