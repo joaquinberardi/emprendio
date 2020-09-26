@@ -110,7 +110,6 @@ h4 {
     margin: auto;
     max-width: 100%;
 }
-<<<<<<< Updated upstream
 
 div.uk-container.uk-container-large.uk-flex.uno {
     width: 100%;
@@ -132,20 +131,20 @@ div.uk-container.uk-container-large.uk-flex.uno h1{
     position: absolute;
     color: whitesmoke;
     top: 40%;
-    margin-left: 10%;
+    left: 10%;
 }
 
 div.uk-container.uk-container-large.uk-flex.uno h3{
     position: absolute;
     color: whitesmoke;
     top: 50%;
-    margin-left: 40%;
+    left: 40%;
 }
 
 div.uk-container.uk-container-large.uk-flex.uno button{
     position: absolute;
     top: 65%;
-    margin-left: 45%;
+    left: 45%;
     color: #fff;
     background-color: rgb(40, 179, 40);
     border-color: rgb(40, 179, 40);
@@ -155,5 +154,21 @@ div.uk-container.uk-container-large.uk-flex.uno button{
     margin-top: 25px;
     border-radius: 3%;
 }
-=======
->>>>>>> Stashed changes
+
+div.uk-container.uk-container-large.uk-flex h1{
+position: absolute;
+left: 5%;
+}
+
+div.uk-container.uk-container-large.uk-flex h3.dos {
+position: absolute;
+left: 40%;
+margin-top: 0.5%;
+}
+
+div.uk-container.uk-container-large.uk-flex h3.tres {
+ position: sticky;
+ margin-top: 10%;
+ /* width: 100%; */
+}
+
