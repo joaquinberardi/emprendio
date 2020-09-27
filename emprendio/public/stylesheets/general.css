@@ -36,7 +36,7 @@ div.carrito {
 
 div.carritoproducto img{
     width: 15%;
-    height: 80px;
+    height: 95px;
     bottom: 40px;
 }
 
@@ -78,14 +78,14 @@ div.carritoproducto:hover {
 
 div.carritoproducto.uno svg {
 position: absolute;
-top: 20%;
+top: 23%;
 left: 76%;
 color: grey;
 }
 
 div.carritoproducto.dos svg {
     position: absolute;
-    top: 46%;
+    top: 49%;
     left: 76%;
     color: grey;
 }

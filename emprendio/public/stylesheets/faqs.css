@@ -1,0 +1,67 @@
+div.uk-container.uk-container-large.uk-flex.uk-flex-middle.uk-flex-center.uno {
+    width: 30%;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 0%;
+    margin-left: 5px;
+}
+
+div.uk-container.uk-container-large.uk-flex.uk-flex-middle.uk-flex-center.dos {
+    width: 30%;
+    position: relative;
+    top: -300px;
+    bottom: 0px;
+    left: 30%;
+    margin-left: 0px;
+    margin-right: 0px;
+    float: left;
+}
+
+div.uk-container.uk-container-large.uk-flex.uk-flex-middle.uk-flex-center.tres {
+    width: 30%;
+    position: relative;
+    top: -700px;
+    bottom: 0px;
+    left: 30%;
+    float: left;
+}
+
+div.uno {
+    float: left;
+    margin-left: 3.3%;
+    width: 30%;
+    margin-top: 4%;
+}
+
+div.dos {
+    float: left;
+    margin-left: 3.3%;
+    width: 30%;
+    margin-top: 4%;
+}
+
+div.tres {
+    float: left;
+    margin-left: 3.3%;
+    width: 30%;
+    margin-top: 4%;
+}
+
+h1.titulo {
+    padding-left: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(25, 110, 99);
+    background-image: url('public/images/marmol.jpg');
+}
+
+div.tres p {
+    margin-top: -5%;
+}
+div.dos p {
+    margin-top: -4%;
+}
