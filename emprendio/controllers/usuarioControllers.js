@@ -9,8 +9,6 @@ let usuarioControllers = {
         res.render ("carrito") // LISTO
     }
 } 
- // editar y borrar productos
-// favoritos
-// carrito
+ // borrar productos
 
 module.exports= usuarioControllers;

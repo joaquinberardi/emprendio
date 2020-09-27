@@ -4,7 +4,7 @@ let emprendioControllers= {
     },
     login: function(req,res){
         let pagina= "login"
-        res.render ("login",{pagina:pagina}) //LISTO  *(href)
+        res.render ("login",{pagina:pagina}) //LISTO
     },
     registroAdmin: function(req,res){
         res.render ("registroAdmin") // LISTO  
