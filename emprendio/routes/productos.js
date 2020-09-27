@@ -12,6 +12,7 @@ router.get('/detalle/:id', productosControllers.detalleId);
 router.get('/buscarProductos', productosControllers.buscarProductos);
 router.get('/editarProducto', productosControllers.editarProducto);
 router.get('/comprarProductos', productosControllers.comprarProductos);
+router.get('/agregarProductos', productosControllers.agregarProductos);
 router.get('/favoritos', productosControllers.favoritos);
 
 module.exports= router;

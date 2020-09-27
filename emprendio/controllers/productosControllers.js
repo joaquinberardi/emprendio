@@ -18,6 +18,9 @@ let productosControllers= {
     favoritos: function(req,res){
         return res.render ("favoritos") // Que tiene que mostrar?
     },
+    agregarProductos: function(req,res){
+        return res.render ("agregarPost") // Que tiene que mostrar?
+    },
 }
 
 module.exports= productosControllers;
