@@ -16,8 +16,10 @@ div.uk-navbar-left{
 }
 
 
+/* Carrito */
+
 div.carrito {
-   width: 70%;
+   width: 65%;
    margin-left: 15%;
    margin-top: 4%;
    border-radius: 1%;
@@ -29,22 +31,75 @@ div.carrito {
    padding-bottom: 20px;
    padding-left: 20px;
    border: 2px solid darkgray;
-   height: 450px;
+   height: 357px;
 }
 
 div.carritoproducto img{
     width: 15%;
-    height: 100px;
+    height: 80px;
+    bottom: 40px;
+}
+
+div.carritoproducto img:hover {
+    width: 16%;
+    height: 85px;
+    bottom: 40px;
 }
 
 div.carritoproducto p.descripcion {
     position: relative;
     left: 35%;
-    bottom: 60px;
+    bottom: 50px;
+    color: grey;
 }
 
 div.carritoproducto p.precio {
     position: relative;
-    left: 85%;
-    bottom: 106px;
+    left: 83%;
+    bottom: 96px;
+    color: grey;
+}
+
+div.carritoproducto.uno {
+    padding-top: 4%;
+    bottom: 10%;
+    height: 154px;
+}
+
+div.carritoproducto.dos {
+    border-top: 1px solid lightgray;
+    padding-top: 6%;
+}
+
+div.carritoproducto:hover {
+    font-size: 110%;
+    text-decoration: none;
+}
+
+div.carritoproducto.uno svg {
+position: absolute;
+top: 20%;
+left: 76%;
+color: grey;
+}
+
+div.carritoproducto.dos svg {
+    position: absolute;
+    top: 46%;
+    left: 76%;
+    color: grey;
+}
+
+button.comprar {
+    color: #fff;
+    background-color: rgb(40, 179, 40);
+    border-color: seagreen;
+    width: 10%;
+    font-weight: 400;
+    margin-top: 25px;
+    position: absolute;
+    left: 70%;
+    height: 40px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 100%;
 }
