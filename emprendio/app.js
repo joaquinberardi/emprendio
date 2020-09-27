@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
 //RUTAS EMPRENDIO
 //HOME
 var homeRuta= require('./routes/home');
@@ -18,9 +19,6 @@ app.use('/emprendedores', emprendedoresRuta);
 //PRODUCTOS
 var productosRuta = require('./routes/productos');
 app.use('/productos', productosRuta);
-//USUARIO
-var usuarioRuta = require('./routes/usuario');
-app.use('/usuario', usuarioRuta);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

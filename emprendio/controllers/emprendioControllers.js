@@ -15,9 +15,6 @@ let emprendioControllers= {
     registroVendedor: function(req,res){ 
         res.render ("registroVendedor") // LISTO 
     },
-    carrito: function(req,res){
-        res.render ("carrito") // LISTO
-    },
     preguntasFrecuentes: function(req,res){
         res.render ("faqs") // LISTO
     },

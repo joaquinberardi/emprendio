@@ -10,9 +10,12 @@ let emprendedoresControllers= {
     miperfil: function(req,res){ 
         res.render ("miPerfil") // LISTO
     },
-    favoritos: function(req,res){
-        res.render ("favoritos")
-    }
+    agregarProductos: function(req,res){
+        return res.render ("agregarPost") // LISTO
+    },
+    editarProducto: function(req,res){
+        return res.render ("editarProductos") // Que tiene que mostrar?
+    },
 }
 
 module.exports= emprendedoresControllers;

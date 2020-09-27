@@ -6,20 +6,14 @@ let productosControllers= {
        // var idProductos= req.params.id
         return res.render ("detallePost") // LISTO
     },
-    buscarProductos: function(req,res){
-        return res.render ("resultadoBusqueda") // LISTO 
-    },
-    editarProducto: function(req,res){
-        return res.render ("editarProductos") // Que tiene que mostrar?
-    },
     comprarProductos: function(req,res){
         return res.render ("comprarProductos") // Que tiene que mostrar?
     },
     favoritos: function(req,res){
         return res.render ("favoritos") // LISTO
     },
-    agregarProductos: function(req,res){
-        return res.render ("agregarPost") // LISTO
+    carrito: function(req,res){
+        res.render ("carrito") // LISTO
     },
 }
 

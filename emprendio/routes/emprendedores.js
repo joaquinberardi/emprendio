@@ -7,6 +7,7 @@ router.get('/', emprendedoresControllers.perfiles);
 router.get('/agregarpost', emprendedoresControllers.agregarPost); // LISTO 
 router.get('/miperfil', emprendedoresControllers.miperfil); // LISTO
 router.get('/perfilesVarios', emprendedoresControllers.perfiles); // LISTO *(href)
-router.get('/favoritos', emprendedoresControllers.favoritos);
+router.get('/agregarProductos', emprendedoresControllers.agregarProductos);
+router.get('/editarProducto', emprendedoresControllers.editarProducto);
 
 module.exports= router;
