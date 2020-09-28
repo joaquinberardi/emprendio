@@ -6,6 +6,9 @@ let emprendioControllers= {
         let pagina= "login"
         res.render ("login",{pagina:pagina}) //LISTO
     },
+    registro: function(req,res){
+        res.render("registro")
+    },
     registroAdmin: function(req,res){
         res.render ("registroAdmin") // LISTO  
     },

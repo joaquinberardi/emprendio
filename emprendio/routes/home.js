@@ -8,6 +8,7 @@ router.get('/', emprendioControllers.home); // LISTO *(href)
 // /home/login
 router.get('/login', emprendioControllers.login); // LISTO *(href)
 // /home/registroAdmin
+router.get('/registro', emprendioControllers.registro)
 router.get('/registroAdmin', emprendioControllers.registroAdmin); // LISTO *(href)
 router.get('/registroComprador', emprendioControllers.registroComprador); // LISTO *(href)
 router.get('/registroVendedor', emprendioControllers.registroVendedor); // LISTO *(href)
