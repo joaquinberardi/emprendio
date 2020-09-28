@@ -155,9 +155,10 @@ div.uk-container.uk-container-large.uk-flex.uno button{
     border-radius: 3%;
 }
 
-div.uk-container.uk-container-large.uk-flex h1{
+div.uk-container.uk-container-large.uk-flex h1.uno{
 position: absolute;
 left: 5%;
+text-decoration: underline;
 }
 
 div.uk-container.uk-container-large.uk-flex h3.dos {
@@ -167,8 +168,21 @@ margin-top: 0.5%;
 }
 
 div.uk-container.uk-container-large.uk-flex h3.tres {
- position: sticky;
+ float: left;
  margin-top: 12%;
+ margin-right: 5%;
  /* width: 100%; */
 }
 
+div.uk-container.uk-container-large.uk-flex h3.cuatro {
+    float: left;
+    margin-top: 12%;
+    margin-right: 5%;
+    /* width: 100%; */
+   }
+
+   div.uk-container.uk-container-large.uk-flex h3.cinco {
+    float: left;
+    margin-top: 12%;
+    /* width: 100%; */
+   }
