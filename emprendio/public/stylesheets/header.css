@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 /* FONTS */
 
-
 header{
     height: auto;
     padding-top: 10px;
@@ -17,6 +16,7 @@ header section nav{
 }
 header nav ul li a{
     color: white;
+    font-family: Nunito;
 }
 header nav ul li a:hover{
     color: lightsteelblue;
@@ -26,7 +26,6 @@ header nav ul li a:hover{
     margin: -3px;
 }
 .logo a{
-    font-family: 'Montserrat';
     color: white;
 }
 .logo a:hover {
