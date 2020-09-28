@@ -112,16 +112,17 @@ h4 {
 }
 
 div.uk-container.uk-container-large.uk-flex.uno {
-    width: 100%;
+    max-width: 1440px;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-div.uk-container.uk-container-large.uk-flex.uno img.im {
+.vemo {
     width: 100%;
+    background-size: 100%;
 }
 
-div.uk-section.uk-section-small {
+div.uk-section {
     width: 100%;
     padding-top: 0px;
     padding-left: 0px;
@@ -137,40 +138,43 @@ div.uk-container.uk-container-large.uk-flex.uno h1{
 div.uk-container.uk-container-large.uk-flex.uno h3{
     position: absolute;
     color: whitesmoke;
-    top: 50%;
-    left: 40%;
+    top: 64%;
+    left: 41%;
 }
 
 div.uk-container.uk-container-large.uk-flex.uno button{
     position: absolute;
     top: 65%;
-    left: 45%;
+    left: 44%;
     color: #fff;
-    background-color: rgb(40, 179, 40);
-    border-color: rgb(40, 179, 40);
+    background-color: rgb(26, 153, 26);
+    border-color: black;
     width: 15%;
     height: 6%;
     font-weight: 400;
-    margin-top: 25px;
-    border-radius: 3%;
+    margin-top: 85px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 div.uk-container.uk-container-large.uk-flex h1.uno{
 position: absolute;
 left: 5%;
-text-decoration: underline;
+margin-top: 91px;
 }
 
 div.uk-container.uk-container-large.uk-flex h3.dos {
 position: absolute;
-left: 40%;
-margin-top: 0.5%;
+left: 38%;
+margin-top: 2.5%;
+font-size: 30px;
 }
 
 div.uk-container.uk-container-large.uk-flex h3.tres {
  float: left;
  margin-top: 12%;
- margin-right: 5%;
+ font-size: 23px;
+ margin-right: 17px;
  /* width: 100%; */
 }
 
