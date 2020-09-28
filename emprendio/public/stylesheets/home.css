@@ -117,7 +117,7 @@ div.uk-container.uk-container-large.uk-flex.uno {
     padding-right: 0px;
 }
 
-.vemo {
+.vemoz {
     width: 100%;
     background-size: 100%;
 }
@@ -131,8 +131,9 @@ div.uk-section {
 div.uk-container.uk-container-large.uk-flex.uno h1{
     position: absolute;
     color: whitesmoke;
-    top: 40%;
-    left: 10%;
+    top: 37%;
+    left: 15%;
+    font-size: 45px;
 }
 
 div.uk-container.uk-container-large.uk-flex.uno h3{
