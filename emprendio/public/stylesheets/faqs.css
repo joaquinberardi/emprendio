@@ -20,7 +20,7 @@ div.tres {
 }
 
 h1.titulo {
-    padding-left: 35%;
+    padding-left: 40.9%;
     padding-top: 5%;
     padding-bottom: -2%;
     width: 100%;
@@ -29,6 +29,16 @@ h1.titulo {
     color: rgb(25, 110, 99);
     background-image: url('public/images/marmol.jpg');
    
+}
+h1.tituloxx{
+    padding-left: 37.9%;
+    padding-top: 5%;
+    padding-bottom: -2%;
+    width: 100%;
+    font-family: Nunito;
+    font-weight: bold;
+    color: rgb(25, 110, 99);
+    background-image: url('public/images/marmol.jpg');
 }
 
 div.tres p {
