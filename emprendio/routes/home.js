@@ -12,7 +12,8 @@ router.get('/registro', emprendioControllers.registro)
 router.get('/registroAdmin', emprendioControllers.registroAdmin); // LISTO *(href)
 router.get('/registroComprador', emprendioControllers.registroComprador); // LISTO *(href)
 router.get('/registroVendedor', emprendioControllers.registroVendedor); // LISTO *(href)
-router.get('/preguntasFrecuentes', emprendioControllers.preguntasFrecuentes);  // A donde conecta?
-router.get('/buscar', emprendioControllers.buscar);  // A donde conecta?
+router.get('/preguntasFrecuentes', emprendioControllers.preguntasFrecuentes);  
+router.get('/buscar', emprendioControllers.buscar);  
+router.get('/aprobacionVendedor', emprendioControllers.aprobacionVendedor);
 
 module.exports= router;

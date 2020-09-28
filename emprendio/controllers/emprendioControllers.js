@@ -24,6 +24,9 @@ let emprendioControllers= {
     buscar: function(req,res){
         res.render ("resultadoBusqueda")  // LISTO 
     },
+    aprobacionVendedor: function(req,res){
+        res.render ("aprobacionVendedor")  // LISTO 
+    },
 }
 
 module.exports= emprendioControllers;
