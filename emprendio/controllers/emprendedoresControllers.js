@@ -14,7 +14,7 @@ let emprendedoresControllers= {
         return res.render ("agregarPost") // LISTO
     },
     editarProducto: function(req,res){
-        return res.render ("editarProductos") // Que tiene que mostrar?
+        return res.render ("editarProductos") //LISTO
     },
 }
 
