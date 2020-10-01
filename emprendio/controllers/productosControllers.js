@@ -1,3 +1,6 @@
+let db = require ("../database/models");
+let sequelize = db.sequelize;
+
 let productosControllers= {
     productos: function(req,res){
         return res.render ("productos") //LISTO

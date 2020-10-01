@@ -1,3 +1,6 @@
+let db = require ("../database/models");
+let sequelize = db.sequelize;
+
 const { favoritos } = require("./productosControllers");
 
 let emprendedoresControllers= { 

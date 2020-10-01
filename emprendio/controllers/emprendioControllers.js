@@ -1,3 +1,6 @@
+let db = require ("../database/models");
+let sequelize = db.sequelize;
+
 let emprendioControllers= {
     home: function(req,res){ 
         res.render ("home") //LISTO  
