@@ -27,6 +27,9 @@ let emprendioControllers= {
     aprobacionVendedor: function(req,res){
         res.render ("aprobacionVendedor")  // LISTO 
     },
+    testing: function(req,res){
+        res.render ("testing") //
+    }
 }
 
 module.exports= emprendioControllers;

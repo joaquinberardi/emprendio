@@ -15,5 +15,6 @@ router.get('/registroVendedor', emprendioControllers.registroVendedor); // LISTO
 router.get('/preguntasFrecuentes', emprendioControllers.preguntasFrecuentes);  
 router.get('/buscar', emprendioControllers.buscar);  
 router.get('/aprobacionVendedor', emprendioControllers.aprobacionVendedor);
+router.get('/testing', emprendioControllers.testing);
 
 module.exports= router;

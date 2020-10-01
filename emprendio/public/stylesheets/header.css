@@ -1,6 +1,9 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 /* FONTS */
+img{
+    
+}
 
 header{
     height: auto;
@@ -19,7 +22,7 @@ header nav ul li a{
     font-family: Nunito;
 }
 header nav ul li a:hover{
-    color: lightsteelblue;
+    color: #C76854;
     text-decoration: none;
 }
 .logo{
