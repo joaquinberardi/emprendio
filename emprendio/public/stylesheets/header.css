@@ -1,14 +1,8 @@
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-/* FONTS */
-img{
-    
-}
 
 header{
     height: auto;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     background-color: rgb(25, 110, 99);
 }
 header section{
@@ -22,7 +16,7 @@ header nav ul li a{
     font-family: Nunito;
 }
 header nav ul li a:hover{
-    color: #C76854;
+    color: #EDE86D;
     text-decoration: none;
 }
 .logo{
@@ -36,7 +30,7 @@ header nav ul li a:hover{
     color: white;
 }
 header ul{
-    margin: 1;
+    margin: 0 auto; /* HEADER CENTRADO */
     padding: 2;
     list-style: none;
 }
@@ -49,6 +43,7 @@ header div.uk-navbar-center ul li:nth-last-child(1){
 }
 header nav form input, header nav form ::placeholder, header nav form span{
     color: white !important;
+    
 }
 header.uk-background-primary{
     background-color: rgb(25, 110, 99);
