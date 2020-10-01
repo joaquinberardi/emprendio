@@ -115,28 +115,23 @@ background: #196E63;
 border-radius: 5px;
 }
 
-.textobotoniconemprendio{
-
-/* btn-text */
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 28px;
-/* identical to box height, or 200% */
-
-letter-spacing: 0.2px;
-
-/* light-text-color */
-
-color: #FFFFFF;
-
-/* Inside Auto Layout */
-
-flex: none;
-order: 1;
-align-self: center;
-flex-grow: 0;
-margin: 15px 0px;
+.botonemprendiodanger{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 5px 15px 5px 15px;
+/* primary-color */
+background: #C76854;
+border-radius: 5px;
+display:inline-block;
+}
+.botonemprendiocreate{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 5px 15px 5px 15px;
+/* primary-color */
+background: #5D7CED;
+border-radius: 5px;
+display:inline-block;
 }

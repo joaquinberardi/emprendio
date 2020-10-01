@@ -14,13 +14,32 @@
     <h3 class="h3emprendio">Esto es un H3</h3>
     <p class="pemprendio">Esto es un Parragraph</p>
 
-    <div> <h3>Buttons:</h3> 
-        <button class="botonemprendio textobotonemprendio"> Boton</button>
-        <button class="botonemprendio textobotonemprendio"> Boton mas largo </button>
-        <button class="botonemprendio textobotonemprendio">
-            <span class="uk-margin-small-right uk-icon" uk-icon="icon: trash"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="trash"><polyline fill="none" stroke="#000" points="6.5 3 6.5 1.5 13.5 1.5 13.5 3"></polyline><polyline fill="none" stroke="#000" points="4.5 4 4.5 18.5 15.5 18.5 15.5 4"></polyline><rect x="8" y="7" width="1" height="9"></rect><rect x="11" y="7" width="1" height="9"></rect><rect x="2" y="3" width="16" height="1"></rect></svg></span>
-            Boton con icon
-        </button>
+    <div> 
+        <h3>Buttons:</h3>
+        <div>
+            <button class="botonemprendio textobotonemprendio"> Boton</button>
+            <button class="botonemprendio textobotonemprendio"> Boton mas largo </button>
+            <button class="botonemprendio textobotonemprendio">
+                <span class="uk-margin-small-right uk-icon" uk-icon="icon: sign-in"></span>
+                Iniciar sesion
+            </button>
+        </div>
+        <div>
+            <button class="botonemprendiodanger textobotonemprendio"> Boton</button>
+            <button class="botonemprendiodanger textobotonemprendio"> Boton mas largo </button>
+            <button class="botonemprendiodanger textobotonemprendio">
+                <span class="uk-margin-small-right uk-icon" uk-icon="icon: trash"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="trash"><polyline fill="none" stroke="#000" points="6.5 3 6.5 1.5 13.5 1.5 13.5 3"></polyline><polyline fill="none" stroke="#000" points="4.5 4 4.5 18.5 15.5 18.5 15.5 4"></polyline><rect x="8" y="7" width="1" height="9"></rect><rect x="11" y="7" width="1" height="9"></rect><rect x="2" y="3" width="16" height="1"></rect></svg></span>
+                Eliminar producto
+            </button>
+        </div>
+        <div>
+            <button class="botonemprendiocreate textobotonemprendio"> Nuevo </button>
+            <button class="botonemprendiocreate textobotonemprendio"> Nuevo producto </button>
+            <button class="botonemprendiocreate textobotonemprendio">
+                <span class="uk-margin-small-right uk-icon" uk-icon="icon: plus"></span>
+                Agregar producto
+            </button>
+        </div>
     </div>
     <%- include('./partials/footer') %> 
 
