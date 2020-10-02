@@ -24,6 +24,9 @@ let emprendioControllers= {
     preguntasFrecuentes: function(req,res){
         res.render ("faqs") // LISTO
     },
+    quienesSomos: function(req,res){
+        res.render ("quienesSomos") // LISTO
+    },
     buscar: function(req,res){
         res.render ("resultadoBusqueda")  // LISTO 
     },
