@@ -122,11 +122,6 @@ div.uk-container.uk-container-large.uk-flex.uno {
     background-size: 100%;
 }
 
-div.uk-section {
-    width: 100%;
-    padding-top: 60px;
-    padding-left: 0px;
-}
 
 div.uk-container.uk-container-large.uk-flex.uno h1{
     position: absolute;
@@ -171,23 +166,13 @@ margin-top: 2.5%;
 font-size: 30px;
 }
 
-div.uk-container.uk-container-large.uk-flex h3.tres {
- float: left;
- margin-top: 12%;
- font-size: 23px;
- margin-right: 5%;
+p.cuca{
+    text-align: center;
+    line-height: 47px;
+    font-size: 22px;
+    width: 100%;
+    margin-top: 11%;
+    padding: 2%;
  /* width: 100%; */
 }
 
-div.uk-container.uk-container-large.uk-flex h3.cuatro {
-    float: left;
-    margin-top: 12%;
-    margin-right: 5%;
-    /* width: 100%; */
-   }
-
-   div.uk-container.uk-container-large.uk-flex h3.cinco {
-    float: left;
-    margin-top: 12%;
-    /* width: 100%; */
-   }
