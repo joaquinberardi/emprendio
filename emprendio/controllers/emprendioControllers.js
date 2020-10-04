@@ -33,6 +33,12 @@ let emprendioControllers= {
     aprobacionVendedor: function(req,res){
         res.render ("aprobacionVendedor")  // LISTO 
     },
+    feed: function(req,res){
+        res.render ("feed") //
+    },
+    contacto: function(req,res){
+        res.render ("contacto") //
+    },
     testing: function(req,res){
         res.render ("testing") //
     }

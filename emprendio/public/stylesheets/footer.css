@@ -1,23 +1,45 @@
 footer.uk-background-primary{
-    height: 40px;
     color: white;
-    padding: 0 10px;
     background-color: rgb(25, 110, 99);
 }
 
 footer ul{
-    list-style: none;
     font-family: 'Source Sans Pro',sans-serif;
     background-color: rgb(25, 110, 99);
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0 auto;
+    padding: 2;
+    list-style: none;
+    text-align: center;
 }
 
-footer ul li{
-    margin-top: 0;
+footer ul a{
+   margin-right: 80px;
+   border-left: 100px;
+   font-family: Nunito;
+
 }
+
+footer ul a:hover{
+    color: #EDE86D !important;
+    text-decoration: none;
+}
+
 footer{
-background-color: rgb(25, 110, 99);
-height: auto;
-color: white;
+    background-color: rgb(25, 110, 99);
+    color: white;
+    margin-top: 0;
+    height: 60px;
+    width: 100%;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 700px !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
 }
 
 ul.uk-width-1-6.uk-flex.uk-flex-middle.uk-flex-around.uk-height-1-1.uk-margin-remove.uk-padding-remove a {

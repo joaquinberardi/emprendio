@@ -143,7 +143,7 @@ div.uk-container.uk-container-large.uk-flex.uno button{
     top: 65%;
     left: 44%;
     color: #fff;
-    background-color: rgb(26, 153, 26);
+    background-color: rgb(25, 110, 99);
     border-color: black;
     width: 15%;
     height: 6%;
@@ -166,13 +166,23 @@ margin-top: 2.5%;
 font-size: 30px;
 }
 
+h3.dos{
+    font-size: 40px !important;
+    text-decoration: underline;
+    text-align: center;
+    color: rgb(25, 110, 99);
+    font-family: Nunito;
+    font-weight: bolder;
+}
 p.cuca{
     text-align: center;
+    text-align: justify;
     line-height: 47px;
-    font-size: 22px;
+    font-size: 23px;
     width: 100%;
-    margin-top: 11%;
-    padding: 2%;
+    margin-top: 8%;
+    padding: 3%;
+    color: black;
  /* width: 100%; */
 }
 
