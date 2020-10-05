@@ -4,7 +4,10 @@ let sequelize = db.sequelize;
 // CONTROLADORES
 let productosControllers= {
     productos: function(req,res){
-        return res.render ("productos") //LISTO
+        db.Producto.findAll()
+            .then (function(productos){
+                res.render("productos", {productos:productos})
+            })
     },
     detalleId: function(req,res){
        // var idProductos= req.params.id
