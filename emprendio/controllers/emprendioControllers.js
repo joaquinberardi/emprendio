@@ -1,6 +1,7 @@
-let db = require ("../database/models");
+let db = require ("../database/models/index");
 let sequelize = db.sequelize;
 
+// CONTROLADORES
 let emprendioControllers= {
     home: function(req,res){ 
         res.render ("home") //LISTO  
@@ -43,5 +44,7 @@ let emprendioControllers= {
         res.render ("testing") //
     }
 }
+
+// FIND
 
 module.exports= emprendioControllers;

@@ -1,6 +1,7 @@
-let db = require ("../database/models");
+let db = require ("../database/models/index");
 let sequelize = db.sequelize;
 
+// CONTROLADORES
 let productosControllers= {
     productos: function(req,res){
         return res.render ("productos") //LISTO
@@ -19,5 +20,7 @@ let productosControllers= {
         res.render ("carrito") // LISTO
     },
 }
+
+// FIND
 
 module.exports= productosControllers;

@@ -1,8 +1,9 @@
-let db = require ("../database/models");
+let db = require ("../database/models/index");
 let sequelize = db.sequelize;
 
 const { favoritos } = require("./productosControllers");
 
+// CONTROLADORES
 let emprendedoresControllers= { 
     perfiles: function(req,res){      // ESTE ES EL MAIN */*
         res.render ("perfilesVarios") // LISTO 
@@ -20,5 +21,7 @@ let emprendedoresControllers= {
         return res.render ("editarProductos") //LISTO
     },
 }
+
+// FIND
 
 module.exports= emprendedoresControllers;
