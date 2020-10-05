@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         descripción: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         usuario_id: {
             AllowNull: false,
@@ -37,23 +37,23 @@ module.exports = (sequelize, dataTypes) => {
         },
         opciones_envio: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         opciones_pago: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         ubicacion: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         colores: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         personalizacion: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         }
     };
     let config = {
