@@ -48,11 +48,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         Historia: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         Integrantes: {
             AllowNull: true,
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         Empleados: {
             AllowNull: true,
