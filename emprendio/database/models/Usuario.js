@@ -1,23 +1,73 @@
-// ¡¡¡ESTÁ HECHA LA BASE DEL ARCHIVO PERO HAY QUE DETERMINAR LAS COLUMNAS DE LA TABLA Y LAS CARACTERÍSTICAS!!!
-
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Nombre del modelo o nombre de la tabla";
+    let alias = "usuario";
     let cols = {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            AllowNull: false,
+            type: dataTypes.INTEGER,
         },
-        title: {
+        Nombre: {
             AllowNull: false,
             type: dataTypes.STRING,
         },
+        Apellido: {
+            AllowNull: false,
+            type: dataTypes.STRING,
+        },
+        DNI: {
+            AllowNull: true,
+            type: dataTypes.INTEGER,
+            unique: true,
+        },
+        Mail: {
+            AllowNull: false,
+            type: dataTypes.STRING,
+            unique: true,
+        },
+        NombreUsuario: {
+            AllowNull: false,
+            type: dataTypes.STRING,
+            unique: true,
+        },
+        Contraseña: {
+            AllowNull: false,
+            type: dataTypes.STRING,
+        },
+        RedSocial: {
+            AllowNull: true,
+            type: dataTypes.STRING,
+        },
+        Foto: {
+            AllowNull: true,
+            type: dataTypes.STRING,
+        },
+        TiempoCreacion: {
+            AllowNull: true,
+            type: dataTypes.STRING,
+        },
+        Historia: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        Integrantes: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        Empleados: {
+            AllowNull: true,
+            type: dataTypes.STRING,
+        },
+        TipoUsuario_id: {
+            AllowNull: true,
+            type: dataTypes.INTEGER,
+        }
     };
     let config = {
-        tableName: "Nombre de la tabla",
+        tableName: "usuarios",
         timestamps: false
     }
-    const Usuario = sequelize.define (alias, cols, config);
+    let Usuario = sequelize.define (alias, cols, config);
 
-    return Usuario
+    return Usuario;
 }

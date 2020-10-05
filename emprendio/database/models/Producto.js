@@ -1,23 +1,66 @@
-// ¡¡¡ESTÁ HECHA LA BASE DEL ARCHIVO PERO HAY QUE DETERMINAR LAS COLUMNAS DE LA TABLA Y LAS CARACTERÍSTICAS!!!
-
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Nombre del modelo o nombre de la tabla";
+    let alias = "producto";
     let cols = {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            AllowNull: false,
+            type: dataTypes.INTEGER,
         },
-        title: {
+        nombre: {
             AllowNull: false,
             type: dataTypes.STRING,
         },
+        precio: {
+            AllowNull: false,
+            type: dataTypes.INTEGER,
+        },
+        categoria_id: {
+            AllowNull: false,
+            type: dataTypes.INTEGER,
+        },
+        foto: {
+            AllowNull: true,
+            type: dataTypes.STRING,
+        },
+        descripción: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        usuario_id: {
+            AllowNull: false,
+            type: dataTypes.INTEGER,
+        },
+        stock: {
+            AllowNull: true,
+            type: dataTypes.INTEGER,
+        },
+        opciones_envio: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        opciones_pago: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        ubicacion: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        colores: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        },
+        personalizacion: {
+            AllowNull: true,
+            type: dataTypes.TEXT,
+        }
     };
     let config = {
-        tableName: "Nombre de la tabla",
+        tableName: "productos",
         timestamps: false
     }
-    const Producto = sequelize.define (alias, cols, config);
+    let Producto = sequelize.define (alias, cols, config);
 
-    return Producto
+    return Producto;
 }

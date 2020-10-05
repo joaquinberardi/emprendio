@@ -1,23 +1,26 @@
 module.exports = {
-  "development": {
+    "development": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "Emprendio",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": "8889"
   },
   "test": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "Emprendio",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": "8889"
   },
   "production": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "Emprendio",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": "8889"
   }
 }
