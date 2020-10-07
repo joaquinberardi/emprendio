@@ -1,5 +1,6 @@
 let db = require ("../database/models/index");
 let sequelize = db.sequelize;
+let op = db.Sequelize.Op;
 
 const { favoritos } = require("./productosControllers");
 
@@ -23,5 +24,9 @@ let emprendedoresControllers= {
 }
 
 // FIND
+
+
+
+
 
 module.exports= emprendedoresControllers;
