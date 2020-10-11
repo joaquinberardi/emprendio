@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <link rel="stylesheet" href="/stylesheets/general.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
-    <link rel="stylesheet" href="/stylesheets/productos.css">
-
     <%- include('./partials/head') %> 
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+
     
 <body>
     <%- include('./partials/header') %> 
@@ -35,8 +33,8 @@
                             </div>
 
                             <!-- imagen-->
-                            <div class="post-body uk-flex uk-flex-center foto1">
-                                <img src="<%=productos[i].foto%>"  alt="" class="foto de perfil">
+                            <div class="post-body uk-flex uk-flex-center foto1 ">
+                                <img src="<%=productos[i].foto%>"  alt="" class="foto de perfil fotoproducto">
                             </div>
 
                             <!-- reacciones-->
@@ -45,10 +43,7 @@
                                     <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span></li>
                                     <li><span class="" uk-icon="icon:comments; ratio: 1.3"></span></li>
                                 </ul>
-                                <div class="post-pie uk-flex">
-                                    <h5 class="uk-width-1-6">Popé Mates</h5>
-                                    <p class="uk-width-5-6">Mate de acero</p>
-                                </div>
+
                             </div>
                             <div class="post-comentarios">
                                 <h3>Descripcion</h6>

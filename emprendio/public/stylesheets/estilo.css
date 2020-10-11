@@ -29,6 +29,13 @@ body{
 
   /*                                 v0.1 ccs estilo                                         */
 
+/*                           general                               */
+
+.fotoproducto{
+  border-radius: 10px;
+}
+
+
 /*                           Textos                               */
   .h1emprendio{
     /* H1 */
@@ -124,26 +131,6 @@ body{
     margin: 15px 10px; 
   }
   
-  .botoniconemprendio{
-  /* Auto Layout */
-  
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 15px 0px 0px 25px;
-  
-  position: absolute;
-  width: 148px;
-  height: 58px;
-  left: 154px;
-  top: 1px;
-  
-  /* primary-color */
-  
-  background: #196E63;
-  border-radius: 5px;
-  }
-  
   .botonemprendiodanger{
     display: flex;
   flex-direction: column;
@@ -154,6 +141,7 @@ body{
   border-radius: 5px;
   display:inline-block;
   }
+  
   .botonemprendiocreate{
     display: flex;
   flex-direction: column;
