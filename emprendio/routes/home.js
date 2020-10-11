@@ -1,23 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var emprendioControllers = require('../controllers/emprendioControllers')
-//RUTAS 
 
-// /home/
-router.get('/', emprendioControllers.home); // LISTO *(href)
-// /home/login
-router.get('/login', emprendioControllers.login); // LISTO *(href)
-// /home/registroAdmin
+
+//RUTAS 
+router.get('/', emprendioControllers.home);
+router.get('/login', emprendioControllers.login); 
 router.get('/registro', emprendioControllers.registro)
-router.get('/registroAdmin', emprendioControllers.registroAdmin); // LISTO *(href)
-router.get('/registroComprador', emprendioControllers.registroComprador); // LISTO *(href)
-router.get('/registroVendedor', emprendioControllers.registroVendedor); // LISTO *(href)
+router.get('/registroAdmin', emprendioControllers.registroAdmin); 
 router.get('/preguntasFrecuentes', emprendioControllers.preguntasFrecuentes); 
 router.get('/quienesSomos', emprendioControllers.quienesSomos); 
 router.get('/buscar', emprendioControllers.buscar);  
 router.get('/aprobacionVendedor', emprendioControllers.aprobacionVendedor);
 router.get('/feed', emprendioControllers.feed);
 router.get('/contacto', emprendioControllers.contacto);
-router.get('/testing', emprendioControllers.testing);
+router.get('/estilos', emprendioControllers.estilos);
 
 module.exports= router;

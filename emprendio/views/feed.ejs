@@ -8,18 +8,13 @@
 <body>
     <%- include('./partials/header') %> 
     <p> *Tengo que conectar el producto con el nombre del emprendedor</p>
-    <p> estilos </p>
-
     <main>
-        <div class="uk-section uk-section-small"> <!-- Este div tiene la linea gris divisoria -->
+        <div class="uk-section uk-section-small"> 
+
             <div class="uk-container uk-container-large uk-flex">
                 <section id="posts" class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-child-width-1-2 uk-width-1-1">
 
                     <!-- PRODUCTOS -->
-
-                    <!-- For y Fetch a la database-->
-
-                    <!-- PRODUCTO 1 -->
 
                     <% for( let i = 0; i < productos.length; i++ ) { %>
                         <article class="post uk-card-default uk-flex uk-flex-column">
@@ -29,25 +24,34 @@
                                 <div>
                                     <img src="https://previews.123rf.com/images/amitspro/amitspro1706/amitspro170600016/80099376-mandala-de-flor-abstracta-patr%C3%B3n-decorativo-fondo-azul-imagen-cuadrada-imagen-de-ilusi%C3%B3n-patr%C3%B3n-fondo-photo.jpg" alt="">
                                 </div>
-                                <h4>Nombre emprendimiento</h4>
+                                <h4 class="h3emprendio"> Nombre emprendimiento</h4>
                             </div>
 
                             <!-- imagen-->
-                            <div class="post-body uk-flex uk-flex-center foto1 ">
+                            <div class="post-body uk-flex uk-flex-center">
                                 <img src="<%=productos[i].foto%>"  alt="" class="foto de perfil fotoproducto">
                             </div>
 
                             <!-- reacciones-->
                             <div class="post-reacciones">
-                                <ul class="post-icons uk-flex uk-flex-between">
-                                    <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span></li>
-                                    <li><span class="" uk-icon="icon:comments; ratio: 1.3"></span></li>
-                                </ul>
-
+                                <ul class="post-icons uk-flex ">
+                                    <div class="uk-navbar-left">
+                                        <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span></li>
+                                        <li><span class="" uk-icon="icon:forward; ratio: 1.3"></span></li>
+                                    </div>
+                                    <div class="uk-navbar-right">
+                                        <button class="botonemprendio textobotonemprendio">
+                                            <span class="uk-margin-small-right uk-icon" uk-icon="icon: cart"></span>
+                                            Comprar
+                                        </button>
+                                    </div>
+                                </ul>                 
                             </div>
+
+                            <!-- Descripcion-->
                             <div class="post-comentarios">
-                                <h3>Descripcion</h6>
-                                <p><%=productos[i].descripcion%></p>
+                                <h4 class="h4emprendio">Descripcion</h4>
+                                <p class="pemprendio"><%=productos[i].descripcion%></p>
                             </div>
 
                             <!-- comentarios-->

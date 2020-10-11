@@ -44,8 +44,8 @@ let emprendioControllers= {
     contacto: function(req,res){
         res.render ("contacto") //
     },
-    testing: function(req,res){
-        res.render ("testing") //
+    estilos: function(req,res){
+        res.render ("estilos") //
     }
 }
 
