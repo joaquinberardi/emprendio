@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    margin-bottom: 40px;
+    background-color: rgb(247, 245, 245);
+}
+html{
+    background-color: rgb(247, 245, 245);
+}
+
+div.uk-navbar-left{
+    width: 20%;
+    height: 15%;
+}
+
+.uk-background-primary {
+    height: auto;
+    font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+.montserrat{
+    font-family: "Montserrat";
+}
+
+body{
+    background-color: rgb(247, 245, 245);
+  }
+
+  /*                                 v0.1 ccs estilo                                         */
+
+/*                           Textos                               */
+  .h1emprendio{
+    /* H1 */
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 80px;
+  /* or 138% */
+  
+  letter-spacing: 0.2px;
+  
+  color: #202020;
+  }
+  
+  .h2emprendio{
+    /* H2 */
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 57px;
+  /* identical to box height, or 142% */
+  
+  letter-spacing: 0.2px;
+  
+  color: #202020;
+  }
+  
+  .h3emprendio{
+    /* H3 */  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  /* or 133% */
+  
+  letter-spacing: 0.1px;
+  
+  color: #202020;
+  }
+  
+  .pemprendio{
+    /* Paragraphe */
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+  
+  letter-spacing: 0.2px;
+  
+  color: #202020;
+  }
+
+  /* BOTONES */
+  
+  .botonemprendio{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 15px 5px 15px;
+  /* primary-color */
+  background: #196E63;
+  border-radius: 5px;
+  display:inline-block;
+  }
+  
+  .textobotonemprendio{
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    /* identical to box height, or 200% */
+    
+    text-align: center;
+    letter-spacing: 0.2px;
+    
+    /* light-text-color */
+    
+    color: #FAFAFA;
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    align-self: center;
+    flex-grow: 0;
+    margin: 15px 10px; 
+  }
+  
+  .botoniconemprendio{
+  /* Auto Layout */
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px 0px 0px 25px;
+  
+  position: absolute;
+  width: 148px;
+  height: 58px;
+  left: 154px;
+  top: 1px;
+  
+  /* primary-color */
+  
+  background: #196E63;
+  border-radius: 5px;
+  }
+  
+  .botonemprendiodanger{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 15px 5px 15px;
+  /* primary-color */
+  background: #C76854;
+  border-radius: 5px;
+  display:inline-block;
+  }
+  .botonemprendiocreate{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 15px 5px 15px;
+  /* primary-color */
+  background: #5D7CED;
+  border-radius: 5px;
+  display:inline-block;
+  }
