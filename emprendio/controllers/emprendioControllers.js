@@ -1,4 +1,4 @@
-let db = require ("../database/models/index");
+let db = require ("../database/models");
 let sequelize = db.sequelize;
 
 // CONTROLADORES
@@ -33,10 +33,14 @@ let emprendioControllers= {
     },
     aprobacionVendedor: function(req,res){
         res.render ("aprobacionVendedor")  // LISTO 
-    },
+    },  
     feed: function(req,res){
-        res.render ("feed") //
+        db.Producto.findAll()
+            .then (function(productos){
+                res.render("feed", {productos:productos})
+            })
     },
+
     contacto: function(req,res){
         res.render ("contacto") //
     },
