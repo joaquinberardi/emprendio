@@ -3,29 +3,30 @@
     width: 220px;
 }
 
-.info-usuario .red-usuario{
+.nombreusuario {
+    padding-bottom: 10px;
+}
+
+.detalleusuario {
+    padding-right: 10px;
     list-style: none;
     padding: 0  ;
     max-width: 80%;
 }
-.sani{
+
+.ubicacionusuario{
     margin-left: 1px;
     padding-left: 19px;
 }
-.muro{
-    border-top: 1px solid lightgray;
-}
+
+
 .muro .link-detalle{
     color: gray;
     text-decoration: none;
 }
-h3{
-    font-family: cursive;
-    font-size: 35px;
-}
+
 .solofoto{
     max-width: 100%;
-   
     box-sizing: border-box;
 }
 .link-detalle .foto-perfil{

@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 main{
-    margin-bottom: 40px;
-    background-color: rgb(247, 245, 245);
+  background-color: #FAFAFA;
 }
 html{
-    background-color: rgb(247, 245, 245);
+    background-color: #FAFAFA;
 }
 
 div.uk-navbar-left{
@@ -24,7 +23,7 @@ div.uk-navbar-left{
 }
 
 body{
-    background-color: rgb(247, 245, 245);
+    background-color: #FAFAFA;
   }
 
   /*                                 v0.1 ccs estilo                                         */
@@ -39,6 +38,11 @@ body{
 .fotoproducto{
   border-radius: 10px;
   height: auto;
+}
+.fondo{
+  height: 100%;
+  z-index: -0;
+
 }
 
 .tarjetaemprendio{

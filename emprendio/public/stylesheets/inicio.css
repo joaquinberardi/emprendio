@@ -1,75 +1,45 @@
-div.uk-container.uk-container-large.uk-flex.uno {
-    max-width: 1440px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.vemoz {
-    width: 100%;
-    background-size: 100%;
-}
-
-
-div.uk-container.uk-container-large.uk-flex.uno h1{
-    position: absolute;
-    color: whitesmoke;
-    top: 37%;
-    left: 9%;
-    font-size: 45px;
-}
-
-div.uk-container.uk-container-large.uk-flex.uno h3{
-    position: absolute;
-    color: whitesmoke;
-    top: 64%;
-    left: 41%;
-}
-
-div.uk-container.uk-container-large.uk-flex.uno button{
+.botonhero{
     position: absolute;
     top: 65%;
-    left: 44%;
-    color: #fff;
-    background-color: rgb(25, 110, 99);
-    border-color: black;
-    width: 15%;
-    height: 6%;
-    font-weight: 400;
-    margin-top: 85px;
-    border-radius: 10px;
-    cursor: pointer;
+    left: 13%;
 }
 
-div.uk-container.uk-container-large.uk-flex h1.uno{
-position: absolute;
-left: 5%;
-margin-top: 6%;
-}
+.h1hero{
+    /* H1 */
+    
+    position: absolute;
+    top: 30%;
+    left: 10%;
 
-div.uk-container.uk-container-large.uk-flex h3.dos {
-position: absolute;
-left: 38%;
-margin-top: 2.5%;
-font-size: 30px;
-}
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 80px;
+    /* or 138% */
 
-h3.dos{
-    font-size: 40px !important;
-    text-decoration: underline;
-    text-align: center;
-    color: rgb(25, 110, 99);
-    font-family: Nunito;
-    font-weight: bolder;
-}
-p.cuca{
-    text-align: center;
-    text-align: justify;
-    line-height: 47px;
-    font-size: 23px;
-    width: 100%;
-    margin-top: 8%;
-    padding: 3%;
-    color: black;
- /* width: 100%; */
-}
+    letter-spacing: 0.2px;
 
+    color: whitesmoke;
+
+  }
+
+.h2hero{
+   /* H2 */
+   position: absolute;
+
+   top: 45%;
+   left: 10%;
+
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 40px;
+   line-height: 57px;
+   /* identical to box height, or 142% */
+   
+   letter-spacing: 0.2px;
+
+   color: whitesmoke;
+ 
+  }
