@@ -39,21 +39,31 @@ article.post div.post-reacciones ul.post-icons{
     padding: 0px 40px;
     list-style-type: none;
 
+    margin-bottom: -5px;
 }
 
 article.post div.post-reacciones ul.post-icons li{ 
     padding-top: 20px;
     padding-left: 10px;
     display: inline;
+
+
+}
+/*                           Precio                               */
+.precio{
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
 /*                           Descripcion                               */
 article.post div.post-comentarios {
     margin-left: 40px;
+    margin-right: 40px;
 }
-article.post div.post-comentarios h6{
-    margin-bottom: 0;
-}
+
+
+/*                           Comentarios                               */
+
 article.post div.post-comentarios ul{
     list-style: none;
     margin-top: 5px
@@ -70,12 +80,3 @@ article.post div.post-comentarios ul li p{
     margin: 0 5px;
 }
 
-div.uk-navbar-left{
-    width: 20%;
-}
-h4 {
-    font-family: montserrat,sans-serif;
-}
-.post.uk-card-default.uk-flex.uk-flex-column {
-    font-family: Roboto,sans-serif
-}

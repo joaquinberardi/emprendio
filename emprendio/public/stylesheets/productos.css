@@ -1,25 +1,18 @@
-h1{
-    text-align: center;
-    color: grey;
-    font-family: Nunito;
-    font-weight: bold;
-    /* text-decoration: underline; */
-    /* text-shadow: 0px 0px 3px seagreen; */
-    padding-top: 18px;
-}
+
 .uk-text-center-si{
-    padding-top: 23px;
+    padding-top: 20px;
     padding-left: 5%;
 }
 .uk-card-uk-card-hover-uk-card-body-uk-flex-uk-flex-column-uk-flex-middle-uk-flex-center-mike{
     padding-left: 50px;
+
 }
 
 div.uk-section.uk-section-small {
-    border-top: 1px solid lightgray;
     margin-top: 20px;
     padding-top: 20px;
     width: 80%;
+
     margin-right: 10%;
     margin-left: 10%;
 }

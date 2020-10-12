@@ -8,18 +8,20 @@
 
 <body>
     <%- include('./partials/header') %> 
-    <h1>PRODUCTOS</h1>
+    <!--  Nota: Hay que acomodar los espacios entre tarjetas  -->
+    <h2 class="h2emprendio tituloseccion">Productos</h2>
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-small">
                <section class="muro uk-flex uk-flex-middle uk-flex-center">
-                    <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
+                    <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" >
 
                         <% for( let i = 0; i < productos.length; i++ ) { %>
-                            <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+                            <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
                                 <a href='/productos/detalle/<%=productos[i].id%>' class="link-detalle">
-                                    <img src="<%=productos[i].foto%>" alt="foto de perfil" class="foto-perfil">
-                                    <p class="uk-text-center"><%=productos[i].nombre%></p>
+                                    <img src="<%=productos[i].foto%>" alt="foto de perfil" class="fotoproducto">
+                                    <h3 class="uk-text-center h3emprendio"><%=productos[i].nombre%></h3>
+                                    <h4 class="uk-text-center h4emprendio">$ <%=productos[i].precio%></h4>
                                 </a>
                             </div>
                         <% } %>
