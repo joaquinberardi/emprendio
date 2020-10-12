@@ -1,57 +1,38 @@
-
 .fotoproductodetalle{
     width: 50%;
 }
-.okas{
-    margin-left: 50px;
+.fotousuario{
+    width:50%;
+    border-radius: 50px;
+    box-shadow:black;
 }
-.daleee{
-margin-left: 50px;
-}
-.info-post.uk-flex.uk-flex-middle.xd{
-    margin-left: 50px;
-}
-.uk-width-1-3.uk-flex.uk-flex-column.detalle-post.hdp{
-width: 315px;
-margin-top: 24px;
-}
+
 .lista-comentarios{
     margin-left: -74px;
     margin-top: 15px;
     max-width: 80%;
 }
-button.uk-button-primary.uk-margin-medium-top.ok{
-    margin-bottom: 75px;
-    margin-left: 70%;
-}
-.uk-text-center4{
-    height: 100px;
-    padding-left: 20px;
-}
-.uk-input9{
-    padding-bottom: 10px;
-}
-.kee{
-    margin-left: 50px;
+
+
+.opcionesenvio{
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-size: 16px;
 }
-.keex{
-    margin-left: 50px;
-    font-size: 16px;
-    font-size: 30px;
-    padding-left: 30px;
-}
-.keext{
+
+.opcionenvio{
     max-width: 100%;
     font-size: 16px;
     padding-top: 70px;
 }
-.fiaca{
-    padding-left: 20px;
-}
+
 .uk-width-1-4.icono-meGusta.sabe{
 padding-left: 30px;
 }
 .comentario uk-flex uk-flex-middle uk-margin-small-top {
     max-width: 70%;
+}
+
+.agregarcomentario{
+    padding-left: 20%;
 }

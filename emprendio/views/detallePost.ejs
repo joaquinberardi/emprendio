@@ -8,23 +8,28 @@
 <body>
     <%- include('./partials/header') %> 
     <main>
-        <!-- PRODUCTO -->
+        <!-- Producto -->
         <div class="uk-section uk-section-xsmall ">
-            <div class="uk-container uk-container-large tarjetaemprendio ">
-                <div class= "card-producto uk-height-large uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+            <div class="uk-container uk-container-large detalleproducto ">
+                <!-- Detalle del producto-->
+                <div class= "card-producto uk-height-large uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">        
                     <section class=" uk-height-large uk-flex uk-width-2-3 detalle-container">
+                        <!-- Imagen-->
                         <article class="uk-width-2-3 uk-flex uk-flex-center uk-flex-middle imagen-post">
                             <img src="<%=detalle.foto%>" alt="Imagen del post" class="fotoproductodetalle">
                         </article>
-                        <article class="uk-width-1-3 uk-flex uk-flex-column detalle-post hdp">
-                            <div class="info-post uk-flex uk-flex-middle xd">
-                                <img src="https://venti-shops-images.s3.sa-east-1.amazonaws.com/user-images/1594148250377-lg.png" alt="Foto del usuario">
+
+                        <!-- Detalle-->
+                        <article class="uk-width-1-3 uk-flex uk-flex-column detalle-post">
+                            <div class="uk-flex uk-flex-middle ">
+                                <img class="fotousuario" src="https://venti-shops-images.s3.sa-east-1.amazonaws.com/user-images/1594148250377-lg.png" alt="Foto del usuario">
                             </div>
                             <div class="info-post uk-flex uk-flex-middle">
-                                <h2 class="daleee"> <%=detalle.nombre%> </h2>
+                                <h2 class="nombreproducto h2emprendio"> <%=detalle.nombre%> </h2>
                             </div>
-                            <div class="info-post uk-flex uk-flex-middle">
-                                <p class="okas"> Detalle: <%=detalle.descripcion%></p>
+                            <div class="">
+                                <h3 class="h3emprendio"> Descripcion:</h3>
+                                <p class="descripcionproducto"><%=detalle.descripcion%></p>
                             </div>
                             <div class="info-post uk-flex uk-flex-middle">
                                 <p class="ubicacion"> Ubicación: <%=detalle.ubicacion%></p>
@@ -38,20 +43,18 @@
                             <div class="info-post uk-flex uk-flex-middle">
                                 <p class="stock"> Stock: <%=detalle.stock%></p>
                             </div>
-                            <div class="uk-width-1-2 uk-flex uk-flex-column precio">
-                                <h2 class="keex"> Precio: $ <%=detalle.precio%> </h2>
+                            <div class=" ">
+                                <h2 class="h2emprendio"> Precio: $ <%=detalle.precio%> </h2>
+                            </div>
+                            <div>
+                                <button class="botonhero botonemprendio textobotonemprendio" onclick="location.href='productos'">Comprar ahora</button>
                             </div>
                         </article>
                     </section>
                 </div>
-                <div class= "agregar-comentario uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">   
-                    <article class="agregar-comentario uk-flex uk-width-1-2 detalle-container">
-                        <form action="" class="uk-text-center4">
-                        <input type="text" class="uk-input" placeholder="Agregar comentario"> 
-                        <button class="uk-button uk-button-primarykk" type="submit">Comentar</button>
-                        </form>
-                        </article>
-                </div>
+                <!-- Comentarios-->
+            <section class="comentarios">
+                
                 <div class="comentarios-producto uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                     <section class="uk-flex uk-width-1-2 detalle-container">
                         <article class="lista-comentarios" >
@@ -74,19 +77,31 @@
                             <h6 class="uk-margin-remove uk-width-2-4"><a href="">Carla</a> Muy lindo!!! Me encantó comprar y poder ayudar a emprendedores!</h6>
                             <a href="" uk-icon="icon:heart; ratio: 0.8" class="uk-width-1-4 uk-text-right icono-meGusta sabe"></a>
                         </div>  
-                        <div class="info-post uk-flex uk-flex-middle">
-                            <h3 class="keext"> Opciones de envio: <%=detalle.opciones_envio %></h3>
-                        </div>
-                        <div class="info-post uk-flex uk-flex-middle">
-                            <p class="pago"> Opciones de pago: <%=detalle.opciones_pago%></p>
-                        </div>
 
-                        <button class= "uk-button uk-button-primary uk-margin-medium-top ok" type="submit">Comprar</button>
-
+                        <div class="opcionesenvio">
+                            <div class="info-post uk-flex uk-flex-middle">
+                                <p class="pago"> Opciones de envio: <%=detalle.opciones_envio %></h3>
+                            </div>
+                            <div class="info-post uk-flex uk-flex-middle">
+                                <p class="pago"> Opciones de pago: <%=detalle.opciones_pago%></p>
+                            </div>
+                        </div>
+                
                         </article>
                         
                     </section>
                 </div>
+                <div class= "uk-container uk-container-large uk-flex">   
+                    <article class="agregarcomentario uk-flex uk-width-1-2 detalle-container">
+                        <form action="" class="uk-text-left">
+                        <input type="text" class="uk-input" placeholder="Agregar comentario"> 
+                        <div>
+                            <button class="botonhero botonemprendiocreate textobotonemprendio"  type="submit" >Comentar</button>
+                        </div>
+                    </form>
+                    </article>
+                </div>
+            </section>
             </div>
         </div>
 
