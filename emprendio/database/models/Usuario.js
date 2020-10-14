@@ -67,7 +67,16 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "usuarios",
         timestamps: false
     }
+
     let Usuario = sequelize.define (alias, cols, config);
 
     return Usuario;
 }
+
+// var express = require('express');
+// var router = express.Router();
+// var emprendedoresController = require("../../controllers/emprendedoresControllers")
+
+// router.get("/", emprendedoresController.list);
+
+// module.exports = router;

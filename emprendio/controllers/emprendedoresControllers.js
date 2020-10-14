@@ -21,10 +21,16 @@ let emprendedoresControllers= {
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
-}
+       }
 
+
+
+// list: function (req, res) {
+//     db.usuarios.findAll()
+//     .then(function(usuarios){
+//      require.render("perfilesVarios", {usuarios: usuarios})
+//         })
 // FIND
-
 
 
 
