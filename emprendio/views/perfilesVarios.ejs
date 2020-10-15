@@ -55,7 +55,20 @@
                </section>
             </div>
         </div>
-
+      <div>
+            <ul>
+           <% for( let i = 5; i < usuarios.length; i++ ) { %>
+           <li>
+            <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
+                <a href='/productos/detalle/<%=usuarios[i].id%>' class="link-detalle">
+                    <img src="<%=usuarios[i].Foto%>" alt="foto de perfil" class="fotoproducto">
+                    <h3 class="uk-text-center h3emprendio"><%=usuarios[i].Nombre%></h3>
+                </a>
+            </div>
+           </li>
+           <% } %> 
+           </ul>
+      </div>
     <%- include('./partials/footer') %> 
 
 </body>

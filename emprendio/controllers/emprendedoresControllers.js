@@ -7,7 +7,10 @@ const { favoritos } = require("./productosControllers");
 // CONTROLADORES
 let emprendedoresControllers= { 
     perfiles: function(req,res){      // ESTE ES EL MAIN */*
-        res.render ("perfilesVarios") // LISTO 
+        db.Usuario.findAll()          // LISTO 
+        .then(function(usuarios){
+        res.render("perfilesVarios", {usuarios: usuarios})
+        })
     },
     agregarPost: function(req,res){
         res.render ("agregarPost") // LISTO 
@@ -28,7 +31,7 @@ let emprendedoresControllers= {
 // list: function (req, res) {
 //     db.usuarios.findAll()
 //     .then(function(usuarios){
-//      require.render("perfilesVarios", {usuarios: usuarios})
+//      res.render("perfilesVarios", {usuarios: usuarios})
 //         })
 // FIND
 

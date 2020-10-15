@@ -42,10 +42,7 @@ module.exports = (sequelize, dataTypes) => {
             AllowNull: true,
             type: dataTypes.STRING,
         },
-        TiempoCreacion: {
-            AllowNull: true,
-            type: dataTypes.STRING,
-        },
+      
         Historia: {
             AllowNull: true,
             type: dataTypes.STRING,
