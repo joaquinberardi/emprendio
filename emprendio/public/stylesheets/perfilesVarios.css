@@ -35,3 +35,25 @@ img.quiero{
     width: 205px;
 }
 
+.uk-text-center-si{
+    padding-top: 20px;
+    padding-left: 5%;
+    float: left;
+}
+.uk-card-uk-card-hover-uk-card-body-uk-flex-uk-flex-column-uk-flex-middle-uk-flex-center-mike{
+    padding-left: 50px;
+
+}
+
+div.uk-section.uk-section-small {
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+a:hover {
+    text-decoration: none;
+}

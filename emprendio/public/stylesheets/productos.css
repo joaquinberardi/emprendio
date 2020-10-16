@@ -16,3 +16,7 @@ div.uk-section.uk-section-small {
     margin-right: 10%;
     margin-left: 10%;
 }
+
+a:hover {
+    text-decoration: none;
+}
