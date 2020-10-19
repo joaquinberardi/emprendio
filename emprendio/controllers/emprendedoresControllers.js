@@ -25,17 +25,15 @@ let emprendedoresControllers= {
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
-<<<<<<< Updated upstream
-    agregarEmprendedor: function(req,res){ ?//FALTA TERMINAR
-        db.emprendedores.create
-            .then (function(emprendedores){
-                res.render("emprendedores", {emprendedores:emprendedores})
+    // agregarEmprendedor: function(req,res){//FALTA TERMINAR
+    //     db.emprendedores.create
+    //         .then (function(emprendedores){
+    //             res.render("emprendedores", {emprendedores:emprendedores})
 
         
-        res.redirect("/")
-    }
-       }
-=======
+    //             res.redirect("/")
+    //         }
+    // },
     guardar: function(req,res){
         let comprador = {
             Nombre: req.body.nombre,
@@ -50,20 +48,7 @@ let emprendedoresControllers= {
         .then(function(){
             res.redirect("/home/login");
         })
-    },
 }
->>>>>>> Stashed changes
-
-
-
-// list: function (req, res) {
-//     db.usuarios.findAll()
-//     .then(function(usuarios){
-//      res.render("perfilesVarios", {usuarios: usuarios})
-//         })
-// FIND
-
-
-
+}
 
 module.exports= emprendedoresControllers;
