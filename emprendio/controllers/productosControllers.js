@@ -24,6 +24,14 @@ let productosControllers= {
     carrito: function(req,res){
         res.render ("carrito") // LISTO
     },
+    comentario: function(req,res){
+        let comentario= req.body.comentario
+        let detalle= req.body.idDelDetalle
+    //      db.Pregunta.create({
+            
+    //  })
+        res.redirect("/productos/detalle/" + detalle)
+    },
 }
 
 module.exports= productosControllers;
