@@ -9,5 +9,6 @@ router.get('/miperfil', emprendedoresControllers.miperfil); // LISTO
 // router.get('/perfilesVarios', emprendedoresControllers.perfiles); // LISTO *(href)
 router.get('/agregarProductos', emprendedoresControllers.agregarProductos);
 router.get('/editarProducto', emprendedoresControllers.editarProducto);
+router.post("/agregarVendedor", emprendedoresControllers.agregarEmprendedor);
 
 module.exports= router;

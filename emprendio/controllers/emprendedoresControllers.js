@@ -24,6 +24,14 @@ let emprendedoresControllers= {
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
+    agregarEmprendedor: function(req,res){ ?//FALTA TERMINAR
+        db.emprendedores.create
+            .then (function(emprendedores){
+                res.render("emprendedores", {emprendedores:emprendedores})
+
+        
+        res.redirect("/")
+    }
        }
 
 
