@@ -14,41 +14,35 @@
 
         <div class="uk-section uk-section-medium ok">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form  class= "formulario" action="" method="POST">
+                <form  class= "formulario" action="/home/guardarAdmin" method="POST">
                     
                   <div class="ajuste3">
                     <p>
                         <label for="nombre"> Nombre: </label>
-                        <input type="text" id="nombre" value="" placeholder="Nombre">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
                     </p>
 
                     <p>
                         <label for="apellido"> Apellido: </label>
-                        <input type="text" id="apellido" value="" placeholder="Apellido">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
                     </p>
 
                     <p>
                         <label for="mail"> Mail: </label>
-                        <input type="email" id="mail" value="" placeholder="Mail">
+                        <input type="email" id="mail" name="mail" placeholder="Mail">
                     </p>
 
                     <p>
                         <label for="nombre de usuario"> Nombre de Usuario: </label>
-                        <input type="text" id="nombre_de_usuario" value="" placeholder="Nombre de usuario">
+                        <input type="text" id="nombre_de_usuario" name="nombreUsuario" placeholder="Nombre de usuario">
                     </p>
 
                     <p>
                         <label for="contraseña"> Contraseña: </label>
-                        <input type="password" id="contraseña" value="" placeholder="Contraseña">
+                        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
                     </p>
-                    
-                    <!-- Botón para enviar -->
-                    <a href="/home/aprobacionVendedor"> 
-                        <p>
-                            <button class="boton3"> Enviar </button>
-                        </p> 
-                    </a>
 
+                    <button type="submit">Enviar</button>
                    
                   </div>
 

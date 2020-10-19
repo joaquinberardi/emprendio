@@ -1,0 +1,74 @@
+body {
+    height: 100%;
+    background-color: rgb(247, 245, 245);
+    }
+
+html{
+    background-color: rgb(247, 245, 245);
+}
+main{
+    background-color: rgb(247, 245, 245);
+}
+
+div.dos {
+    float: left;
+    margin-left: 3.3%;
+    width: 45%;
+    margin-top: 4%;
+    background-color: rgb(247, 245, 245);
+}
+
+div.tres {
+    float: left;
+    margin-left: 3.3%;
+    width: 45%;
+    margin-top: 4%;
+    background-color: rgb(247, 245, 245);
+}
+
+div.montserrat {
+    padding-bottom: 5%;
+    margin-bottom: 7%;
+    position: relative
+    ;
+}
+
+h1.titulo {
+    padding-left: 40.9%;
+    padding-top: 7%;
+    padding-bottom: 2%;
+    width: 100%;
+    font-family: Nunito;
+    font-weight: bold;
+    color: rgb(25, 110, 99);
+    background-image: url('public/images/marmol.jpg');
+   
+}
+h1.tituloxx{
+    padding-left: 37.9%;
+    padding-top: 5%;
+    padding-bottom: -2%;
+    width: 100%;
+    font-family: Nunito;
+    font-weight: bold;
+    color: rgb(25, 110, 99);
+    background-image: url('public/images/marmol.jpg');
+}
+
+div.tres p {
+    margin-top: -5%;
+    margin-bottom: 8%;
+}
+div.dos p {
+    margin-top: -4%;
+}
+h3{
+    text-align: center;
+    padding-bottom: 18px;
+}
+p.oka{
+    padding-top: 30px;
+}
+p.okson{
+    padding-top: 12px;
+}

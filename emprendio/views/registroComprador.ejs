@@ -14,43 +14,39 @@
 
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form  class= "formulario" action="" method="POST">
+                <form  class= "formulario" action="/emprendedores/guardar" method="POST">
 
                  <div class="ajuste">
                     <p>
                         <label for="nombre"> Nombre: </label>
-                        <input type="text" id="nombre" value="" placeholder="Nombre">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
                        
                     </p>
 
                     <p>
                         <label for="apellido"> Apellido: </label>
-                        <input type="text" id="apellido" value="" placeholder="Apellido">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
                     </p>
 
                     <p>
                         <label for="mail"> Mail: </label>
-                        <input type="email" id="mail" value="" placeholder="Mail">
+                        <input type="email" id="mail" name="mail" placeholder="Mail">
                     </p>
 
                     <p>
                         <label for="nombre de usuario"> Nombre de usuario: </label>
-                        <input type="text" id="nombre_de_usuario" value="" placeholder="Nombre de usuario">
+                        <input type="text" id="nombre_de_usuario" name="NombreUsuario" placeholder="Nombre de usuario">
                     </p>
 
                     <p>
                         <label for="contraseña"> Contraseña: </label>
-                        <input type="password" id="contraseña" value="" placeholder="Contraseña">
+                        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
                     </p>
 
                     <div class="boton3"> 
-                        <button>Enviar</button>
+                        <button type="submit">Enviar</button>
                     </div>
                 </div>
-
-                    
-
-                    
 
                     <p>
                         <h3> ¡Muchas gracias! Ya podés comprar a través de Emprendio. </h3 >
