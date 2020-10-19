@@ -1,6 +1,7 @@
 let db = require ("../database/models/index");
 let sequelize = db.sequelize;
 let op = db.Sequelize.Op;
+let bcrypt = require ("bcryptjs")
 
 const { favoritos } = require("./productosControllers");
 
@@ -24,18 +25,30 @@ let emprendedoresControllers= {
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
-       }
+    // agregarEmprendedor: function(req,res){//FALTA TERMINAR
+    //     db.emprendedores.create
+    //         .then (function(emprendedores){
+    //             res.render("emprendedores", {emprendedores:emprendedores})
 
-
-
-// list: function (req, res) {
-//     db.usuarios.findAll()
-//     .then(function(usuarios){
-//      res.render("perfilesVarios", {usuarios: usuarios})
-//         })
-// FIND
-
-
-
+        
+    //             res.redirect("/")
+    //         }
+    // },
+    guardar: function(req,res){
+        let comprador = {
+            Nombre: req.body.nombre,
+            Apellido: req.body.apellido,
+            Mail: req.body.mail,
+            NombreUsuario: req.body.NombreUsuario,
+            Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+            TipoUsuario_id: 1,
+        }
+    
+        db.Usuario.create(comprador)
+        .then(function(){
+            res.redirect("/home/login");
+        })
+}
+}
 
 module.exports= emprendedoresControllers;

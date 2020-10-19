@@ -1,109 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Emprendio</title>
-        <link rel="icon" href="/images/logo.png" type="image/png">
-
-        <link rel="stylesheet" href="/stylesheets/agregarPost.css">
-    
-        <!-- UiKit -->
-        <!-- <link rel="stylesheet" href="css/uikit.min.css">
-        <script src="js/uikit-icons.min.js"></script>
-        <script src="js/uikit.min.js"></script> -->
-        <!-- UiKit -->
-        
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
-        
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
-
-
-    </head>
-
 <body>
     <%- include('./partials/head') %> 
-    <header class="uk-background-primary">
-        <section class=" uk-container uk-container-large">
-            <div class="">
-                <nav class="" uk-navbar>
-                    <div class="uk-navbar-left">
-                        <a href="home.html"><img src="/images/titulologo.png" alt=""></a>
-                       
-                    </div>
-                    <div class="uk-navbar-center">
-                        <ul class="uk-flex uk-flex-between uk-flex-middle">
-                            <li><a href="/home">Inicio</a></li>
-                            <li><a href="/emprendedores">Emprendedores</a></li>
-                            <li><a href="/productos">Productos</a></li>
-                            <li><a href="/home/registroComprador">Registro</a></li>
-                            <li><a href="/home/login">Login</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="uk-navbar-right">
-                        <ul class="uk-flex uk-flex-between uk-flex-middle">
-                            <li>
-                                <form action="" class="uk-search uk-search-default">
-                                    <span uk-search-icon></span>
-                                    <input type="search" class="uk-search-input" placeholder="Buscar...">
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </section>
-    </header>
+    <link rel="stylesheet" href="/stylesheets/agregarPost.css">
+    <%- include('./partials/header') %> 
+
     <main>
        
-            <h1 class="jaja"> Agregar Post</h1>
+        <h1 class="jaja"> Agregar producto</h1>
         
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex">
-                <form  class= "formulario" action="" method="POST">
+                <form  class= "formulario" action="/emprendedores/agregarPost" method="POST">
                     <p>
                         <label for="nombre"> Nombre del producto: </label>
-                        <input type="text" id="nombre" value="" placeholder="Nombre" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                     </p>
 
                     <p>
                         <label for="precio">Precio: </label>
-                        <input type="number" id="precio" value="" placeholder="Precio" required>
+                        <input type="number" id="precio" name="precio" placeholder="Precio" required>
                     </p>
                     <p>
-                        <label for="Foto"> Foto del producto: </label>
-                        <input type="file" id="foto" value="" required>
+                        <label for="Foto"> Foto: </label>
+                        <input type="file" id="foto" name="foto" >
                     </p>
                     <p>
-                        <label for="descripcion"> Descripción del producto: </label>
-                        <textarea id="descripcion" cols="30" rows="8" required></textarea>
+                        <label for="descripcion"> Descripción: </label>
+                        <textarea id="descripcion" cols="30" rows="8" name="descripcion" required></textarea>
                     </p>
 
                     <p>
                         <label for="colores"> ¿Qué colores o variedades tiene? </label>
-                        <input type="text" id="colores" value="" required>
+                        <input type="text" id="colores" name="colores">
                     </p>
                     <p>
-                        <label for="personalizacion"> ¿Tiene personalización? </label>
-                        <select name="personalizacion" id="personalizacion">
+                        <label for="personalizacion"> ¿Se puede personalizar? </label>
+                        <select name="personalizacion" id="personalizacion" name="personalizacion">
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                         </select>
                     </p>
                     <p>
                         <label for="envio"> Opciones de envio: </label>
-                        <textarea id="envio" cols="30" rows="8" required></textarea>
+                        <textarea id="envio" cols="30" rows="8" name="envio"></textarea>
                     </p>
                     <p>
                         <label for="pago"> Opciones de pago: </label>
-                        <textarea id="pago" cols="30" rows="8" required></textarea>
+                        <textarea id="pago" cols="30" rows="8" naem="pago"></textarea>
                     </p>
-                    <button class="jeje">Agregar</button>
+                    <button class="jeje" href="/">Agregar</button>
 
                 </form>
             </div>

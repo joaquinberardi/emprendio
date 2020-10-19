@@ -93,8 +93,9 @@
                 </div>
                 <div class= "uk-container uk-container-large uk-flex">   
                     <article class="agregarcomentario uk-flex uk-width-1-2 detalle-container">
-                        <form action="" class="uk-text-left">
-                        <input type="text" class="uk-input" placeholder="Agregar comentario"> 
+                        <form action="/productos/comentario" class="uk-text-left" method="POST">  
+                        <input type="text" class="uk-input" placeholder="Agregar comentario" name="comentario"> 
+                        <input type="hidden" value="<%=detalle.id%>" name="idDelDetalle">
                         <div>
                             <button class="botonhero botonemprendiocreate textobotonemprendio"  type="submit" >Comentar</button>
                         </div>
