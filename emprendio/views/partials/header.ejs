@@ -23,9 +23,9 @@
                         <button class="botonemprendio textobotonemprendio"  onclick="location.href='/home/login'">  <a href="/home/login"></a>Iniciar sesión </a> </button>
 
                         <li>
-                            <form action="../home/buscar" class="botonemprendio ">
-                                <span uk-search-icon></span>
-                                <input type="search"  placeholder="Buscar..."> 
+                            <form action="../home/buscar" class="botonemprendio " method="GET">
+                                <span uk-search-icon type="submit" value="Search"></span>
+                                <input type="text"  name="query" placeholder="Buscar..."> 
                             </form>
                         </li>
                     </ul>

@@ -83,9 +83,9 @@ guardarAdmin: function(req,res){
     quienesSomos: function(req,res){
         res.render ("quienesSomos") // LISTO
     },
-    buscar: function(req,res){
-        res.render ("resultadoBusqueda")  // LISTO 
-    },
+    // buscar: function(req,res){
+    //     res.render ("resultadoBusqueda")
+    // },
     aprobacionVendedor: function(req,res){
         res.render ("aprobacionVendedor")  // LISTO 
     },  
@@ -101,8 +101,17 @@ guardarAdmin: function(req,res){
     },
     estilos: function(req,res){
         res.render ("estilos") //
-    }
+    },
+
+//BUSCADOR
+
+search: function (req,res) {
+    let loQueBuscoElUsuario = req.query;
+    res.send(loQueBuscoElUsuario);
 }
+
+}
+
 
 // FIND
 

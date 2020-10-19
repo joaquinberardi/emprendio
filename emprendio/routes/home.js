@@ -12,7 +12,7 @@ router.get('/registroComprador', homeController.registroComprador);
 router.get('/registroVendedor', homeController.registroVendedor); 
 router.get('/preguntasFrecuentes', homeController.preguntasFrecuentes); 
 router.get('/quienesSomos', homeController.quienesSomos); 
-router.get('/buscar', homeController.buscar);  
+router.get('/buscar', homeController.search);  
 router.get('/aprobacionVendedor', homeController.aprobacionVendedor);
 router.get('/feed', homeController.feed);
 router.get('/contacto', homeController.contacto);
