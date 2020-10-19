@@ -8,6 +8,8 @@ router.get('/', emprendioControllers.home);
 router.get('/login', emprendioControllers.login); 
 router.get('/registro', emprendioControllers.registro)
 router.get('/registroAdmin', emprendioControllers.registroAdmin); 
+router.get('/registroComprador', emprendioControllers.registroAdmin); 
+router.get('/registroVendedor', emprendioControllers.registroAdmin); 
 router.get('/preguntasFrecuentes', emprendioControllers.preguntasFrecuentes); 
 router.get('/quienesSomos', emprendioControllers.quienesSomos); 
 router.get('/buscar', emprendioControllers.buscar);  
