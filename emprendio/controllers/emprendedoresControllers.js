@@ -14,7 +14,17 @@ let emprendedoresControllers= {
         })
     },
     agregarPost: function(req,res){
-        res.render ("agregarPost") // LISTO 
+        let agregarPost = {
+            // VAS A LA CARPETA DATABASE, DESPUES A LA CARPETA MODELS, Y EN EL ARCHIVO PRODUCTO.JS, PONES TODOS LOS ATRIBUTOS PRINCIPALES (SIN CONTAR ID),
+            // OSEA NOMBRE, PRECIO, CATEGORIA_ID, FOTO, ETC. IMPORTANTE --> PONELOS EXACTAMENTE IGUAL QUE COMO ESTÁN ESCRITOS, SIN MAYÚSUCLA, SIN TILES Y CON LOS "_"
+            // DESPUÉS PONES DOS PUNTOS Y EN TODOS PONES REQ.BODY. Y DESPUÉS DEL PUNTO TENES QUE FIJARTE LO QUE DICE EN EL FORMULARIO EN EL ARCHIVO AGREGAR POST
+            // EN CADA INPUT, TE FIJAS EN LOS ATRIBUTOS "NAME", Y PONES EL NOMBRE QUE TENGA EN CADA UNO.
+        }
+
+        db.Producto.create(agregarPost)
+        .then(function(){
+            res.redirect("/emprendedores/miPerfil");
+        })
     },
     miperfil: function(req,res){ 
         res.render ("miPerfil") // LISTO
@@ -25,15 +35,6 @@ let emprendedoresControllers= {
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
-    // agregarEmprendedor: function(req,res){//FALTA TERMINAR
-    //     db.emprendedores.create
-    //         .then (function(emprendedores){
-    //             res.render("emprendedores", {emprendedores:emprendedores})
-
-        
-    //             res.redirect("/")
-    //         }
-    // },
     guardar: function(req,res){
         let comprador = {
             Nombre: req.body.nombre,

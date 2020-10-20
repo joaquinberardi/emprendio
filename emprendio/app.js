@@ -23,12 +23,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 var homeRuta= require('./routes/home');
 app.use('/home', homeRuta);
-//EMPRENDEDORES
-var emprendedoresRuta= require('./routes/emprendedores');
-app.use('/emprendedores', emprendedoresRuta);
-//PRODUCTOS
-var productosRuta = require('./routes/productos');
-app.use('/productos', productosRuta);
 
 //HOME
 var homeRuta= require('./routes/home');

@@ -29,8 +29,7 @@ div.tres {
 div.montserrat {
     padding-bottom: 5%;
     margin-bottom: 7%;
-    position: relative
-    ;
+    position: relative;
 }
 
 h1.titulo {
@@ -53,6 +52,7 @@ h1.tituloxx{
     font-weight: bold;
     color: rgb(25, 110, 99);
     background-image: url('public/images/marmol.jpg');
+    text-decoration: underline;
 }
 
 div.tres p {
@@ -65,10 +65,16 @@ div.dos p {
 h3{
     text-align: center;
     padding-bottom: 18px;
+    font-size: 30px;
 }
 p.oka{
     padding-top: 30px;
 }
 p.okson{
     padding-top: 12px;
+}
+button.uk-button.uk-button-primary.uk-align-center{
+    background-color: rgb(25, 110, 99);
+    width: 30%;
+    height: 25%;
 }
