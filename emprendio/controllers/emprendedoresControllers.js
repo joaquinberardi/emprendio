@@ -15,6 +15,18 @@ let emprendedoresControllers= {
     },
     agregarPost: function(req,res){
         let agregarPost = {
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            foto: req.body.foto,
+            descripcion: req.body.descripcion,
+            opciones_envio: req.body.envio,
+            opciones_pago: req.body.pago,
+            ubicacion: req.body.ubicacion,
+            colores: req.body.colores,
+            personalizacion: req.body.personalizacion,
+            categoria_id: 1,
+            usuario_id: 2
+            
             // VAS A LA CARPETA DATABASE, DESPUES A LA CARPETA MODELS, Y EN EL ARCHIVO PRODUCTO.JS, PONES TODOS LOS ATRIBUTOS PRINCIPALES (SIN CONTAR ID),
             // OSEA NOMBRE, PRECIO, CATEGORIA_ID, FOTO, ETC. IMPORTANTE --> PONELOS EXACTAMENTE IGUAL QUE COMO ESTÁN ESCRITOS, SIN MAYÚSUCLA, SIN TILES Y CON LOS "_"
             // DESPUÉS PONES DOS PUNTOS Y EN TODOS PONES REQ.BODY. Y DESPUÉS DEL PUNTO TENES QUE FIJARTE LO QUE DICE EN EL FORMULARIO EN EL ARCHIVO AGREGAR POST
@@ -30,7 +42,7 @@ let emprendedoresControllers= {
         res.render ("miPerfil") // LISTO
     },
     agregarProductos: function(req,res){
-        return res.render ("agregarPost") // LISTO
+        return res.render ("agregarProductos") // LISTO
     },
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
