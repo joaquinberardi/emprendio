@@ -11,8 +11,8 @@ router.get('/respuesta', homeController.respuesta);
 router.get('/registroAdmin', homeController.registroAdmin); 
 router.get('/registroComprador', homeController.registroComprador); 
 router.get('/registroVendedor', homeController.registroVendedor); 
-router.post ("/guardarAdmin", homeController.guardarAdmin);
-router.post ("/guardarVendedor", homeController.guardarVendedor);
+router.post('/guardarAdmin', homeController.guardarAdmin);
+router.post('/guardarVendedor', homeController.guardarVendedor);
 router.get('/preguntasFrecuentes', homeController.preguntasFrecuentes); 
 router.get('/quienesSomos', homeController.quienesSomos);  
 router.get('/quienesSomos', homeController.quienesSomos); 
@@ -21,7 +21,7 @@ router.get('/aprobacionVendedor', homeController.aprobacionVendedor);
 router.get('/feed', homeController.feed);
 router.get('/contacto', homeController.contacto);
 router.get('/estilos', homeController.estilos);
-router.get('/buscar', homeController.search); 
+ 
 
 
 
