@@ -1,6 +1,8 @@
 let db = require ("../database/models");
 let sequelize = db.sequelize;
-let bcrypt = require ("bcryptjs")
+let bcrypt = require ("bcryptjs");
+// const { Op } = require("sequelize/types");
+let op = db.Sequelize.Op;
 
 let emprendioControllers= {
     home: function(req,res){ 
@@ -105,14 +107,26 @@ guardarAdmin: function(req,res){
 
 //BUSCADOR
 
-search: function (req,res) {
-    let loQueBuscoElUsuario = req.query;
-    res.send(loQueBuscoElUsuario);
-}
+buscar: function (req,res) {
+    let resultadoBusqueda = req.query.buscador123;
+    // res.render ("resultadoBusqueda");
+
+    db.Producto.findAll( 
+     {
+        where: [
+         {nombre: { [op.like]: "%"+ resultadoBusqueda + "%"}}
+        ],
+        order: ["nombre"],
+     }
+    )
+        
+   .then(function(productos) { 
+       res.render("resultadoBusqueda", {productos: productos}) 
+   })
+//    res.send(resultadoBusqueda)
+},
 
 }
-
-
 // FIND
 
 module.exports= emprendioControllers;

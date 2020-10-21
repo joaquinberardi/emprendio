@@ -15,6 +15,8 @@ router.post ("/guardarAdmin", homeController.guardarAdmin);
 router.post ("/guardarVendedor", homeController.guardarVendedor);
 router.get('/preguntasFrecuentes', homeController.preguntasFrecuentes); 
 router.get('/quienesSomos', homeController.quienesSomos);  
+router.get('/quienesSomos', homeController.quienesSomos); 
+router.get('/buscar', homeController.buscar);  
 router.get('/aprobacionVendedor', homeController.aprobacionVendedor);
 router.get('/feed', homeController.feed);
 router.get('/contacto', homeController.contacto);
