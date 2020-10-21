@@ -7,6 +7,9 @@ let usuarioControllers = {
     },
     carrito: function(req,res){
         res.render ("carrito") // LISTO
+    },
+    panelAdmin: function (req,res){
+        res.render ("panelAdmin")
     }
 } 
  // borrar productos

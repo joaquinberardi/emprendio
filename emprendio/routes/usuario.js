@@ -3,7 +3,6 @@ var router = express.Router();
 var usuarioControllers = require('../controllers/usuarioControllers')
 
 router.get('/', usuarioControllers.miperfil);
-router.get('/favoritos', usuarioControllers.favoritos);
-router.get('/carrito', usuarioControllers.carrito);
+router.get('/admin', usuarioControllers.panelAdmin);
 
 module.exports= router;

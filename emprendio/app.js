@@ -34,6 +34,9 @@ app.use('/emprendedores', emprendedoresRuta);
 //PRODUCTOS
 var productosRuta = require('./routes/productos');
 app.use('/productos', productosRuta);
+//USUARIO
+var usuarioRuta = require('./routes/usuario');
+app.use('/usuario', usuarioRuta);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
