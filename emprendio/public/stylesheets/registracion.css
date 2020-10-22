@@ -67,6 +67,21 @@ background-color: whitesmoke;
   margin-bottom: 15px;
   padding-bottom: 20px;
 }
+.ajuste4{
+  object-position: center;
+  background-color: whitesmoke;
+  width: 541px;
+  border: 10px solid rgb(25, 110, 99);
+  padding: 40px;
+  margin: 20px;
+  text-align: center;
+  margin-top: 45px;
+  margin: auto;
+  border-radius: 2%;
+  margin-bottom: 5%;
+  margin-top: 4%;
+}
+
 button{
     background-color: rgb(25, 110, 99);
     border-radius: 10px;
@@ -152,6 +167,33 @@ width: 100%;
     border: 2px solid;
   border-radius: 4px;
 }
+#descripcion{
+  display: flex;
+  width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid;
+    border-radius: 4px;
+  }
+  #envio{
+    display: flex;
+    width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid;
+      border-radius: 4px;
+    }
+    #pago{
+      display: flex;
+      width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 2px solid;
+        border-radius: 4px;
+      }
 
 
 

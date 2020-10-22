@@ -3,14 +3,14 @@
 
 <body>
     <%- include('./partials/head') %> 
-    <link rel="stylesheet" href="/stylesheets/agregarPost.css">
+    <link rel="stylesheet" href="/stylesheets/registracion.css">
     <%- include('./partials/header') %> 
 
     <main>
        
-        <h1 class="jaja"> Agregar producto</h1>
+        <h1 class="formu"> Agregar producto</h1>
         
-        <div class="uk-section uk-section-small">
+        <div class="ajuste4">
             <div class="uk-container uk-container-large uk-flex">
                 <form  class= "formulario" action="/emprendedores/agregarPost" method="POST">
                     <p>
@@ -28,7 +28,7 @@
                     </p>
                     <p>
                         <label for="descripcion"> Descripción: </label>
-                        <textarea id="descripcion" cols="30" rows="8" name="descripcion" required></textarea>
+                        <textarea id="descripcion" cols="30" rows="4" name="descripcion" required></textarea>
                     </p>
 
                     <p>
@@ -48,11 +48,11 @@
                     </p>
                     <p>
                         <label for="envio"> Opciones de envio: </label>
-                        <textarea id="envio" cols="30" rows="8" name="envio"></textarea>
+                        <textarea id="envio" cols="30" rows="4" name="envio"></textarea>
                     </p>
                     <p>
                         <label for="pago"> Opciones de pago: </label>
-                        <textarea id="pago" cols="30" rows="8" name="pago"></textarea>
+                        <textarea id="pago" cols="30" rows="4" name="pago"></textarea>
                     </p>
                     <button type="submit" class="jeje">Agregar</button> 
 
