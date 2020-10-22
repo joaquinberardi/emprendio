@@ -121,9 +121,23 @@ buscar: function (req,res) {
     )
         
    .then(function(productos) { 
-       res.render("resultadoBusqueda", {productos: productos}) 
+    //    res.render("resultadoBusqueda", {productos: productos}) 
+    db.Usuario.findAll( 
+    {
+       where: [
+        {nombreUsuario: { [op.like]: "%"+ resultadoBusqueda + "%"}}
+       ],
+       order: ["nombreUsuario"],
+    }
+   )
+       
+  .then(function(usuarios) { 
+      res.render("resultadoBusqueda", {productos: productos, usuarios: usuarios}) 
+  })
+//    res.send(resultadoBusqueda)      
    })
-//    res.send(resultadoBusqueda)
+
+
 },
 
 }

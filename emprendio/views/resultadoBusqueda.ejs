@@ -10,8 +10,7 @@
     <%- include('./partials/header') %> 
     <main>
         <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-               
+            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">               
                 <% for( let i = 0; i < productos.length; i++ ) { %>
                     <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
                         <a href='/productos/detalle/<%=productos[i].id%>' class="link-detalle">
@@ -21,9 +20,14 @@
                         </a>
                     </div>
                 <% } %>
-                
-            
-
+                <% for( let i = 0; i < usuarios.length; i++ ) { %>
+                    <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
+                        <a href='/productos/detalle/<%=usuarios[i].id%>' class="link-detalle">
+                            <img src="<%=usuarios[i].Foto%>" alt="foto de perfil" class="fotoproducto">
+                            <h3 class="uk-text-center h3emprendio"><%=usuarios[i].NombreUsuario%></h3>
+                        </a>
+                    </div>
+                   <% } %> 
             </div>
         </div>
     </main>
