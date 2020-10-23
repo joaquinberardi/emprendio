@@ -47,6 +47,27 @@ let emprendedoresControllers= {
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
+   update: function(req,res){
+     let edicion= {
+         nombre: req.body.nombreproducto,
+         precio: req.body.precio,
+        //  Foto: req.body.fotoproducto,
+         descripcion: req.body.descripcion,
+         colores: req.body.variedades,
+         personalizacion: req.body.personalizacion,
+         opciones_envio: req.body.envio,
+         opciones_pago: req.body.pago,
+//El primero es el nombre que esta en database, models, y req.body.El nombre que aparece en el input del formulario
+     }
+    db.Producto.update(edicion, {
+        where: [
+            {id:3}
+        ]
+        })
+    .then(function(){
+        res.redirect("/emprendedores/miperfil")
+    }) 
+  },
     guardar: function(req,res){
         let comprador = {
             Nombre: req.body.nombre,

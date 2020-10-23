@@ -14,5 +14,4 @@ router.get('/favoritos', productosControllers.favoritos);
 router.get('/carrito', productosControllers.carrito);
 router.post('/comentario', productosControllers.comentario);
 
-
 module.exports= router;
