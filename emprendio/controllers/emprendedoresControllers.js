@@ -44,6 +44,17 @@ let emprendedoresControllers= {
     agregarProductos: function(req,res){
         return res.render ("agregarProductos") // LISTO
     },
+    borrar: function(req,res){
+         let idProductoBorrar = req.body.idProducto123;
+         db.Producto.destroy(
+         { where: {
+             id: idProductoBorrar
+         }
+        })
+        .then(function() {
+            res.render("miPerfil")
+        })
+    },
     editarProducto: function(req,res){
         return res.render ("editarProductos") //LISTO
     },
