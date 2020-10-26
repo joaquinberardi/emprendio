@@ -93,9 +93,8 @@ let emprendedoresControllers= {
        .then(function(){
            res.redirect("/emprendedores/miperfil")
        }) 
-     }
-     
-  },
+    }
+    },
     guardar: function(req,res){
         let comprador = {
             Nombre: req.body.nombre,
@@ -109,20 +108,19 @@ let emprendedoresControllers= {
         db.Usuario.create(comprador)
         .then(function(){
             res.redirect("/home/login");
-        },
-
-        editarEmprendedores: function(req,res){
+        })
+    },
+    editarEmprendedores: function(req,res){
         let id = req.query.id
         db.Emprendedor.findByPk(id)
         .then(function(edicion){
             console.log(edicion)
-            res.render ("editarEmprendedores") , {edicion: edicion});
-        })
-        update: function(req,res){
-            let emprendedoresid= req.body.idEmprendedores
-        }
-    }    
-}
+            res.render ("editarEmprendedores") , {edicion: edicion}
+            })
+    },
+    update: function(req,res){
+        let emprendedoresid= req.body.idEmprendedores
+    }
 }
 
 module.exports= emprendedoresControllers;
