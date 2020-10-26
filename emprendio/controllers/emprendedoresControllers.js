@@ -95,7 +95,19 @@ let emprendedoresControllers= {
         db.Usuario.create(comprador)
         .then(function(){
             res.redirect("/home/login");
+        },
+
+        editarEmprendedores: function(req,res){
+        let id = req.query.id
+        db.Emprendedor.findByPk(id)
+        .then(function(edicion){
+            console.log(edicion)
+            res.render ("editarEmprendedores") , {edicion: edicion});
         })
+        update: function(req,res){
+            let emprendedoresid= req.body.idEmprendedores
+        }
+    }    
 }
 }
 

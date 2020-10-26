@@ -7,6 +7,7 @@ router.get('/', emprendedoresControllers.perfiles);
 router.get('/miperfil', emprendedoresControllers.miperfil);
 router.get('/agregarProductos', emprendedoresControllers.agregarProductos);
 router.get('/editarProducto', emprendedoresControllers.editarProducto);
+router.get("/editarEmprendedores:id", emprendedoresControllers.editarEmprendedores);
 router.post('/update', emprendedoresControllers.update);
 router.post ("/guardar", emprendedoresControllers.guardar);
 router.post ("/borrar", emprendedoresControllers.borrar);
