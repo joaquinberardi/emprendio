@@ -10,31 +10,27 @@
     <%- include('./partials/header') %> 
     <main>
         <!-- <p>
-            <h1>Iniciar Sesión</h1>
+        <h1>Iniciar Sesión</h1>
         </p> -->
         <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form class="form-signin">
-                    <p class="iniciarsesion">Iniciar Sesion</p>
-                    <label for="inputEmail" class="sr-only"></label>                 
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Nombre de Usuario" required autofocus>
-                    <label for="inputPassword" class="sr-only"></label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                    <div class="checkbox mb-3">
-                      <label>
-                        <input type="checkbox" value="remember-me"> Recordarme
-                      </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
-                    
-                  </form>
-                  <a href="/emprendedores/miPerfil">  <button> Entrar igual </button></a>
-                  
+          <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+            <form class="form-signin" action="/home/procesologin" method="POST">
+              <p class="iniciarsesion">Iniciar Sesion</p>
 
-                   
-                    <!-- <button>Enviar</button> -->
-            </div>
+              <label for="inputEmail" class="sr-only"></label>                 
+              <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Nombre de Usuario" required autofocus>
+
+              <label for="inputPassword" class="sr-only"></label>
+              <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Contraseña" required>
+
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+              <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+
+              <a href="/emprendedores/miPerfil"><button>Entrar igual</button></a>
+              
+            </form>
+          
+      </div>
 
         </div>
     </main>

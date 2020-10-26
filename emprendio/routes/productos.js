@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 var productosControllers = require('../controllers/productosControllers')
 
-
-
 // ACA SOLO PUEDO ENTRAR CON EL PREFIJO "PRODUCTOS"
 
 // localhsot:3000/productos/

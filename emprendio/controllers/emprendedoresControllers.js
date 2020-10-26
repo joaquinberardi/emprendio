@@ -38,11 +38,12 @@ let emprendedoresControllers= {
             res.redirect("/emprendedores/miPerfil");
         })
     },
-    miperfil: function(req,res){ 
+    miperfil: function(req,res){
         res.render ("miPerfil") // LISTO
     },
     agregarProductos: function(req,res){
-        return res.render ("agregarProductos") // LISTO
+        return res.render ("agregarProductos")
+        
     },
     borrar: function(req,res){
          let idProductoBorrar = req.body.idProducto123;
@@ -93,7 +94,7 @@ let emprendedoresControllers= {
         .then(function(){
             res.redirect("/home/login");
         })
-}
+    },
 }
 
 module.exports= emprendedoresControllers;

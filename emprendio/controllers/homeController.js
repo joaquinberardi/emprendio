@@ -3,16 +3,24 @@ let sequelize = db.sequelize;
 let bcrypt = require ("bcryptjs");
 // const { Op } = require("sequelize/types");
 let op = db.Sequelize.Op;
+const session = require ("express-session");
 
 let emprendioControllers= {
     home: function(req,res){ 
         res.render ("home") //LISTO  
     },
     login: function(req,res){
+        if (req.session.usuarioLogueado != undefined){
+            // Si el usuario está logueado, te lleva a la página del inicio
+            res.redirect("/")
+        }
         let pagina= "login"
         res.render ("login",{pagina:pagina}) //LISTO
     },
     registro: function(req,res){
+        if (req.session.usuarioLogueado != undefined){
+            res.redirect("/")
+        }
         res.render("registro")
     },
 
@@ -21,15 +29,24 @@ let emprendioControllers= {
     },
 
 registroComprador: function(req,res){
+    if (req.session.usuarioLogueado != undefined){
+        res.redirect("/")
+    }
     return res.render("registroComprador")
 
 },
 
 registroVendedor: function(req,res){
+    if (req.session.usuarioLogueado != undefined){
+        res.redirect("/")
+    }
     return res.render("registroVendedor")
 
 },
 registroAdmin: function(req,res){
+    if (req.session.usuarioLogueado != undefined){
+        res.redirect("/")
+    }
     return res.render("registroAdmin")
 
 },
@@ -85,9 +102,6 @@ guardarAdmin: function(req,res){
     quienesSomos: function(req,res){
         res.render ("quienesSomos") // LISTO
     },
-    // buscar: function(req,res){
-    //     res.render ("resultadoBusqueda")
-    // },
     aprobacionVendedor: function(req,res){
         res.render ("aprobacionVendedor")  // LISTO 
     },  
@@ -105,42 +119,58 @@ guardarAdmin: function(req,res){
         res.render ("estilos") //
     },
 
-//BUSCADOR
+    //BUSCADOR
+    buscar: function (req,res) {
+        let resultadoBusqueda = req.query.buscador123;
+        // res.render ("resultadoBusqueda");
 
-buscar: function (req,res) {
-    let resultadoBusqueda = req.query.buscador123;
-    // res.render ("resultadoBusqueda");
-
-    db.Producto.findAll( 
-     {
+        db.Producto.findAll( 
+        {
+            where: [
+            {nombre: { [op.like]: "%"+ resultadoBusqueda + "%"}}
+            ],
+            order: ["nombre"],
+        }
+        )
+            
+    .then(function(productos) { 
+        //    res.render("resultadoBusqueda", {productos: productos}) 
+        db.Usuario.findAll( 
+        {
         where: [
-         {nombre: { [op.like]: "%"+ resultadoBusqueda + "%"}}
+            {nombreUsuario: { [op.like]: "%"+ resultadoBusqueda + "%"}}
         ],
-        order: ["nombre"],
-     }
+        order: ["nombreUsuario"],
+        }
     )
         
-   .then(function(productos) { 
-    //    res.render("resultadoBusqueda", {productos: productos}) 
-    db.Usuario.findAll( 
-    {
-       where: [
-        {nombreUsuario: { [op.like]: "%"+ resultadoBusqueda + "%"}}
-       ],
-       order: ["nombreUsuario"],
+    .then(function(usuarios) { 
+        res.render("resultadoBusqueda", {productos: productos, usuarios: usuarios}) 
+    })
+        //    res.send(resultadoBusqueda)      
+    })
+    },
+
+    procesologin: function (req, res){
+        db.Usuario.findOne({
+            where: [
+                {Mail: req.body.email},
+            ]
+        })
+        .then(function(usuario){
+            if (usuario == null) {
+                res.send ("El mail no existe")
+            }
+            else if (bcrypt.compareSync(req.body.password, usuario.Contraseña)){
+                res.send ("La contraseña es incorrecta")
+            }
+            else{
+                req.session.usuarioLogueado = usuario;
+                res.redirect ("/emprendedores/miPerfil")
+            }
+        })
     }
-   )
-       
-  .then(function(usuarios) { 
-      res.render("resultadoBusqueda", {productos: productos, usuarios: usuarios}) 
-  })
-//    res.send(resultadoBusqueda)      
-   })
-
-
-},
 
 }
-// FIND
 
 module.exports= emprendioControllers;

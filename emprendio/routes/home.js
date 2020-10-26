@@ -21,6 +21,7 @@ router.get('/aprobacionVendedor', homeController.aprobacionVendedor);
 router.get('/feed', homeController.feed);
 router.get('/contacto', homeController.contacto);
 router.get('/estilos', homeController.estilos);
+router.post("/procesologin", homeController.procesologin)
  
 
 
