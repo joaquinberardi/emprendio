@@ -25,6 +25,9 @@ let productosControllers= {
         res.render ("carrito") // LISTO
     },
     comentario: function(req,res){
+        if (req.session.UsuarioLogueado == undefined){ //si el usuario no esta logueado y quiere comentar lo manda a que se registre
+            res.redirect("/home/login")
+           }
         let comentario= req.body.comentario
         let detalle= req.body.idDelDetalle
     //      db.Pregunta.create({

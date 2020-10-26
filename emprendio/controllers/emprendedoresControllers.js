@@ -38,12 +38,11 @@ let emprendedoresControllers= {
             res.redirect("/emprendedores/miPerfil");
         })
     },
-    miperfil: function(req,res){
+    miperfil: function(req,res){ 
         res.render ("miPerfil") // LISTO
     },
     agregarProductos: function(req,res){
-        return res.render ("agregarProductos")
-        
+        return res.render ("agregarProductos") // LISTO
     },
     borrar: function(req,res){
          let idProductoBorrar = req.body.idProducto123;
@@ -60,6 +59,9 @@ let emprendedoresControllers= {
         return res.render ("editarProductos") //LISTO
     },
    update: function(req,res){
+       if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
+        res.redirect("/home/login")
+       }
      let edicion= {
          nombre: req.body.nombreproducto,
          precio: req.body.precio,
@@ -94,7 +96,7 @@ let emprendedoresControllers= {
         .then(function(){
             res.redirect("/home/login");
         })
-    },
+}
 }
 
 module.exports= emprendedoresControllers;
