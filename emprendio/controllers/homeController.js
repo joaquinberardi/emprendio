@@ -155,20 +155,33 @@ guardarAdmin: function(req,res){
         db.Usuario.findOne({
             where: [
                 {Mail: req.body.email},
+                {NombreUsuario: req.body.email}
             ]
         })
         .then(function(usuario){
             if (usuario == null) {
                 res.send ("El mail no existe")
             }
-            else if (bcrypt.compareSync(req.body.password, usuario.Contraseña)){
+            else if (bcrypt.compareSync(req.body.password, usuario.Contraseña) == false){
                 res.send ("La contraseña es incorrecta")
             }
             else{
                 req.session.usuarioLogueado = usuario;
-                res.redirect ("/emprendedores/miPerfil")
+                if (usuario.TipoUsuario_id == 2){
+                    res.redirect ("/emprendedores/miPerfil")
+                }
+                else if (usuario.TipoUsuario_id == 1) {
+                    res.redirect ("/productos")
+                }
+                else{
+                    res.redirect ("/usuario/admin")
+                }
             }
         })
+    },
+    cerrarsesion: function(req, res){
+        req.session.usuarioLogueado = undefined;
+        res.redirect("/")
     }
 
 }
