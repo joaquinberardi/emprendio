@@ -43,10 +43,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
 
-        // TiempoCreacion: {
-        //     AllowNull: true,
-        //     type: dataTypes.STRING,
-        // },
+        TiempoCreacion: {
+            AllowNull: true,
+           type: dataTypes.STRING,
+         },
       
         Historia: {
             AllowNull: true,
