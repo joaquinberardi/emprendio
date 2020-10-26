@@ -16,27 +16,30 @@
         <div class="ajuste4">
             <div class="uk-container uk-container-large uk-flex">
                 <form  class= "formulario" action="/emprendedores/update" method="POST">
+                    <input type="text" name="idProducto" value="<%=edicion.id%>" hidden>
+                    <input type="text" name="idUsuario" value="<%=edicion.usuario_id%>" hidden>
                     <p>
                         <label for="nombre"> Nombre del producto: </label>
-                        <input type="text" id="nombre" value="" name="nombreproducto" placeholder="Nombre" required>
+                        <input type="text" id="nombre" value="<%=edicion.nombre%>" name="nombreproducto" placeholder="Nombre" required>
                     </p>
 
                     <p>
                         <label for="precio">Precio: </label>
-                        <input type="number" id="precio" value="" name="precio" placeholder="Precio" required>
+                        <input type="number" id="precio" value="<%=edicion.precio%>" name="precio" placeholder="Precio" required>
                     </p>
                     <p>
                         <label for="Foto"> Foto del producto: </label>
-                        <input type="file" id="foto" value="" name="fotoproducto" required>
+                        <input type="file" id="foto" value="" name="fotoproducto" >
                     </p>
                     <p>
                         <label for="descripcion"> Descripción del producto: </label>
-                        <textarea id="descripcion" cols="30" name="descripcion" rows="8" required></textarea>
+                        <textarea id="descripcion" cols="30" name="descripcion" rows="8" required> <%=edicion.descripcion%></textarea>
+                        
                     </p>
 
                     <p>
                         <label for="colores"> ¿Qué colores o variedades tiene? </label>
-                        <input type="text" id="colores" value="" name="variedades" required>
+                        <input type="text" id="colores" value="<%=edicion.colores%>" name="variedades" required>
                     </p>
                     <p>
                         <label for="personalizacion"> ¿Tiene personalización? </label>
@@ -47,11 +50,11 @@
                     </p>
                     <p>
                         <label for="envio"> Opciones de envio: </label>
-                        <textarea id="envio" name="envio" cols="30" rows="8" required></textarea>
+                        <textarea id="envio" name="envio" cols="30" rows="8" required><%=edicion.opciones_envio%></textarea>
                     </p>
                     <p>
                         <label for="pago"> Opciones de pago: </label>
-                        <textarea id="pago" name="pago" cols="30" rows="8" required></textarea>
+                        <textarea id="pago" name="pago"  cols="30" rows="8" required><%=edicion.opciones_pago%></textarea>
                     </p>
                     <button class="jeje">Editar</button>
 

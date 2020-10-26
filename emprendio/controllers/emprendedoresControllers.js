@@ -56,31 +56,45 @@ let emprendedoresControllers= {
         })
     },
     editarProducto: function(req,res){
-        return res.render ("editarProductos") //LISTO
+        let id = req.params.id
+        db.Producto.findByPk(id)
+         .then(function(edicion){
+             console.log(edicion)
+            res.render ("editarProductos" , {edicion: edicion}); 
+        //  primero pongo a la vista que va y despues con edicion:edicion me trae toda la informacion
+         })
     },
    update: function(req,res){
+       let productoid= req.body.idProducto
+       let usuarioid= req.body.idUsuario
        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
         res.redirect("/home/login")
        }
-     let edicion= {
-         nombre: req.body.nombreproducto,
-         precio: req.body.precio,
-        //  Foto: req.body.fotoproducto,
-         descripcion: req.body.descripcion,
-         colores: req.body.variedades,
-         personalizacion: req.body.personalizacion,
-         opciones_envio: req.body.envio,
-         opciones_pago: req.body.pago,
-//El primero es el nombre que esta en database, models, y req.body.El nombre que aparece en el input del formulario
+         else if (usuarioid != req.session.usuarioLogueado.id) {
+         res.send("No es posible editar este producto")
      }
-    db.Producto.update(edicion, {
-        where: [
-            {id:3}
-        ]
-        })
-    .then(function(){
-        res.redirect("/emprendedores/miperfil")
-    }) 
+     else{
+        let edicion= {
+            nombre: req.body.nombreproducto,
+            precio: req.body.precio,
+           //  foto: req.body.fotoproducto,
+            descripcion: req.body.descripcion,
+            colores: req.body.variedades,
+            personalizacion: req.body.personalizacion,
+            opciones_envio: req.body.envio,
+            opciones_pago: req.body.pago,
+   //El primero es el nombre que esta en database, models, y req.body.El nombre que aparece en el input del formulario
+        }
+       db.Producto.update(edicion, {
+           where: [
+               {id: productoid}
+           ]
+           })
+       .then(function(){
+           res.redirect("/emprendedores/miperfil")
+       }) 
+     }
+     
   },
     guardar: function(req,res){
         let comprador = {
