@@ -107,9 +107,13 @@ guardarAdmin: function(req,res){
     },  
     feed: function(req,res){
         db.Producto.findAll()
-            .then (function(productos){
-                res.render("feed", {productos:productos})
+        .then(function(productos){
+            db.Usuario.findAll()
+            .then(function(usuarios){
+                res.render("feed", {productos:productos, usuarios:usuarios})
+
             })
+        })
     },
 
     contacto: function(req,res){

@@ -43,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
 
-        TiempoCreacion: {
+        TiempoCreación: {
             AllowNull: true,
            type: dataTypes.STRING,
          },
