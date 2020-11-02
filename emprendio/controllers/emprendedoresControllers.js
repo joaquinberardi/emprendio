@@ -112,16 +112,87 @@ let emprendedoresControllers= {
         })
     },
     editarEmprendedores: function(req,res){
-        let id = req.query.id
-        db.Emprendedor.findByPk(id)
+        let id = req.params.id
+        db.Usuario.findByPk(id)
         .then(function(edicion){
             console.log(edicion)
-            res.render ("editarEmprendedores") , {edicion: edicion}
-            })
+        
+            res.render ("editarEmprendedores", {edicion: edicion})
+        })
+            
     },
-    update: function(req,res){
-        let emprendedoresid= req.body.idEmprendedores
+    
+    edito: function(req,res){
+        let usuarioid= req.params.id
+        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
+            res.redirect("/home/login")
+           }
+             else if (usuarioid != req.session.usuarioLogueado.id) {
+             //res.send("No es posible editar la información")
+             res.redirect("/emprendedores")
+            }
+        
+            else{
+            let edicion= {
+                Nombre: req.body.nombre,
+                Apellido: req.body.apellido,
+                DNI:req.body.dni,
+                Mail:req.body.mail,
+                NombreUsuario:req.body.nombreUsuario,
+                Contraseña:req.body.contraseña,
+                RedSocial:req.body.RedSocial,
+                Foto:req.body.fotoPerfil,
+                TiempoCreacion:req.body.tiempoCreacion,
+                Historia:req.body.historia,
+                Integrantes:req.body.integrantes,
+                Empleados:req.body.empleados,
+                
     }
 }
-
-module.exports= emprendedoresControllers;
+    
+    db.Usuario.edito(edicion, {
+        where:[
+            {id: usuarioid}
+        ]
+    })
+    .then(function(){
+        res.redirect("/emprendedores/miperfil")
+    
+    
+        /*if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
+         res.redirect("/home/login")
+        }
+         else if (usuarioid != req.session.usuarioLogueado.id) {
+            res.send("No es posible editar el perfil")
+        }
+        else{
+            let edicion= {
+                Nombre: req.body.nombre,
+                Apellido: req.body.apellido,
+                DNI:req.body.dni,
+                Mail:req.body.mail,
+                NombreUsuario:req.body.nombreUsuario,
+                Contraseña:req.body.contraseña,
+                RedSocial:req.body.RedSocial,
+                Foto:req.body.fotoPerfil,
+                TiempoCreacion:req.body.tiempoCreacion,
+                Historia:req.body.historia,
+                Integrantes:req.body.integrantes,
+                Empleados:req.body.empleados,
+                
+    }
+    db.Emprendedor.update(edicion, {
+        where:[
+            {id: usuarioid}
+        ]
+    })
+    .then(function(){
+        res.redirect("/emprendedores/miperfil")
+    })
+} */
+    
+})
+}
+}
+module.exports=emprendedoresControllers;
+    

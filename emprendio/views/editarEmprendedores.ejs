@@ -15,41 +15,42 @@
         
         <div class="ajuste4">
             <div class="uk-container uk-container-large uk-flex">
-                <form  class= "formulario" action="/emprendedores/update" method="POST">
+                <form  class= "formulario" action="/emprendedores/edito/<%=edicion.id%>" method="POST">
+                    
                     
                     <p class="vende">
                         <label for="nombre"> Nombre: </label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <input type="text" id="nombre" value="<%=edicion.Nombre%>" name="nombre" placeholder="Nombre">
                     </p>
 
                     <p class="vende">
                         <label for="apellido"> Apellido: </label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                        <input type="text" id="apellido" value="<%=edicion.Apellido%>" name="apellido" placeholder="Apellido">
                     </p>
 
                     <p class="vende">
                         <label for="mail"> Mail: </label>
-                        <input type="email" id="mail" name="mail" placeholder="Mail">
+                        <input type="email" id="mail" value="<%=edicion.Mail%>" name="mail" placeholder="Mail">
                     </p>
 
                     <p class="vende">
                         <label for="nombre de usuario"> Nombre de tu marca: </label>
-                        <input type="text" id="nombre_de_usuario" name="nombreUsuario" placeholder="Nombre de usuario">
+                        <input type="text" id="nombre_de_usuario" value="<%=edicion.NombreUsuario%>" name="nombreUsuario" placeholder="Nombre de usuario">
                     </p>
 
                     <p class="vende">
                         <label for="contraseña"> Contraseña: </label>
-                        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
+                        <input type="password" id="contraseña" value="<%=edicion.Contraseña%>" name="contraseña" placeholder="Contraseña">
                     </p>
 
                     <p class="vende">
                         <label for="dni"> DNI: </label>
-                        <input type="number" id="dni" name="dni" placeholder="DNI">
+                        <input type="number" id="dni" value="<%=edicion.DNI%>" name="dni" placeholder="DNI">
                     </p>
 
                     <p class="vende">
                         <label for="tiempo creación"> ¿Hace cuánto creaste tu marca? </label>                  
-                        <select name="tiempoCreacion" id="tiempoCreacion" name="tiempoCreacion">
+                        <select name="tiempoCreacion" id="tiempoCreacion"  value="<%=edicion.TiempoCreacion%>" name="tiempoCreacion">
                             <option value="Menos de 1 año">Menos de 1 año.</option>
                             <option value="Entre 1 y 3 años">Entre 1 y 3 años.</option>
                             <option value="Más de 3 años">Más de tres años.</option>
@@ -58,17 +59,17 @@
 
                     <p class="vende">
                         <label for="historia"> Historia de tu marca: ¿Cómo surgió? </label>
-                        <textarea id="historia" cols="30" rows="8" name="historia"></textarea>
+                        <textarea id="historia" value="<%=edicion.Historia%>" cols="30" rows="8" name="historia"></textarea>
                     </p>
 
                     <p class="vende">
                         <label for="integrantes"> ¿Quiénes forman parte de tu emprendimiento? </label>
-                        <input type="text" id="integrantes" name="integrantes">
+                        <input type="text" id="integrantes" value="<%=edicion.Integrantes%>" name="integrantes">
                     </p>
 
                     <p class="vende">
                         <label for="empleados"> ¿Tenés empleados? </label>
-                        <select name="empleados" id="empleados">
+                        <select name="empleados" id="empleados"> 
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                         </select>
@@ -76,12 +77,12 @@
 
                     <p class="vende"> 
                         <label for="red social"> Red social de tu marca </label>
-                        <input type="text" id="red social" name="redSocial" placeholder="Red social">
+                        <input type="text" id="red_social" value="<%=edicion.RedSocial%>" name="redSocial" placeholder="Red social">
                     </p>
 
                     <p class="vende">
                         <label for="Foto Perfil"> Foto de perfil: </label>
-                        <input type="file"  id="foto perfil" name="fotoPerfil">
+                        <input type="file"  id="foto_perfil" value="<%=edicion.Foto%>" name="fotoPerfil">
                     </p>
 
                     <button class="jeje">Editar</button>
