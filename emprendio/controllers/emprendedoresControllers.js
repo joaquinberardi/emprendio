@@ -71,7 +71,8 @@ let emprendedoresControllers= {
         res.redirect("/home/login")
        }
          else if (usuarioid != req.session.usuarioLogueado.id) {
-         res.send("No es posible editar este producto")
+        //  res.send("No es posible editar este producto")
+        res.redirect("/productos")
      }
      else{
         let edicion= {

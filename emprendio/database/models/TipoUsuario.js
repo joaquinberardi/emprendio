@@ -17,6 +17,12 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     let TipoUsuario = sequelize.define (alias, cols, config);
-
+   
+    TipoUsuario.associate=function(modelo){
+     TipoUsuario.hasMany(modelo.Usuario, {
+      as:"usuario",
+      foreignKey: "TipoUsuario_id"
+       })
+     }
     return TipoUsuario;
 }

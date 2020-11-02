@@ -10,8 +10,11 @@ let productosControllers= {
     },
     detalleId: function(req,res){
        let idProductos= req.params.id
-       db.Producto.findByPk(idProductos)
+       db.Producto.findByPk(idProductos, {
+        include: [{all: true, nested:true}], //PORQUE HAY MUCHAS RELACIONES ENTRE TABLAS
+       })
        .then(function(detalle) {
+        // res.send(detalle)
          res.render("detallePost", {detalle: detalle});
        })
     },
@@ -28,12 +31,18 @@ let productosControllers= {
         if (req.session.UsuarioLogueado == undefined){ //si el usuario no esta logueado y quiere comentar lo manda a que se registre
             res.redirect("/home/login")
            }
-        let comentario= req.body.comentario
-        let detalle= req.body.idDelDetalle
-    //      db.Pregunta.create({
-            
-    //  })
+        else {
+            let comentario= req.body.comentario
+            let detalle= req.body.idDelDetalle
+             db.Pregunta.create({
+                pregunta: comentario,
+                producto_id: detalle,
+                usuario_id: req.session.UsuarioLogueado.id,
+                respuesta: "No",
+      }) .then(function(){
         res.redirect("/productos/detalle/" + detalle)
+      })
+        }
     },
 }
 
