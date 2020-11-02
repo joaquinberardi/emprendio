@@ -105,7 +105,7 @@ let emprendedoresControllers= {
             Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
             TipoUsuario_id: 1,
         }
-    
+        console.log(comprador)
         db.Usuario.create(comprador)
         .then(function(){
             res.redirect("/home/login");

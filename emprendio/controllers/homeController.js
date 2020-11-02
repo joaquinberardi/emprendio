@@ -3,6 +3,7 @@ let sequelize = db.sequelize;
 let bcrypt = require ("bcryptjs");
 // const { Op } = require("sequelize/types");
 let op = db.Sequelize.Op;
+const { Op } = require("sequelize");
 const session = require ("express-session");
 
 let emprendioControllers= {
@@ -157,19 +158,23 @@ guardarAdmin: function(req,res){
 
     procesologin: function (req, res){
         db.Usuario.findOne({
-            where: [
-                {Mail: req.body.email},
-                {NombreUsuario: req.body.email}
-            ]
+            where: {
+                [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+            }
         })
         .then(function(usuario){
             if (usuario == null) {
-                res.send ("El mail no existe")
+                // res.send ("El usuario no existe")
+                res.redirect ("/home/login")
             }
             else if (bcrypt.compareSync(req.body.password, usuario.Contraseña) == false){
-                res.send ("La contraseña es incorrecta")
+                // res.send ("La contraseña es incorrecta")
+                res.redirect ("/home/login")
             }
             else{
+                if (req.body.remember != undefined){
+                    res.cookie("idUsuarioLogueado", usuario.id, {maxAge: 1000 * 60 * 60 * 24 * 31 * 12})
+                }
                 req.session.usuarioLogueado = usuario;
                 if (usuario.TipoUsuario_id == 2){
                     res.redirect ("/emprendedores/miPerfil")
@@ -181,10 +186,12 @@ guardarAdmin: function(req,res){
                     res.redirect ("/usuario/admin")
                 }
             }
+            
         })
     },
     cerrarsesion: function(req, res){
         req.session.usuarioLogueado = undefined;
+        res.clearCookie("idUsuarioLogueado")
         res.redirect("/")
     }
 

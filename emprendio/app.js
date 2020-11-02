@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+let db = require("./database/models");
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -25,9 +27,6 @@ app.use(session({secret: "Mensaje secreto"}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-var homeRuta= require('./routes/home');
-app.use('/home', homeRuta);
-
 //HOME
 var homeRuta= require('./routes/home');
 app.use('/home', homeRuta);
@@ -40,6 +39,28 @@ app.use('/productos', productosRuta);
 //USUARIO
 var usuarioRuta = require('./routes/usuario');
 app.use('/usuario', usuarioRuta);
+
+// RECORDAR USUARIO
+app.use(function(req, res, next){
+  res.locals = {
+    usuarioLogueado: req.session.usuarioLogueado
+  }
+  next();
+})
+
+// Hacer cosas que se hacen en todas las páginas
+app.use(function(req, res, next){
+  if (req.cookies.idUsuarioLogueado != undefined && req.session.usuarioLogueado == undefined){
+    db.Usuario.findByPk (req.cookies.idUsuarioLogueado)
+    .then(function(user){
+      req.session.usuarioLogueado = user;
+      res.redirect(req.originalUrl);
+    })
+  }
+  else {
+    return next();
+  }
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

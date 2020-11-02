@@ -87,11 +87,3 @@ module.exports = (sequelize, dataTypes) => {
     }
     return Usuario;
 }
-
-// var express = require('express');
-// var router = express.Router();
-// var emprendedoresController = require("../../controllers/emprendedoresControllers")
-
-// router.get("/", emprendedoresController.list);
-
-// module.exports = router;
