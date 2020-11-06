@@ -4,5 +4,8 @@ var usuarioControllers = require('../controllers/usuarioControllers')
 
 router.get('/', usuarioControllers.miperfil);
 router.get('/admin', usuarioControllers.panelAdmin);
+router.get('/admin/listaemprendedores', usuarioControllers.listaemprendedores)
+router.get('/admin/listaproductos', usuarioControllers.listaproductos)
+
 
 module.exports= router;
