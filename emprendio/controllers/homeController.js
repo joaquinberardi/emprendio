@@ -67,7 +67,7 @@ guardarVendedor: function(req,res){
         Historia: req.body.historia,
         Integrantes: req.body.integrantes,
         Empleados: req.body.empleados,
-        TipoUsuario_id: 2,
+        TipoUsuario_id: 0,
 
     }
 
@@ -94,26 +94,37 @@ guardarAdmin: function(req,res){
     .then(function(){
         res.redirect("/home/login");
     })
-
-},
+    },
 
     preguntasFrecuentes: function(req,res){
         res.render ("faqs") // LISTO
     },
+
     quienesSomos: function(req,res){
         res.render ("quienesSomos") // LISTO
     },
-    aprobacionVendedor: function(req,res){
-        res.render ("aprobacionVendedor")  // LISTO 
-    },  
-    feed: function(req,res){
-        db.Producto.findAll()
-        .then(function(productos){
-            db.Usuario.findAll()
-            .then(function(usuarios){
-                res.render("feed", {productos:productos, usuarios:usuarios})
 
-            })
+    feed: function(req,res){
+        //db.Producto.findAll()
+
+        db.Producto.findAll({
+            include: [{association:'usuarioProducto'}]
+        })
+        
+        .then(function(productos){
+            return res.render("feed", {productos:productos})
+
+            return res.send(productos)
+
+            //.then(function(productos){
+            //db.Usuario.findAll()
+            
+            //.then(function(usuarios){
+
+           // })
+        })
+        .catch(function(error){
+            console.log(error)
         })
     },
 
