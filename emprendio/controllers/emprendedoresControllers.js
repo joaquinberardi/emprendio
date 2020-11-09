@@ -107,7 +107,7 @@ let emprendedoresControllers= {
 guardar: function(req,res){
     db.Usuario.findOne({
     where: {
-       [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+       [Op.or]:[{NombreUsuario: req.body.NombreUsuario}, {Mail: req.body.mail}]
     }
     })
     .then(function(usuario){

@@ -56,7 +56,7 @@ guardarVendedor: function(req,res){
 
     db.Usuario.findOne({
         where: {
-            [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+            [Op.or]:[{NombreUsuario: req.body.NombreUsuario}, {Mail: req.body.mail}]
         }
     })
     .then(function(usuario){
@@ -70,7 +70,7 @@ guardarVendedor: function(req,res){
                 Apellido: req.body.apellido,
                 Mail: req.body.mail,
                 DNI: req.body.dni,
-                NombreUsuario: req.body.nombreUsuario,
+                NombreUsuario: req.body.NombreUsuario,
                 Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
                 RedSocial: req.body.redSocial,
                 Foto: req.body.fotoPerfil,
@@ -94,10 +94,9 @@ guardarVendedor: function(req,res){
 // ADMINISTRADOR
 guardarAdmin: function(req,res){
     // llamar a la base de datos, hacer un findone, si hay un registro que tenga el mismo mail hacer res.render(registro, mensaje de que no podes registrarte con este nombre), si no hay usuario linea 84 a 97.
-    
     db.Usuario.findOne({
         where: {
-            [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+            [Op.or]:[{NombreUsuario: req.body.nombreUsuario}, {Mail: req.body.mail}]
         }
     })
     .then(function(usuario){
