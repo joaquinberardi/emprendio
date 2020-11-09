@@ -28,21 +28,21 @@ let productosControllers= {
         res.render ("carrito") // LISTO
     },
     comentario: function(req,res){
-        if (req.session.UsuarioLogueado == undefined){ //si el usuario no esta logueado y quiere comentar lo manda a que se registre
+         if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado y quiere comentar lo manda a que se registre
             res.redirect("/home/login")
-           }
-        else {
+            }
+         else {
             let comentario= req.body.comentario
             let detalle= req.body.idDelDetalle
              db.Pregunta.create({
                 pregunta: comentario,
                 producto_id: detalle,
-                usuario_id: req.session.UsuarioLogueado.id,
-                respuesta: "No",
-      }) .then(function(){
+                usuario_id: req.session.usuarioLogueado.id,
+                respuesta: "No", //no hay respuesta
+      }) .then(function(resultado){
         res.redirect("/productos/detalle/" + detalle)
       })
-        }
+ }
     },
 }
 
