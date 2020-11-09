@@ -70,7 +70,7 @@ let emprendedoresControllers= {
        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
         res.redirect("/home/login")
        }
-         else if (usuarioid != req.session.usuarioLogueado.id) {
+         else if (usuarioid != req.session.usuarioLogueado.id) { //Si el producto que quiere editar no le pertenece
         //  res.send("No es posible editar este producto")
         res.redirect("/productos")
      }
