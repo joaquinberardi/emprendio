@@ -10,6 +10,7 @@ router.get('/detalle/:id', productosControllers.detalleId);
 router.get('/comprarProductos', productosControllers.comprarProductos);
 router.get('/favoritos', productosControllers.favoritos);
 router.get('/carrito', productosControllers.carrito);
+router.get('/agregarCarrito/:id', productosControllers.agregarCarrito);
 router.post('/comentario', productosControllers.comentario);
 
 module.exports= router;

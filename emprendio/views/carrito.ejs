@@ -7,11 +7,23 @@
     </head>
     
 <body>
-  <main>
-    <%- include('./partials/headerlogueado') %> 
-  
-
-  </main>
+  <%- include('./partials/headerlogueado') %> 
+  <h2 class="h2emprendio tituloseccion">Carrito</h2>
+    <main>
+      <div class="uk-section uk-section-small">
+        <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">               
+            <% for( let i = 0; i < productos.length; i++ ) { %>
+                <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
+                    <a href='/productos/detalle/<%=productos[i].id%>' class="link-detalle">
+                        <img src="<%=productos[i].foto%>" alt="foto de perfil" class="fotoproducto">
+                        <h3 class="uk-text-center h3emprendio"><%=productos[i].nombre%></h3>
+                        <h4 class="uk-text-center h4emprendio">$ <%=productos[i].precio%></h4>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    </main>
 
   <%- include('./partials/footer') %> 
 

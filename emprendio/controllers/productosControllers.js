@@ -1,4 +1,5 @@
 let db = require ("../database/models");
+// const { where } = require("sequelize/types");
 let sequelize = db.sequelize;
 
 let productosControllers= {
@@ -24,8 +25,17 @@ let productosControllers= {
     favoritos: function(req,res){
         return res.render ("favoritos") // LISTO
     },
-    carrito: function(req,res){
-        res.render ("carrito") // LISTO
+    carrito: function (req,res) {
+        db.Producto.findAll(
+            {
+                where: {
+                    id: req.session.carrito
+                }
+            }
+        )
+        .then(function(productos){
+            res.render("carrito", {productos: productos})
+        })      
     },
     comentario: function(req,res){
         if (req.session.UsuarioLogueado == undefined){ //si el usuario no esta logueado y quiere comentar lo manda a que se registre
@@ -44,6 +54,19 @@ let productosControllers= {
       })
         }
     },
+    agregarCarrito: function (req, res) {
+       
+        let productoId  = req.params.id
+       if (req.session.carrito != undefined) {
+        req.session.carrito = [...req.session.carrito, productoId]
+         
+       } else {
+           req.session.carrito = [productoId]
+       }
+       console.log(req.session)
+       res.redirect('/productos/carrito') 
+    }
+    
 }
 
 module.exports= productosControllers;

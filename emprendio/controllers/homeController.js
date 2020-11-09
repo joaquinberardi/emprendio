@@ -187,6 +187,7 @@ guardarAdmin: function(req,res){
                     res.cookie("idUsuarioLogueado", usuario.id, {maxAge: 1000 * 60 * 60 * 24 * 31 * 12})
                 }
                 req.session.usuarioLogueado = usuario;
+                req.session.carrito = []
                 if (usuario.TipoUsuario_id == 2){
                     res.redirect ("/emprendedores/miPerfil")
                 }
