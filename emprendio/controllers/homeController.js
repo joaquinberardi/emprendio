@@ -199,6 +199,9 @@ guardarAdmin: function(req,res){
             }
             
         })
+        .catch(function(error){
+            console.log(error)
+        })
     },
     cerrarsesion: function(req, res){
         req.session.usuarioLogueado = undefined;
