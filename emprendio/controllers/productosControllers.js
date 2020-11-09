@@ -14,7 +14,7 @@ let productosControllers= {
         include: [{all: true, nested:true}], //PORQUE HAY MUCHAS RELACIONES ENTRE TABLAS
        })
        .then(function(detalle) {
-        // res.send(detalle)
+        //res.send(detalle)
          res.render("detallePost", {detalle: detalle});
        })
     },

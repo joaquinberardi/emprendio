@@ -1,3 +1,6 @@
+
+
+
 module.exports = (sequelize, dataTypes) => {
     let alias = "Usuario";
     let cols = {
@@ -43,10 +46,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
 
-        //TiempoCreacion: {
-           // AllowNull: true,
-           //type: dataTypes.STRING,
-         //},
+        TiempoCreacion: {
+            AllowNull: true,
+           type: dataTypes.STRING,
+         },
       
         Historia: {
             AllowNull: true,
@@ -85,5 +88,19 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "usuario_id"
         })
     }
+
+    let relacionUsuario = sequelize.define ("Usuario", cols, config);
+
+    relacionUsuario.associate = function (relacion) {
+
+       relacionUsuario.hasMany(relacion.Producto, {
+           as: "relacionUsuarioProductos",
+            foreignKey: "usuario_id"
+       }
+)
+    
+    
+   }
     return Usuario;
 }
+

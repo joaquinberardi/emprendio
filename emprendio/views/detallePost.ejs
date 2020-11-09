@@ -19,10 +19,21 @@
                             <img src="<%=detalle.foto%>" alt="Imagen del post" class="fotoproductodetalle">
                         </article>
 
+
+            
+
+
+  
+
+
+
                         <!-- Detalle-->
                         <article class="uk-width-1-3 uk-flex uk-flex-column detalle-post">
                             <div class="uk-flex uk-flex-middle ">
-                                <img class="fotousuario" src="https://venti-shops-images.s3.sa-east-1.amazonaws.com/user-images/1594148250377-lg.png" alt="Foto del usuario">
+                                
+                                <%=detalle.usuarioProducto.NombreUsuario%>
+                                
+                                <img class="fotousuario" src="<%=detalle.usuarioProducto.Foto%>" alt="Foto del usuario">
                             </div>
                             <div class="info-post uk-flex uk-flex-middle">
                                 <h2 class="nombreproducto h2emprendio"> <%=detalle.nombre%> </h2>

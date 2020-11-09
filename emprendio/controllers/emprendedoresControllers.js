@@ -39,7 +39,13 @@ let emprendedoresControllers= {
         })
     },
     miperfil: function(req,res){ 
-        res.render ("miPerfil") // LISTO
+        let idEmprendedores = req.params.id
+        db.Usuario.findByPk (idEmprendedores)
+        .then(function (emprendedor) {
+        res.render ("miPerfil",{emprendedor}) // LISTO
+        })
+
+
     },
     agregarProductos: function(req,res){
         return res.render ("agregarProductos") // LISTO
@@ -123,16 +129,20 @@ let emprendedoresControllers= {
     },
     
     edito: function(req,res){
+      
+     
+      
         let usuarioid= req.params.id
-        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
-            res.redirect("/home/login")
-           }
-             else if (usuarioid != req.session.usuarioLogueado.id) {
-             //res.send("No es posible editar la información")
-             res.redirect("/emprendedores")
-            }
+       // if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
+        //    return res.redirect("/home/login")
+        //   }
         
-            else{
+         //    else if (usuarioid != req.session.usuarioLogueado.id) {
+             //res.send("No es posible editar la información")
+          //   return res.redirect("/emprendedores")
+          //  }
+        
+            //else{
             let edicion= {
                 Nombre: req.body.nombre,
                 Apellido: req.body.apellido,
@@ -148,9 +158,9 @@ let emprendedoresControllers= {
                 Empleados:req.body.empleados,
                 
     }
-}
+//}
     
-    db.Usuario.edito(edicion, {
+    db.Usuario.update(edicion, {
         where:[
             {id: usuarioid}
         ]

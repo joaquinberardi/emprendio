@@ -9,28 +9,31 @@
 <body>
     <%- include('./partials/headerlogueado') %> 
     <main>
+       
         <div class="uk-section-9">
             <div class="uk-container uk-container-small">
                 <section class="info-usuario uk-flex uk-flex-around uk-width-1-1">
                     <div class="uk-width-1-3 uk-flex uk-flex-center uk-flex-middle">
                         
-                            <img src="https://celpouch.com/wp-content/uploads/2019/11/cel-pouch-logowordpress.png" alt="foto de perfil" class="foto-perfil">
+                       <img src="<%=emprendedor.Foto%>" alt="foto de perfil" class="foto-perfil">
                     
                         
                     </div>
                     <!-- Detalle -->
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
+                        <h3 class="uk-margin-remove h3emprendio"><%=emprendedor.NombreUsuario%></h3>
+
                         <!-- Nombre usuario -->
                         <div class="uk-flex uk-flex-middle nombreusuario">
-                            <h3 class="uk-margin-remove h3emprendio">Nombre usuario</h3>
+                          
                             <a href="" uk-icon="icon:cog; ratio: 1.2" class="uk-margin-left"></a>
                         </div>
                             
                         <!-- Descripcion -->
                         <div>
                             <ul class="uk-flex uk-flex-between detalleusuario">
-                              <li class="pemprendio">Historia de la marca: Nació cuando descubrimos que había una necesidad de crear fundas para celulares de cuero que sean antirobo. Es un emprendimiento que formé con mi novio hace menos de un año. ¡Espero que les gusten!</li>
-                              <li class="ubicacionusuario">Ubicación: San Isidro</li>
+                              <li class="pemprendio"><%=emprendedor.Historia%></li>
+                              <li class="ubicacionusuario">Red Social: <%=emprendedor.RedSocial%></li>
                             </ul>
                         </div>
                     </div>
@@ -46,6 +49,7 @@
                                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                 </svg>
+                        
                             </a>
                             <a href="/productos/detalle/:id" class="link-detalle">
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
@@ -110,7 +114,7 @@
                         </div>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="/emprendedores/agregarProductos" class="">
+                            <a href="/emprendedores/agregarProducto" class="">
                                 
                                 <img class="clp" src="data:image/png;base64,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">
                                 <p class="uk-text-center">Agregar producto</p>
