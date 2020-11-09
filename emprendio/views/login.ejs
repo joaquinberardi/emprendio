@@ -12,6 +12,10 @@
         <!-- <p>
         <h1>Iniciar Sesión</h1>
         </p> -->
+        <% if (typeof mensajeErrorLogin != "undefined") { %>
+          <h3><%= mensajeErrorLogin %></h3>
+        <% } %>
+        
         <div class="uk-section uk-section-small">
           <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
             <form class="form-signin" action="/home/procesologin" method="POST">
@@ -29,12 +33,10 @@
 
               <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
               <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
-
-            
-              
+ 
             </form>
           
-      </div>
+          </div>
 
         </div>
     </main>

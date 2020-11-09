@@ -14,6 +14,9 @@
         <h2 class="siestas">Si sos un administrador de Emprendio, dejá los siguientes datos para crear tu cuenta.</h2>
 
         <div class="uk-section uk-section-medium ok">
+            <% if (typeof mensajeErrorRegistro != "undefined") { %>
+                <h3><%= mensajeErrorRegistro %></h3>
+            <% } %>
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                 <form  class= "formulario" action="/home/guardarAdmin" method="POST">
                     

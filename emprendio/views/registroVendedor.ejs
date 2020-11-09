@@ -13,6 +13,10 @@
         <h2 class="siestas">Si estás interesado en vender tus productos a través de Emprendio, dejá los siguientes datos y nos comunicaremos a la brevedad para confirmarte la aprobación de tu cuenta.</h2>
 
         <div class="uk-section uk-section-small jaja">
+            <% if (typeof mensajeErrorRegistro != "undefined") { %>
+                <h3><%= mensajeErrorRegistro %></h3>
+            <% } %>
+
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                 <form  class= "formulario" action="/home/guardarVendedor" method="POST">
                     

@@ -1,7 +1,8 @@
 let db = require ("../database/models/index");
 let sequelize = db.sequelize;
-let op = db.Sequelize.Op;
 let bcrypt = require ("bcryptjs")
+let op = db.Sequelize.Op;
+const { Op } = require("sequelize");
 
 const { favoritos } = require("./productosControllers");
 
@@ -102,21 +103,35 @@ let emprendedoresControllers= {
        }) 
     }
     },
-    guardar: function(req,res){
-        let comprador = {
-            Nombre: req.body.nombre,
-            Apellido: req.body.apellido,
-            Mail: req.body.mail,
-            NombreUsuario: req.body.NombreUsuario,
-            Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-            TipoUsuario_id: 1,
+
+guardar: function(req,res){
+    db.Usuario.findOne({
+    where: {
+       [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+    }
+    })
+    .then(function(usuario){
+        if (usuario != undefined) {
+            let mensajeErrorRegistro = "No es posible crear una cuenta con el mail o nombre de usuario ingresado. Por favor intente nuevamente."
+            res.render("registroComprador", {mensajeErrorRegistro})
         }
-        console.log(comprador)
-        db.Usuario.create(comprador)
-        .then(function(){
-            res.redirect("/home/login");
-        })
-    },
+        else{
+            let comprador = {
+                Nombre: req.body.nombre,
+                Apellido: req.body.apellido,
+                Mail: req.body.mail,
+                NombreUsuario: req.body.NombreUsuario,
+                Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+                TipoUsuario_id: 1,
+            }
+            db.Usuario.create(comprador)
+            .then(function(){
+                res.redirect("/home/login");
+            })
+        }
+    })
+},
+
     editarEmprendedores: function(req,res){
         let id = req.params.id
         db.Usuario.findByPk(id)
