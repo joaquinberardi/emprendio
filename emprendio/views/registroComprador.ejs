@@ -13,6 +13,10 @@
         <h2 class="siestas">Si estás interesado en comprar productos a través de Emprendio, completá tus datos y creá tu cuenta al instante para comenzar a comprar.</h2>
 
         <div class="uk-section uk-section-small">
+            <% if (typeof mensajeErrorRegistro != "undefined") { %>
+                <h3><%= mensajeErrorRegistro %></h3>
+            <% } %>
+
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                 <form  class= "formulario" action="/emprendedores/guardar" method="POST">
 

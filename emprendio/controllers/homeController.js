@@ -1,7 +1,6 @@
 let db = require ("../database/models");
 let sequelize = db.sequelize;
 let bcrypt = require ("bcryptjs");
-// const { Op } = require("sequelize/types");
 let op = db.Sequelize.Op;
 const { Op } = require("sequelize");
 const session = require ("express-session");
@@ -53,46 +52,75 @@ registroAdmin: function(req,res){
 },
 
 // VENDEDOR
-guardarVendedor: function(req,res){ 
-    let vendedor = {
-        Nombre: req.body.nombre,
-        Apellido: req.body.apellido,
-        Mail: req.body.mail,
-        DNI: req.body.dni,
-        NombreUsuario: req.body.nombreUsuario,
-        Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-        RedSocial: req.body.redSocial,
-        Foto: req.body.fotoPerfil,
-        TiempoCreacion: req.body.tiempoCreacion,
-        Historia: req.body.historia,
-        Integrantes: req.body.integrantes,
-        Empleados: req.body.empleados,
-        TipoUsuario_id: 0,
+guardarVendedor: function(req,res){
 
-    }
-
-    db.Usuario.create(vendedor)
-    .then(function(){
-        res.redirect("/home/respuesta");
+    db.Usuario.findOne({
+        where: {
+            [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+        }
+    })
+    .then(function(usuario){
+        if (usuario != undefined) {
+            let mensajeErrorRegistro = "No es posible crear una cuenta con el mail o nombre de usuario ingresado. Por favor intente nuevamente."
+            res.render("registroVendedor", {mensajeErrorRegistro})
+        }
+        else{
+            let vendedor = {
+                Nombre: req.body.nombre,
+                Apellido: req.body.apellido,
+                Mail: req.body.mail,
+                DNI: req.body.dni,
+                NombreUsuario: req.body.nombreUsuario,
+                Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+                RedSocial: req.body.redSocial,
+                Foto: req.body.fotoPerfil,
+                TiempoCreacion: req.body.tiempoCreacion,
+                Historia: req.body.historia,
+                Integrantes: req.body.integrantes,
+                Empleados: req.body.empleados,
+                TipoUsuario_id: 2,
+        
+            }
+        
+            db.Usuario.create(vendedor)
+            .then(function(){
+                res.redirect("/home/respuesta");
+            })
+        }
     })
 
 },
 
 // ADMINISTRADOR
 guardarAdmin: function(req,res){
-    let admin = {
-        Nombre: req.body.nombre,
-        Apellido: req.body.apellido,
-        Mail: req.body.mail,
-        NombreUsuario: req.body.nombreUsuario,
-        Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-        TipoUsuario_id: 3,
-    }
-
-    db.Usuario.create(admin)
-
-    .then(function(){
-        res.redirect("/home/login");
+    // llamar a la base de datos, hacer un findone, si hay un registro que tenga el mismo mail hacer res.render(registro, mensaje de que no podes registrarte con este nombre), si no hay usuario linea 84 a 97.
+    
+    db.Usuario.findOne({
+        where: {
+            [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+        }
+    })
+    .then(function(usuario){
+        if (usuario != undefined) {
+            let mensajeErrorRegistro = "No es posible crear una cuenta con el mail o nombre de usuario ingresado. Por favor intente nuevamente."
+            res.render("registroAdmin", {mensajeErrorRegistro})
+        }
+        else{
+            let admin = {
+                Nombre: req.body.nombre,
+                Apellido: req.body.apellido,
+                Mail: req.body.mail,
+                NombreUsuario: req.body.nombreUsuario,
+                Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+                TipoUsuario_id: 3,
+            }
+        
+            db.Usuario.create(admin)
+        
+            .then(function(){
+                res.redirect("/home/login");
+            })
+        }
     })
     },
 
@@ -175,12 +203,12 @@ guardarAdmin: function(req,res){
         })
         .then(function(usuario){
             if (usuario == null) {
-                // res.send ("El usuario no existe")
-                res.redirect ("/home/login")
+                let mensajeErrorLogin = "Los datos ingresados son incorrectos. Intente nuevamente."
+                res.render("login", {mensajeErrorLogin})
             }
             else if (bcrypt.compareSync(req.body.password, usuario.Contraseña) == false){
-                // res.send ("La contraseña es incorrecta")
-                res.redirect ("/home/login")
+                let mensajeErrorLogin = "Los datos ingresados son incorrectos. Intente nuevamente."
+                res.render("login", {mensajeErrorLogin})
             }
             else{
                 if (req.body.remember != undefined){
@@ -199,6 +227,9 @@ guardarAdmin: function(req,res){
                 }
             }
             
+        })
+        .catch(function(error){
+            console.log(error)
         })
     },
     cerrarsesion: function(req, res){

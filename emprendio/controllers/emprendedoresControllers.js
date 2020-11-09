@@ -1,7 +1,8 @@
 let db = require ("../database/models/index");
 let sequelize = db.sequelize;
-let op = db.Sequelize.Op;
 let bcrypt = require ("bcryptjs")
+let op = db.Sequelize.Op;
+const { Op } = require("sequelize");
 
 const { favoritos } = require("./productosControllers");
 
@@ -39,7 +40,13 @@ let emprendedoresControllers= {
         })
     },
     miperfil: function(req,res){ 
-        res.render ("miPerfil") // LISTO
+        let idEmprendedores = req.params.id
+        db.Usuario.findByPk (idEmprendedores)
+        .then(function (emprendedor) {
+        res.render ("miPerfil",{emprendedor}) // LISTO
+        })
+
+
     },
     agregarProductos: function(req,res){
         return res.render ("agregarProductos") // LISTO
@@ -96,21 +103,35 @@ let emprendedoresControllers= {
        }) 
     }
     },
-    guardar: function(req,res){
-        let comprador = {
-            Nombre: req.body.nombre,
-            Apellido: req.body.apellido,
-            Mail: req.body.mail,
-            NombreUsuario: req.body.NombreUsuario,
-            Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-            TipoUsuario_id: 1,
+
+guardar: function(req,res){
+    db.Usuario.findOne({
+    where: {
+       [Op.or]:[{NombreUsuario: req.body.email}, {Mail: req.body.email}]
+    }
+    })
+    .then(function(usuario){
+        if (usuario != undefined) {
+            let mensajeErrorRegistro = "No es posible crear una cuenta con el mail o nombre de usuario ingresado. Por favor intente nuevamente."
+            res.render("registroComprador", {mensajeErrorRegistro})
         }
-        console.log(comprador)
-        db.Usuario.create(comprador)
-        .then(function(){
-            res.redirect("/home/login");
-        })
-    },
+        else{
+            let comprador = {
+                Nombre: req.body.nombre,
+                Apellido: req.body.apellido,
+                Mail: req.body.mail,
+                NombreUsuario: req.body.NombreUsuario,
+                Contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+                TipoUsuario_id: 1,
+            }
+            db.Usuario.create(comprador)
+            .then(function(){
+                res.redirect("/home/login");
+            })
+        }
+    })
+},
+
     editarEmprendedores: function(req,res){
         let id = req.params.id
         db.Usuario.findByPk(id)
@@ -123,16 +144,20 @@ let emprendedoresControllers= {
     },
     
     edito: function(req,res){
+      
+     
+      
         let usuarioid= req.params.id
-        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
-            res.redirect("/home/login")
-           }
-             else if (usuarioid != req.session.usuarioLogueado.id) {
-             //res.send("No es posible editar la información")
-             res.redirect("/emprendedores")
-            }
+       // if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
+        //    return res.redirect("/home/login")
+        //   }
         
-            else{
+         //    else if (usuarioid != req.session.usuarioLogueado.id) {
+             //res.send("No es posible editar la información")
+          //   return res.redirect("/emprendedores")
+          //  }
+        
+            //else{
             let edicion= {
                 Nombre: req.body.nombre,
                 Apellido: req.body.apellido,
@@ -148,9 +173,9 @@ let emprendedoresControllers= {
                 Empleados:req.body.empleados,
                 
     }
-}
+//}
     
-    db.Usuario.edito(edicion, {
+    db.Usuario.update(edicion, {
         where:[
             {id: usuarioid}
         ]
