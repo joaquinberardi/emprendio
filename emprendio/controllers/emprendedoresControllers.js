@@ -39,13 +39,41 @@ let emprendedoresControllers= {
             res.redirect("/emprendedores/miPerfil");
         })
     },
-    miperfil: function(req,res){ 
+    /*miperfil: function(req,res){ 
         //let idEmprendedores = req.params.id
         //db.Usuario.findByPk (idEmprendedores)
         //.then(function (emprendedor) {
         res.render ("miPerfil") // LISTO
         //})
 
+
+    },*/
+
+    miperfil: function(req,res){ 
+        //let idEmprendedores = req.params.id
+        //db.Usuario.findByPk (idEmprendedores)
+        //.then(function (emprendedor) {
+        res.render ("miPerfil") // LISTO
+        //})
+        db.Producto.findAll({
+            include: [{association:'usuarioProducto'}]
+        })
+        
+        .then(function(productos){
+            return res.render("feed", {productos:productos})
+    
+            return res.send(productos)
+    
+            //.then(function(productos){
+            //db.Usuario.findAll()
+            
+            //.then(function(usuarios){
+    
+           // })
+        })
+        .catch(function(error){
+            console.log(error)
+        })
 
     },
     emprendedorPerfil: function(req,res){ 
