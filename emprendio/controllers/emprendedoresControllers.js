@@ -36,7 +36,7 @@ let emprendedoresControllers= {
 
         db.Producto.create(agregarPost)
         .then(function(){
-            res.redirect("/emprendedores/miPerfil");
+            res.redirect("/emprendedores/miperfil" );
         })
     },
     /*miperfil: function(req,res){ 
