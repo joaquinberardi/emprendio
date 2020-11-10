@@ -4,10 +4,10 @@ var emprendedoresControllers = require('../controllers/emprendedoresControllers'
 
 // /emprendedores
 router.get('/', emprendedoresControllers.perfiles);
-router.get('/miperfil', emprendedoresControllers.miperfil);
+router.get('/miperfil/:id', emprendedoresControllers.miperfil);
 router.get('/emprendedor/:id', emprendedoresControllers.emprendedorPerfil);
 router.get('/agregarProducto', emprendedoresControllers.agregarProductos);
-router.get('/editarProducto/:id', emprendedoresControllers.editarProducto);
+router.get('/editarProductos/:id', emprendedoresControllers.editarProductos);
 router.get("/editarEmprendedores/:id", emprendedoresControllers.editarEmprendedores);
 router.post('/update', emprendedoresControllers.update);
 router.post('/edito/:id', emprendedoresControllers.edito);

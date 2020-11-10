@@ -53,14 +53,14 @@ let emprendedoresControllers= {
         //let idEmprendedores = req.params.id
         //db.Usuario.findByPk (idEmprendedores)
         //.then(function (emprendedor) {
-        res.render ("miPerfil") // LISTO
+       
         //})
         db.Producto.findAll({
             include: [{association:'usuarioProducto'}]
         })
         
         .then(function(productos){
-            return res.render("feed", {productos:productos})
+            return res.render("emprendedores/miPerfil", {productos:productos})
     
             return res.send(productos)
     
@@ -86,7 +86,10 @@ let emprendedoresControllers= {
 
     },
     agregarProductos: function(req,res){
-        return res.render ("agregarProductos") // LISTO
+        return res.render ("agregarProductos")
+        .then(function() {
+            res.render("miPerfil")
+         }) // LISTO
     },
     borrar: function(req,res){
          let idProductoBorrar = req.body.idProducto123;
@@ -99,7 +102,7 @@ let emprendedoresControllers= {
             res.render("miPerfil")
         })
     },
-    editarProducto: function(req,res){
+    editarProductos: function(req,res){
         let id = req.params.id
         db.Producto.findByPk(id)
          .then(function(edicion){
@@ -218,6 +221,7 @@ guardar: function(req,res){
         ]
     })
     .then(function(){
+        req.session.usuarioLogueado = edicion
         res.redirect("/emprendedores/miperfil")
     
     
