@@ -5,6 +5,7 @@ var emprendedoresControllers = require('../controllers/emprendedoresControllers'
 // /emprendedores
 router.get('/', emprendedoresControllers.perfiles);
 router.get('/miperfil/:id', emprendedoresControllers.miperfil);
+router.get('/emprendedor/:id', emprendedoresControllers.emprendedorPerfil);
 router.get('/agregarProducto', emprendedoresControllers.agregarProductos);
 router.get('/editarProducto/:id', emprendedoresControllers.editarProducto);
 router.get("/editarEmprendedores/:id", emprendedoresControllers.editarEmprendedores);

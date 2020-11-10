@@ -22,7 +22,7 @@
                     <div class="uk-width-1-3 uk-flex uk-flex-center uk-flex-middle">
                         
                         <% if (usuario.Foto != null){%> 
-                       <img src="<%=usuario.Foto%>" alt="foto de perfil" class="foto-perfil">
+                       <img src="<%=emprendedor.Foto%>" alt="foto de perfil" class="foto-perfil">
                         <% } else {%>
                             <img src="https://www.optimaley.com/wp-content/uploads/2014/09/foto-perfil-generica.jpg" alt="foto de perfil" class="foto-perfil">
                         <%  } %>
@@ -30,7 +30,7 @@
                     </div>
                     <!-- Detalle -->
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
-                        <h3 class="uk-margin-remove h3emprendio"><%=usuario.NombreUsuario%></h3>
+                        <h3 class="uk-margin-remove h3emprendio"><%=emprendedor.NombreUsuario%></h3>
                         <!-- Nombre usuario -->
                         <div class="uk-flex uk-flex-middle nombreusuario">
                           
@@ -40,8 +40,8 @@
                         <!-- Descripcion -->
                         <div>
                             <ul class="uk-flex uk-flex-between detalleusuario">
-                              <li class="pemprendio"><%=usuario.Historia%></li>
-                              <li class="ubicacionusuario">Red Social: <%=usuario.RedSocial%></li>
+                              <li class="pemprendio"><%=emprendedor.Historia%></li>
+                              <li class="ubicacionusuario">Red Social: <%=emprendedor.RedSocial%></li>
                             </ul>
                         </div>
                     </div>

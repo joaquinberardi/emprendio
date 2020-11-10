@@ -40,10 +40,19 @@ let emprendedoresControllers= {
         })
     },
     miperfil: function(req,res){ 
+        //let idEmprendedores = req.params.id
+        //db.Usuario.findByPk (idEmprendedores)
+        //.then(function (emprendedor) {
+        res.render ("miPerfil") // LISTO
+        //})
+
+
+    },
+    emprendedorPerfil: function(req,res){ 
         let idEmprendedores = req.params.id
         db.Usuario.findByPk (idEmprendedores)
         .then(function (emprendedor) {
-        res.render ("miPerfil",{emprendedor}) // LISTO
+        res.render ("emprendedor",{emprendedor}) // LISTO
         })
 
 

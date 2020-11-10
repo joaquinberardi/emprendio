@@ -8,7 +8,12 @@
     <script src="/javiscript/carrito.js"></script>
 </head>
 <body>
-    <%- include('./partials/header') %> 
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %>  
+    
     <main>
         <!-- Producto -->
         <div class="uk-section uk-section-xsmall ">
