@@ -7,7 +7,12 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+
     <main>
             <h1>¡Muchas gracias! En breve nos comunicaremos para confirmarte que fuiste aceptado para vender tus productos por Emprendio.</h1>
             <h2>Mientras tanto podés ver productos para comprar en nuestra web.</h2>

@@ -7,7 +7,13 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
+
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+
     <h2 class="h2emprendio tituloseccion">Emprendedores</h2>
     <main>
         <div class="uk-section uk-section-small">

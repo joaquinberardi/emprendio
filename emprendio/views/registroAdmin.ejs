@@ -8,8 +8,12 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
-    <main>
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+<main>
         <h1 class="formu">Formulario de registración: Administrador</h1>
         <h2 class="siestas">Si sos un administrador de Emprendio, dejá los siguientes datos para crear tu cuenta.</h2>
 

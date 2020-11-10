@@ -7,8 +7,12 @@
 </head>
     
 <body>
-    <%- include('./partials/header') %> 
-    <main>
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+<main>
         <h1 class="formu">Formulario de registración: Comprador</h1>
         <h2 class="siestas">Si estás interesado en comprar productos a través de Emprendio, completá tus datos y creá tu cuenta al instante para comenzar a comprar.</h2>
 

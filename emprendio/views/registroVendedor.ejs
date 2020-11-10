@@ -7,7 +7,12 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+
     <main>
         <h1 class="formu">Formulario de registración: Vendedor</h1>
         <h2 class="siestas">Si estás interesado en vender tus productos a través de Emprendio, dejá los siguientes datos y nos comunicaremos a la brevedad para confirmarte la aprobación de tu cuenta.</h2>

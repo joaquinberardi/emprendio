@@ -24,29 +24,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 const session = require ("express-session");
 app.use(session({secret: "Mensaje secreto"}));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-//HOME
-var homeRuta= require('./routes/home');
-app.use('/home', homeRuta);
-//EMPRENDEDORES
-var emprendedoresRuta= require('./routes/emprendedores');
-app.use('/emprendedores', emprendedoresRuta);
-//PRODUCTOS
-var productosRuta = require('./routes/productos');
-app.use('/productos', productosRuta);
-//USUARIO
-var usuarioRuta = require('./routes/usuario');
-app.use('/usuario', usuarioRuta);
-
 // RECORDAR USUARIO
 app.use(function(req, res, next){
   res.locals = {
-    usuarioLogueado: req.session.usuarioLogueado
+    usuario: req.session.usuarioLogueado
   }
   next();
 })
+
 
 // Hacer cosas que se hacen en todas las páginas
 app.use(function(req, res, next){
@@ -61,6 +46,26 @@ app.use(function(req, res, next){
     return next();
   }
 })
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+
+
+//HOME
+var homeRuta= require('./routes/home');
+app.use('/home', homeRuta);
+//EMPRENDEDORES
+var emprendedoresRuta= require('./routes/emprendedores');
+app.use('/emprendedores', emprendedoresRuta);
+//PRODUCTOS
+var productosRuta = require('./routes/productos');
+app.use('/productos', productosRuta);
+//USUARIO
+var usuarioRuta = require('./routes/usuario');
+app.use('/usuario', usuarioRuta);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

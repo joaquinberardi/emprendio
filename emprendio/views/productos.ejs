@@ -7,7 +7,14 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
+    
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+
+    <h2 class="h2emprendio tituloseccion">  </h2>
     <!--  Nota: Hay que acomodar los espacios entre tarjetas  -->
     <h2 class="h2emprendio tituloseccion">Productos</h2>
     <main>

@@ -6,7 +6,13 @@
 
     
 <body>
-    <%- include('./partials/header') %> 
+
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+
         <!--  Nota: Joaquin*Tengo que conectar el producto con el nombre del emprendedor -->
     <main>
 

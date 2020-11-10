@@ -7,8 +7,15 @@
 </head>
     
 <body>
-    <%- include('./partials/header') %> 
+
+        <% if (usuario != undefined) { %>  
+            <%- include('./partials/headerLogueado') %>
+        <% } else { %>    
+             <%- include('./partials/header')   %> 
+        <% } %> 
+
     <main>
+        <h1 class="h1hero"></h1> 
         <img class="fondo .uk-background-cover" src="images/inicio.png" alt="">
 
         <div class="uk-container uk-container-large uk-flex herosection">

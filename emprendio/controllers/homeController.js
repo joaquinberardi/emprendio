@@ -7,12 +7,15 @@ const session = require ("express-session");
 
 let emprendioControllers= {
     home: function(req,res){ 
-        res.render ("home") //LISTO  
+        res.render ("home" ) //LISTO  
     },
     login: function(req,res){
         if (req.session.usuarioLogueado != undefined){
             // Si el usuario está logueado, te lleva a la página del inicio
-            res.redirect("/")
+            //return res.send(req.session.usuarioLogueado)
+            return res.render("home",{res: req.session.usuarioLogueado})
+            //return res.redirect("/",{res: res})
+
         }
         let pagina= "login"
         res.render ("login",{pagina:pagina}) //LISTO
@@ -216,7 +219,7 @@ guardarAdmin: function(req,res){
                 req.session.usuarioLogueado = usuario;
                 req.session.carrito = []
                 if (usuario.TipoUsuario_id == 2){
-                    res.redirect ("/emprendedores/miPerfil")
+                    res.redirect ("/emprendedores/miPerfil/" + usuario.id)
                 }
                 else if (usuario.TipoUsuario_id == 1) {
                     res.redirect ("/productos")

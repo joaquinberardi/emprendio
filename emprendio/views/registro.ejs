@@ -7,8 +7,12 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
-    <main>
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+<main>
         <!-- <div class="uk-section uk-section-small"> -->
            <h1 class="titulo montserrat uk-align-center"> Tipo de registro</h1> 
 

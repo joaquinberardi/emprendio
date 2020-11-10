@@ -7,7 +7,12 @@
 </head>
 
 <body>
-    <%- include('./partials/headerlogueado') %> 
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %> 
+    
     <main>
         
         <!-- Detalle Admin -->

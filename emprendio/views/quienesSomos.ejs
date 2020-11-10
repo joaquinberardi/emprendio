@@ -7,8 +7,11 @@
 </head>
 
 <body>
-    <%- include('./partials/header') %> 
-    <main>
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %>     <main>
         <div class="uk-container uk-container-large uk-flex">
             <h3 class="dos">¿Quiénes somos?</h3>
             <p class="cuca">💡 Emprendio llega como una forma fácil y rápida para que los emprendedores puedan vender todos sus productos de forma online, sin necesidad de tener conocimientos técnicos.
