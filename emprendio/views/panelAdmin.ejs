@@ -47,6 +47,8 @@
                 <!-- Estadisticas -->
                 <h2>Estadisticas</h2>
                 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+
+                    <!-- Arreglar CSS botones  -->
                     <div>
                         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
                             <h3 class="uk-card-title"><a href="/usuario/admin/listaemprendedores">Cantidad de emprendedores</a></h3>
@@ -58,7 +60,7 @@
                         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
                             <h3 class="uk-card-title"><a href="/usuario/admin/listaproductos">Cantidad de productos</a></h3>
                             <p><%= productos.length %> </p>
-                            <button class="botonemprendio textobotonemprendio"><a href="/usuario/admin/listaproductos">Gestionar Productos</a>  </button>
+                            <button class="botonemprendio textobotonemprendio sinestilo"><a href="/usuario/admin/listaproductos">Gestionar Productos</a>  </button>
                         </div>
                     </div>
                 </div>
@@ -71,9 +73,11 @@
                                     <li class=""> 
                                         <img src="" alt="">
                                         <h3> <%= usuarios[i].NombreUsuario%> </h3>
+                                        <!-- Eliminar Usuario -->
                                         <form action="/usuario/admin/eliminandousuario" method="POST">
                                             <button name="emprendedor" value="<%= usuarios[i].id %>">Rechazar usuario</button>
                                         </form>
+                                         <!-- Aceptar Usuario -->
                                         <form action="/usuario/admin/aceptandousuario" method="POST">
                                             <button name="emprendedor" value="<%= usuarios[i].id %>">Aceptar usuario</button>
                                         </form>
