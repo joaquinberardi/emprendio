@@ -63,10 +63,10 @@
                                         <h3 class="uk-text-center h3emprendio"><%=productos[i].nombre%></h3>
                                         <h4 class="uk-text-center h4emprendio">$ <%=productos[i].precio%></h4>
                                     </a>
-                                  <form action="/emprendedores/miPerfil" method="post"> 
+                                <form action="/emprendedores/borrar" method="post"> 
                                 <input name="idProducto123" type="hidden" value="<%= productos[i].id %>">
                                 <button type="submit">Borrar producto</button>
-                            </form>
+                                </form>
                                 </div>
                             <% } %>
 

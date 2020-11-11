@@ -109,7 +109,7 @@ let emprendedoresControllers= {
          }
         })
         .then(function() {
-            res.render("miPerfil")
+            res.redirect("/emprendedores/miperfil")
         })
     },
     editarProductos: function(req,res){
