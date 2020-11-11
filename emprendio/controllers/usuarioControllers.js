@@ -10,17 +10,44 @@ let usuarioControllers = {
     carrito: function(req,res){
         res.render ("carrito") // LISTO
     },
+
     eliminandousuario: function(req,res){
+        
         let idUsuario = req.body.emprendedor;
-        db.Usuario.findByPk (idUsuario)
-        .then(function (usuario) {
-            res.send(usuario) // FUNCIONA
 
-            //ELIMINAR USUARIO 
-
-            // REDIRECT PANELADMIN
+            db.Usuario.destroy(
+            {   where: {
+                    id: idUsuario
+            } 
             })
-        },
+            
+            .then(function(){
+                res.redirect("/usuario/admin")
+            })
+
+            // Error con usuarios viejos?
+    
+    },
+    aprovarvendedor: function(req,res){
+        
+        let idUsuario = req.body.emprendedor;
+        let edicion= {
+            TipoUsuario_id: 2,
+        }
+            db.Usuario.update(
+            {   where: {
+                    id: idUsuario
+            } 
+            })
+            
+            .then(function(){
+                res.render("panelAdmin")
+            })
+
+            // EL PROBLEMA ESTA EN ELIMINAR ADMINS 
+            // MISMO TIPO USUARIO??!!
+    
+    },
     panelAdmin: function (req,res){
 
         db.Usuario.findAll()
