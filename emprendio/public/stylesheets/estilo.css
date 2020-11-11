@@ -168,6 +168,7 @@ body{
     /* light-text-color */
     
     color: #FAFAFA;
+    text-decoration: none;
     
     /* Inside Auto Layout */
     
@@ -177,6 +178,7 @@ body{
     flex-grow: 0;
     margin: 15px 10px; 
   }
+
   
   .botonemprendiodanger{
   display: flex;
