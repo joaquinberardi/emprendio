@@ -15,7 +15,7 @@
                         <% if(usuario.TipoUsuario_id == 3){ %>
                             <li> <a href=<%-"/usuario/admin"%>> Mi perfil </a> </li>
                         <% } else { %>
-                            <li><a href=<%- "/emprendedores/miperfil/"%> >Mi perfil</a></li> 
+                            <li><a href="/emprendedores/miperfil/<%= usuario.id%>" >Mi perfil</a></li> 
                         <% } %>
                     </ul>
                     
