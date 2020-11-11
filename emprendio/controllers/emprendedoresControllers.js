@@ -55,25 +55,35 @@ let emprendedoresControllers= {
         //.then(function (emprendedor) {
        
         //})
-        db.Producto.findAll({
-            include: [{association:'usuarioProducto'}]
-        })
-        
-        .then(function(productos){
-            return res.render("miPerfil", {productos:productos})
-    
-            return res.send(productos)
-    
-            //.then(function(productos){
-            //db.Usuario.findAll()
+        //res.send(req.session)
+        //return res.redirect ("/usuario/admin")        
+        if (req.session.TipoUsuario_id == 3){
+            return res.redirect ("/usuario/admin")        
+        } else {
             
-            //.then(function(usuarios){
-    
-           // })
-        })
-        .catch(function(error){
-            console.log(error)
-        })
+            db.Producto.findAll({
+                include: [{association:'usuarioProducto'}]
+            })
+            
+            .then(function(productos){
+                //ACA TENGO QUE AGREGAR --> AL ADMIN A ADMIN PANEL
+                
+                return res.render("miPerfil", {productos:productos})
+                return res.send(productos)
+        
+                //.then(function(productos){
+                //db.Usuario.findAll()
+                
+                //.then(function(usuarios){
+        
+               // })
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+
+
+        }
 
     },
     emprendedorPerfil: function(req,res){ 

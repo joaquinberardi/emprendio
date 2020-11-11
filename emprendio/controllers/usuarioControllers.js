@@ -10,6 +10,17 @@ let usuarioControllers = {
     carrito: function(req,res){
         res.render ("carrito") // LISTO
     },
+    eliminandousuario: function(req,res){
+        let idUsuario = req.body.emprendedor;
+        db.Usuario.findByPk (idUsuario)
+        .then(function (usuario) {
+            res.send(usuario) // FUNCIONA
+
+            //ELIMINAR USUARIO 
+
+            // REDIRECT PANELADMIN
+            })
+        },
     panelAdmin: function (req,res){
 
         db.Usuario.findAll()

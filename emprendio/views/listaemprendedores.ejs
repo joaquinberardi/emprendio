@@ -7,8 +7,11 @@
 </head>
 
 <body>
-    <%- include('./partials/headerlogueado') %> 
-    <main>
+    <% if (usuario != undefined) { %>  
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>    
+         <%- include('./partials/header')   %> 
+    <% } %>     <main>
         
         <!-- Detalle Admin -->
         <div class="uk-section-9">
@@ -55,14 +58,18 @@
                                     <li class=""> 
                                         <img src="" alt="">
                                         <h3> <%= usuarios[i].NombreUsuario%> </h3>
+                                        <p>Tipo de usuario: <%= usuarios[i].TipoUsuario_id%></p>
                                         <% if (usuarios[i].TipoUsuario_id == 0){ %> 
                                         <button> Ver solicitud </button>
                                         <button> Aceptar </button>
                                         <button> Rechazar </button>
                                         <% } else {%> 
-                                            <button> Ver emprendedor </button>
-                                            <button> Eliminar </button>
+                                            <form action="/usuario/admin/eliminandousuario" method="POST">
+                                                <button name="emprendedor" value="<%= usuarios[i].id %>">Eliminar usuario</button>
+                                            </form>
+                                            <button> Ver usuario </button>
                                             <% } %> 
+                                            
                                     </li>
                                 <% } %> 
 
