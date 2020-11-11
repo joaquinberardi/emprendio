@@ -28,18 +28,17 @@ let usuarioControllers = {
             // Error con usuarios viejos?
     
     },
-    aprovarvendedor: function(req,res){
+    aprobarvendedor: function(req,res){
         
         let idUsuario = req.body.emprendedor;
         let edicion= {
             TipoUsuario_id: 2,
         }
-            db.Usuario.update(
-            {   where: {
-                    id: idUsuario
-            } 
+            db.Usuario.update( edicion, {
+               where: [
+                { TipoUsuario_id: 2} 
+                ]
             })
-            
             .then(function(){
                 res.render("panelAdmin")
             })

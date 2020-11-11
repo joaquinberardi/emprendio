@@ -71,9 +71,12 @@
                                     <li class=""> 
                                         <img src="" alt="">
                                         <h3> <%= usuarios[i].NombreUsuario%> </h3>
-                                        <button> Ver solicitud </button>
-                                        <button> Aceptar </button>
-                                        <button> Rechazar </button>
+                                        <form action="/usuario/admin/eliminandousuario" method="POST">
+                                            <button name="emprendedor" value="<%= usuarios[i].id %>">Rechazar usuario</button>
+                                        </form>
+                                        <form action="/usuario/admin/aceptandousuario" method="POST">
+                                            <button name="emprendedor" value="<%= usuarios[i].id %>">Aceptar usuario</button>
+                                        </form>
                                     </li>
                                 <% } %> 
                                 <% } %> 
