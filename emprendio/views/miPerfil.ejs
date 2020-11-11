@@ -13,6 +13,10 @@
     <% } else { %>    
          <%- include('./partials/header')   %> 
     <% } %> 
+    <% if (usuario.TipoUsuario_id == 0 ) { %>  
+        <h3>CUENTA NO ACTIVA</h3>
+    <% } %>    
+    
 
     <main>
        <!-- usuario viene de locals-->

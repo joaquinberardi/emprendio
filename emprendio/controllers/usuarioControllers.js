@@ -36,11 +36,11 @@ let usuarioControllers = {
         }
             db.Usuario.update( edicion, {
                where: [
-                { TipoUsuario_id: 2} 
+                { id: idUsuario} 
                 ]
             })
             .then(function(){
-                res.render("panelAdmin")
+                res.redirect("/usuario/admin")
             })
 
             // EL PROBLEMA ESTA EN ELIMINAR ADMINS 

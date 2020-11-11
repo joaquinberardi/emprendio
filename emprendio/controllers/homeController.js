@@ -81,7 +81,7 @@ guardarVendedor: function(req,res){
                 Historia: req.body.historia,
                 Integrantes: req.body.integrantes,
                 Empleados: req.body.empleados,
-                TipoUsuario_id: 2,
+                TipoUsuario_id: 0,
         
             }
         
@@ -221,7 +221,7 @@ guardarAdmin: function(req,res){
                 if (usuario.TipoUsuario_id == 2){
                     res.redirect ("/emprendedores/miperfil/" + usuario.id)
                 }
-                else if (usuario.TipoUsuario_id == 1) {
+                else if (usuario.TipoUsuario_id == 1 || usuario.TipoUsuario_id == 0) {
                     res.redirect ("/productos")
                 }
                 else{
