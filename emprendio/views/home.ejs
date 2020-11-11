@@ -14,6 +14,11 @@
              <%- include('./partials/header')   %> 
         <% } %> 
 
+        <% if(usuario.TipoUsuario_id == 3){ %>
+            <li> <a href=<%-"/usuario/admin"%>> Mi perfil </a> </li>
+        <% } else { %>
+            <li><a href=<%- "/emprendedores/miperfil/"%> >Mi perfil</a></li> 
+        <% } %> 
     <main>
         <h1 class="h1hero"></h1> 
         <img class="fondo .uk-background-cover" src="images/inicio.png" alt="">
