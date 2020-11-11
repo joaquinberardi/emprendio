@@ -60,7 +60,7 @@ let emprendedoresControllers= {
         })
         
         .then(function(productos){
-            return res.render("emprendedores/miPerfil", {productos:productos})
+            return res.render("miPerfil", {productos:productos})
     
             return res.send(productos)
     

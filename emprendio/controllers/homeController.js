@@ -219,7 +219,7 @@ guardarAdmin: function(req,res){
                 req.session.usuarioLogueado = usuario;
                 req.session.carrito = []
                 if (usuario.TipoUsuario_id == 2){
-                    res.redirect ("/emprendedores/miPerfil/" + usuario.id)
+                    res.redirect ("/emprendedores/miperfil/" + usuario.id)
                 }
                 else if (usuario.TipoUsuario_id == 1) {
                     res.redirect ("/productos")
