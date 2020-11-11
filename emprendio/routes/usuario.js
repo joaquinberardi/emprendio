@@ -8,4 +8,7 @@ router.get('/admin/listaemprendedores', usuarioControllers.listaemprendedores)
 router.get('/admin/listaproductos', usuarioControllers.listaproductos)
 
 
+router.post('/admin/eliminandousuario', usuarioControllers.eliminandousuario)
+
+
 module.exports= router;
