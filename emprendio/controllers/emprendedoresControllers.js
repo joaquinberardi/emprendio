@@ -109,7 +109,8 @@ let emprendedoresControllers= {
          }
         })
         .then(function() {
-            res.redirect("/emprendedores/miperfil/" + agregarPost.usuario_id );            
+          //  res.send(req.session.usuarioLogueado)
+            res.redirect("/emprendedores/miperfil/" + req.session.usuarioLogueado.id);            
             // Este no funciona por alguna razon, SI elimina el producto
         })
     },
