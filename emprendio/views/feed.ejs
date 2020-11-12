@@ -75,14 +75,12 @@
                                 <h4 class="h4emprendio">Comentarios</h6>
                                 <ul>
                                     <!-- For [i] comentarios-->
+                                    <% for( let k = 0; k < productos[i].preguntaProducto.length; k++ ) { %>
                                     <li>
-                                        <a href="">Usuario</a>
-                                        <p>Comentario</p>
+                                        <p> <a href="pemprendio"> <%=productos[i].preguntaProducto[k].usuarioPregunta.Nombre %> </a></p>
+                                        <p> <%=productos[i].preguntaProducto[k].pregunta %> </p>
                                     </li>
-                                    <li>
-                                        <a href="">Usuario</a>
-                                        <p>Comentario</p>
-                                    </li>
+                                    <% } %>
                                     
                                     <li>
                                         <button class="botonemprendiocreate textobotonemprendio">

@@ -138,10 +138,10 @@ guardarAdmin: function(req,res){
         //db.Producto.findAll()
 
         db.Producto.findAll({
-            include: [{association:'usuarioProducto'}]
+            include: [{all: true, nested:true}],
         })
-        
         .then(function(productos){
+            //res.send(productos)
             return res.render("feed", {productos:productos})
 
             return res.send(productos)
