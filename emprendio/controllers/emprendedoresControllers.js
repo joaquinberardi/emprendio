@@ -36,7 +36,7 @@ let emprendedoresControllers= {
 
         db.Producto.create(agregarPost)
         .then(function(){
-            res.redirect("/emprendedores/miperfil" );
+            res.redirect("/emprendedores/miperfil/" + agregarPost.usuario_id );
         })
     },
     /*miperfil: function(req,res){ 
@@ -109,7 +109,8 @@ let emprendedoresControllers= {
          }
         })
         .then(function() {
-            res.redirect("/emprendedores/miperfil")
+            res.redirect("/emprendedores/miperfil/" + agregarPost.usuario_id );            
+            // Este no funciona por alguna razon, SI elimina el producto
         })
     },
     editarProductos: function(req,res){
