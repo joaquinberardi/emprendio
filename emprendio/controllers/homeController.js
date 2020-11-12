@@ -81,7 +81,7 @@ guardarVendedor: function(req,res){
                 Historia: req.body.historia,
                 Integrantes: req.body.integrantes,
                 Empleados: req.body.empleados,
-                TipoUsuario_id: 0,
+                TipoUsuario_id: 2,
         
             }
         
