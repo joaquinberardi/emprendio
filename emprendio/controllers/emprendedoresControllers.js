@@ -4,7 +4,7 @@ let bcrypt = require ("bcryptjs")
 let op = db.Sequelize.Op;
 const { Op } = require("sequelize");
 
-const { favoritos } = require("./productosControllers");
+const { favoritos, productos } = require("./productosControllers");
 
 // CONTROLADORES
 let emprendedoresControllers= { 
@@ -55,43 +55,40 @@ let emprendedoresControllers= {
         //.then(function (emprendedor) {
        
         //})
-        //res.send(req.session)
-        //return res.redirect ("/usuario/admin")        
-        if (req.session.TipoUsuario_id == 3){
-            return res.redirect ("/usuario/admin")        
-        } else {
-            
-            db.Producto.findAll({
-                include: [{association:'usuarioProducto'}]
-            })
-            
-            .then(function(productos){
-                //ACA TENGO QUE AGREGAR --> AL ADMIN A ADMIN PANEL
-                
-                return res.render("miPerfil", {productos:productos})
-                return res.send(productos)
+        db.Producto.findAll({
+            include: [{association:'usuarioProducto'}]
+        })
         
-                //.then(function(productos){
-                //db.Usuario.findAll()
-                
-                //.then(function(usuarios){
-        
-               // })
-            })
-            .catch(function(error){
-                console.log(error)
-            })
-
-
-        }
+        .then(function(productos){
+            return res.render("miPerfil", {productos:productos})
+    
+            return res.send(productos)
+    
+            //.then(function(productos){
+            //db.Usuario.findAll()
+            
+            //.then(function(usuarios){
+    
+           // })
+        })
+        .catch(function(error){
+            console.log(error)
+        })
 
     },
     emprendedorPerfil: function(req,res){ 
         let idEmprendedores = req.params.id
-        db.Usuario.findByPk (idEmprendedores)
-        .then(function (emprendedor) {
-        res.render ("emprendedor",{emprendedor}) // LISTO
+        db.Usuario.findByPk (idEmprendedores,
+            {
+            include: [
+                {association: "productoUsuario"},
+            ]
+        
         })
+        .then(function(emprendedor)  {
+           
+                res.render("emprendedor", { emprendedor }); // LISTO
+            })
 
 
     },
@@ -118,7 +115,6 @@ let emprendedoresControllers= {
         let id = req.params.id
         db.Producto.findByPk(id)
          .then(function(edicion){
-             console.log(edicion)
             res.render ("editarProductos" , {edicion: edicion}); 
         //  primero pongo a la vista que va y despues con edicion:edicion me trae toda la informacion
          })

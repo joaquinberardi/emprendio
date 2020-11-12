@@ -21,7 +21,7 @@
                 <section class="info-usuario uk-flex uk-flex-around uk-width-1-1">
                     <div class="uk-width-1-3 uk-flex uk-flex-center uk-flex-middle">
                         
-                        <% if (usuario.Foto != null){%> 
+                        <% if (emprendedor.Foto != null){%>
                        <img src="<%=emprendedor.Foto%>" alt="foto de perfil" class="foto-perfil">
                         <% } else {%>
                             <img src="https://www.optimaley.com/wp-content/uploads/2014/09/foto-perfil-generica.jpg" alt="foto de perfil" class="foto-perfil">
@@ -63,6 +63,21 @@
                                 <img src="https://previews.123rf.com/images/vectora/vectora1601/vectora160101182/51224740-modelo-cuadrado-fondo-monocrom%C3%A1tico-incons%C3%BAtil-repetible-con-formas-cuadradas-.jpg" alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center"><Celpouch vintage model></p>
                             </a>
+                            
+                              <li>
+                                Productos
+                                <ul>
+                                    <% for (let i = 0; i < emprendedor.productoUsuario.length; i++)  { %>
+                                      
+                                        <li>
+                                            
+                                            <%=emprendedor.productoUsuario[i].nombre%>
+                                        </li>
+                                
+                                    <% } %>
+                                </ul>
+                            </li> 
+                            
                             <!-- <form action="/emprendedores/miPerfil" method="post"> 
                                 <input name="idProducto123" type="hidden" value="(FALTAN LOS< %=,%>)= productos[i].id">
                                 <button type="submit">Borrar producto</button>
@@ -70,6 +85,7 @@
                         </div>
 
                         <div
+                        
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
                             <a href="/emprendedores/agregarProducto" class="">
                                 

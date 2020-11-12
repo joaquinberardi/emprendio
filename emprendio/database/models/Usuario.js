@@ -89,18 +89,11 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 
-    let relacionUsuario = sequelize.define ("Usuario", cols, config);
+    
 
-    relacionUsuario.associate = function (relacion) {
-
-       relacionUsuario.hasMany(relacion.Producto, {
-           as: "relacionUsuarioProductos",
-            foreignKey: "usuario_id"
-       }
-)
     
     
-   }
+   
     return Usuario;
 }
 
