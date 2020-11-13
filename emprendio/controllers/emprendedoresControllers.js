@@ -26,7 +26,7 @@ let emprendedoresControllers= {
             colores: req.body.colores,
             personalizacion: req.body.personalizacion,
             categoria_id: 1,
-            usuario_id: 2 // ESTE CAMPO ESTA MAL! POR ESTO NO FUNCIONA EL EDITAR PRODUCTO
+            usuario_id: req.session.usuarioLogueado.id // LE GUARDO EL ID DE USUARIO LOGUEADO
             
             // VAS A LA CARPETA DATABASE, DESPUES A LA CARPETA MODELS, Y EN EL ARCHIVO PRODUCTO.JS, PONES TODOS LOS ATRIBUTOS PRINCIPALES (SIN CONTAR ID),
             // OSEA NOMBRE, PRECIO, CATEGORIA_ID, FOTO, ETC. IMPORTANTE --> PONELOS EXACTAMENTE IGUAL QUE COMO ESTÁN ESCRITOS, SIN MAYÚSUCLA, SIN TILES Y CON LOS "_"
@@ -36,7 +36,7 @@ let emprendedoresControllers= {
 
         db.Producto.create(agregarPost)
         .then(function(){
-            res.redirect("/emprendedores/miperfil/" + agregarPost.usuario_id );
+            res.redirect("/emprendedores/miperfil/" + agregarPost.usuario_id ); // ACA REDIRIGE A miperfil/2 Y ESTA MAL! Funciona igual XD
         })
     },
     /*miperfil: function(req,res){ 
@@ -60,6 +60,7 @@ let emprendedoresControllers= {
         })
         
         .then(function(productos){
+            //res.send(productos)
             return res.render("miPerfil", {productos:productos})
     
             return res.send(productos)
@@ -115,6 +116,7 @@ let emprendedoresControllers= {
         let id = req.params.id
         db.Producto.findByPk(id)
          .then(function(edicion){
+             //res.send(req.session.usuarioLogueado.id)
             res.render ("editarProductos" , {edicion: edicion}); 
         //  primero pongo a la vista que va y despues con edicion:edicion me trae toda la informacion
          })
@@ -148,7 +150,7 @@ let emprendedoresControllers= {
            ]
            })
        .then(function(){
-           res.redirect("/emprendedores/miperfil")
+           res.redirect("/emprendedores/miperfil/" + usuarioid)
        }) 
     }
     },
