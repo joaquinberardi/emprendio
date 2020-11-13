@@ -25,18 +25,7 @@ let productosControllers= {
     favoritos: function(req,res){
         return res.render ("favoritos") // LISTO
     },
-    carrito: function (req,res) {
-        db.Producto.findAll(
-            {
-                where: {
-                    id: req.session.carrito
-                }
-            }
-        )
-        .then(function(productos){
-            res.render("carrito", {productos: productos})
-        })      
-    },
+    
     comentario: function(req,res){
          if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado y quiere comentar lo manda a que se registre
             res.redirect("/home/login")
@@ -54,6 +43,18 @@ let productosControllers= {
       })
  }
     },
+       carrito: function (req,res) {
+        db.Producto.findAll(
+            {
+                where: {
+                    id: req.session.carrito
+                }
+            }
+        )
+        .then(function(productos){
+            res.render("carrito", {productos: productos})
+        })      
+    },
     agregarCarrito: function (req, res) {
        
         let productoId  = req.params.id
@@ -65,7 +66,17 @@ let productosControllers= {
        }
        console.log(req.session)
        res.redirect('/productos/carrito') 
-    }
+    },
+
+    eliminarCarrito: function (req, res) {
+        let productoId  = req.params.id
+        let posicion = req.session.carrito.indexOf(productoId)
+
+        if (posicion > -1) {
+            req.session.carrito.splice(posicion,1)
+        }
+       res.redirect('/productos/carrito') 
+    }    
     
 }
 
