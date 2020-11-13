@@ -26,7 +26,7 @@ let emprendedoresControllers= {
             colores: req.body.colores,
             personalizacion: req.body.personalizacion,
             categoria_id: 1,
-            usuario_id: 2
+            usuario_id: 2 // ESTE CAMPO ESTA MAL! POR ESTO NO FUNCIONA EL EDITAR PRODUCTO
             
             // VAS A LA CARPETA DATABASE, DESPUES A LA CARPETA MODELS, Y EN EL ARCHIVO PRODUCTO.JS, PONES TODOS LOS ATRIBUTOS PRINCIPALES (SIN CONTAR ID),
             // OSEA NOMBRE, PRECIO, CATEGORIA_ID, FOTO, ETC. IMPORTANTE --> PONELOS EXACTAMENTE IGUAL QUE COMO ESTÁN ESCRITOS, SIN MAYÚSUCLA, SIN TILES Y CON LOS "_"
@@ -121,12 +121,13 @@ let emprendedoresControllers= {
     },
    update: function(req,res){
        let productoid= req.body.idProducto
-       let usuarioid= req.body.idUsuario
+       let usuarioid= req.body.idUsuario // ESTE "USUARIOID" CONTIENE TIPO DE USUARIO, POR ESO NUNCA VALIDA AL ELIMINAR
        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
         res.redirect("/home/login")
        }
          else if (usuarioid != req.session.usuarioLogueado.id) { //Si el producto que quiere editar no le pertenece
-        //  res.send("No es posible editar este producto")
+            // el problema es que usuarioid no es el id, es el tipo de usuario que siempre es 2 para el vendedor!
+            //  res.send("No es posible editar este producto")
         res.redirect("/productos")
      }
      else{

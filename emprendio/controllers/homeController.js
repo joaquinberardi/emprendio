@@ -89,6 +89,9 @@ guardarVendedor: function(req,res){
             .then(function(){
                 res.redirect("/home/respuesta");
             })
+            .catch(function(error){
+                console.log(error)
+            })
         }
     })
 
