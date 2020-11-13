@@ -123,12 +123,11 @@ let emprendedoresControllers= {
     },
    update: function(req,res){
        let productoid= req.body.idProducto
-       let usuarioid= req.body.idUsuario // ESTE "USUARIOID" CONTIENE TIPO DE USUARIO, POR ESO NUNCA VALIDA AL ELIMINAR
+       let usuarioid= req.body.idUsuario // 
        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
         res.redirect("/home/login")
        }
          else if (usuarioid != req.session.usuarioLogueado.id) { //Si el producto que quiere editar no le pertenece
-            // el problema es que usuarioid no es el id, es el tipo de usuario que siempre es 2 para el vendedor!
         //   res.send("No es posible editar este producto")
         res.redirect("/productos")
      }
