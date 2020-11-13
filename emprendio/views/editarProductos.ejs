@@ -17,7 +17,7 @@
             <div class="uk-container uk-container-large uk-flex">
                 <form  class= "formulario" action="/emprendedores/update" method="POST">
                     <input type="text" name="idProducto" value="<%=edicion.id%>" hidden>
-                    <input type="text" name="idUsuario" value="<%=edicion.usuario_id%>" hidden> <!-- ESTE usuario_id es en realidad tipo de usuario, por eso no valida identidad al editarlo-->
+                    <input type="text" name="idUsuario" value="<%=edicion.usuario_id%>" hidden>
                     <p>
                         <label for="nombre"> Nombre del producto: </label>
                         <input type="text" id="nombre" value="<%=edicion.nombre%>" name="nombreproducto" placeholder="Nombre" required>

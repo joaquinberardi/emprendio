@@ -114,20 +114,21 @@ let emprendedoresControllers= {
     },
     editarProductos: function(req,res){
         let id = req.params.id
+        if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
+            res.redirect("/home/login")
+           }
+           else{
         db.Producto.findByPk(id)
          .then(function(edicion){
              //res.send(req.session.usuarioLogueado.id)
             res.render ("editarProductos" , {edicion: edicion}); 
         //  primero pongo a la vista que va y despues con edicion:edicion me trae toda la informacion
-         })
+         })}
     },
    update: function(req,res){
        let productoid= req.body.idProducto
        let usuarioid= req.body.idUsuario // 
-       if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
-        res.redirect("/home/login")
-       }
-         else if (usuarioid != req.session.usuarioLogueado.id) { //Si el producto que quiere editar no le pertenece
+         if (usuarioid != req.session.usuarioLogueado.id) { //Si el producto que quiere editar no le pertenece
         //   res.send("No es posible editar este producto")
         res.redirect("/productos")
      }
