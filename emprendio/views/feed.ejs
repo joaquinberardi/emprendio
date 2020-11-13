@@ -77,18 +77,22 @@
                                     <!-- For [i] comentarios-->
                                     <% for( let k = 0; k < productos[i].preguntaProducto.length; k++ ) { %>
                                     <li>
-                                        <p> <a href="pemprendio"> <%=productos[i].preguntaProducto[k].usuarioPregunta.Nombre %> </a></p>
+                                        <p> <a href='/emprendedores/emprendedor/<%=productos[i].preguntaProducto[k].usuarioPregunta.id%>'> <%=productos[i].preguntaProducto[k].usuarioPregunta.Nombre %> </a></p>
                                         <p> <%=productos[i].preguntaProducto[k].pregunta %> </p>
                                     </li>
                                     <% } %>
-                                    
-                                    <li>
-                                        <button class="botonemprendiocreate textobotonemprendio">
+
+                                </ul>
+                                <form action="/productos/comentario" class="uk-text-left" method="POST">  
+                                    <input type="text" class="uk-input" placeholder="Escribe tu comentario" name="comentario"> 
+                                    <input type="hidden" value="<%=productos[i].id%>" name="idDelDetalle">
+                                    <div>
+                                        <button class="botonemprendiocreate textobotonemprendio"  type="submit">
                                             <span class="uk-margin-small-right uk-icon" uk-icon="icon: comment"></span>
                                             Agregar comentario
                                         </button>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </form>
                             </div>
                             <!-- FIN DEL PRODUCTO-->
                         </article>
