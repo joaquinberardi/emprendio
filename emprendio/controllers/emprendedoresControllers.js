@@ -129,7 +129,7 @@ let emprendedoresControllers= {
        }
          else if (usuarioid != req.session.usuarioLogueado.id) { //Si el producto que quiere editar no le pertenece
             // el problema es que usuarioid no es el id, es el tipo de usuario que siempre es 2 para el vendedor!
-            //  res.send("No es posible editar este producto")
+        //   res.send("No es posible editar este producto")
         res.redirect("/productos")
      }
      else{
