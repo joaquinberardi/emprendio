@@ -8,7 +8,11 @@
 
 <body>
     <main>
-        <%- include('./partials/header') %> 
+        <% if (usuario != undefined) { %>  
+            <%- include('./partials/headerLogueado') %>
+        <% } else { %>    
+             <%- include('./partials/header')   %> 
+        <% } %> 
     
         <!-- <div class="uk-section uk-section-small"> -->
            <h1 class="tituloxx"> Preguntas Frecuentes</h1> 
