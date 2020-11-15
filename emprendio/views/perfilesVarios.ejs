@@ -28,11 +28,7 @@
                             <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
                                 <a href='/emprendedores/emprendedor/<%=usuarios[i].id%>' class="link-detalle">
                                     
-                        <% if (usuario.Foto != null){%> 
                             <img src="<%=usuarios[i].Foto%>" alt="foto de perfil" class="foto-perfil">
-                             <% } else {%>
-                                 <img src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-11.jpg" alt="Sin foto de perfil" class="foto-perfil">
-                             <%  } %>  
                                     <h3 class="uk-text-center h3emprendio"><%=usuarios[i].NombreUsuario%></h3>
                                 </a>
                             </div>
