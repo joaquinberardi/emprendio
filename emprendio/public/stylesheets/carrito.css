@@ -1,5 +1,11 @@
 
 /* Carrito */
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
 main{
     background-color: rgb(247, 245, 245);
 }
