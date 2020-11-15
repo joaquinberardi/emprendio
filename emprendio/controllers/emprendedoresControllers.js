@@ -233,7 +233,7 @@ guardar: function(req,res){
     })
     .then(function(){
         req.session.usuarioLogueado = edicion
-        res.redirect("/emprendedores/miperfil")
+        res.redirect("/emprendedores/miperfil/"  + usuarioid)
     
     
         /*if (req.session.usuarioLogueado == undefined){ //si el usuario no esta logueado lo manda a que se registre
