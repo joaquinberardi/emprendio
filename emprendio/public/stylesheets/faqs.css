@@ -1,8 +1,12 @@
 body {
     height: 100%;
+    background-color: rgb(247, 245, 245);
     }
 
 html{
+    background-color: rgb(247, 245, 245);
+}
+main{
     background-color: rgb(247, 245, 245);
 }
 div.uno {
