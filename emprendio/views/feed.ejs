@@ -55,10 +55,11 @@
                                     </div>
                                     <div class="uk-navbar-right">
                                         <h3 class="h3emprendio precio"> $ <%=productos[i].precio %> </h3>
-                                        <button class="botonemprendio textobotonemprendio">
-                                            <span class="uk-margin-small-right uk-icon" uk-icon="icon: cart"></span>
-                                            Comprar
-                                        </button>
+                                        <a href="/productos/agregarCarrito/<%= productos[i].id %>">
+                                            <button class="botonhero botonemprendio textobotonemprendio agregar-carrito" >
+                                                <span class="uk-margin-small-right uk-icon" uk-icon="icon: cart"></span>
+                                                Agregar al Carrito</button>
+                                        </a>
                                     </div>
                                 </ul>                 
                             </div>

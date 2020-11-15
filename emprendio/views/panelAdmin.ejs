@@ -51,16 +51,23 @@
                     <!-- Arreglar CSS botones  -->
                     <div>
                         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                            <h3 class="uk-card-title"><a href="/usuario/admin/listaemprendedores">Cantidad de emprendedores</a></h3>
+                            <h3 class="uk-card-title">Cantidad de emprendedores</h3>
                             <p> <%= usuarios.length %> </p>
-                            <button class="botonemprendio textobotonemprendio"><a href="/usuario/admin/listaemprendedores"> Gestionar Usuarios </a>  </button>
+                            <form action="/usuario/admin/listaemprendedores" class="uk-text-left" method="GET">  
+                                <div>
+                                    <button class="botonemprendio textobotonemprendio">
+                                        <span class="uk-margin-small-right uk-icon" uk-icon="icon: users"></span>
+                                        Gestionar emprendedores
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div>
                         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                            <h3 class="uk-card-title"><a href="/usuario/admin/listaproductos">Cantidad de productos</a></h3>
+                            <h3 class="uk-card-title">Cantidad de productos</h3>
                             <p><%= productos.length %> </p>
-                            <button class="botonemprendio textobotonemprendio sinestilo"><a href="/usuario/admin/listaproductos">Gestionar Productos</a>  </button>
+                            
                         </div>
                     </div>
                 </div>

@@ -20,16 +20,15 @@
 
     <main>
        <!-- usuario viene de locals-->
-       <h3>    <%=  %>     </h3>
         <div class="uk-section-9">
             <div class="uk-container uk-container-small">
                 <section class="info-usuario uk-flex uk-flex-around uk-width-1-1">
                     <div class="uk-width-1-3 uk-flex uk-flex-center uk-flex-middle">
-                        
-                        <% if (usuario.Foto != null){%> 
+
+                        <% if (usuario.Foto != ''){%> 
                        <img src="<%=usuario.Foto%>" alt="foto de perfil" class="foto-perfil">
                         <% } else {%>
-                            <img src="https://www.optimaley.com/wp-content/uploads/2014/09/foto-perfil-generica.jpg" alt="foto de perfil" class="foto-perfil">
+                            <img src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-11.jpg" alt="Sin foto de perfil" class="foto-perfil">
                         <%  } %>  
                         
                     </div>
@@ -60,11 +59,17 @@
                                 <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
                                     <a href='/productos/detalle/<%=productos[i].id%>' class="link-detalle">
                                         <a href= "/emprendedores/editarProductos/<%=productos[i].id%>">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="vemo" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                             </svg>
-                                        <img src="<%=productos[i].foto%>" alt="foto de perfil" class="fotoproducto">
+                                            Editar producto!
+                                        </a>
+                                        <% if (productos[i].foto != "") { %>
+                                            <img data-src="https://industrial.aquip.co.th/wp-content/themes/456repair/assets//img/no-product-image.png" width="200" height="200" alt="" uk-img>
+                                        <% } else {%>
+                                            <img src="<%=productos[i].foto%>"  width="200" height="200" alt="foto de perfil" class="fotoproducto">
+                                        <% } %> 
                                         <h3 class="uk-text-center h3emprendio"><%=productos[i].nombre%></h3>
                                         <h4 class="uk-text-center h4emprendio">$ <%=productos[i].precio%></h4>
                                     </a>
