@@ -16,24 +16,41 @@
 
     <main>
         <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">               
-                <% for( let i = 0; i < productos.length; i++ ) { %>
-                    <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
-                        <a href='/productos/detalle/<%=productos[i].id%>' class="link-detalle">
-                            <img src="<%=productos[i].foto%>" alt="foto de perfil" class="fotoproducto">
-                            <h3 class="uk-text-center h3emprendio"><%=productos[i].nombre%></h3>
-                            <h4 class="uk-text-center h4emprendio">$ <%=productos[i].precio%></h4>
-                        </a>
+            <div class="uk-container uk-container-small">
+               <section class="muro uk-flex uk-flex-middle uk-flex-center">
+                    <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" >
+
+                        <% for( let i = 0; i < productos.length; i++ ) { %>
+
+                            <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
+        
+                                <a href='/productos/detalle/<%=productos[i].id%>' class="link-detalle">
+                                    
+                                    <img src="<%=productos[i].foto%>" alt="<%=productos[i].foto%>" class="fotoproducto">
+                                    <h3 class="uk-text-center h3emprendio"><%=productos[i].nombre%></h3>
+                                    <h4 class="uk-text-center h4emprendio">$ <%=productos[i].precio%></h4>
+                                </a>
+                              
+                            </div>
+                        <% } %>
+                        <% for( let i = 0; i < usuarios.length; i++ ) { %>
+                            <% if (usuarios[i].TipoUsuario_id == 2) { %>    
+                               <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
+                                   <a href='/emprendedores/emprendedor/<%=usuarios[i].id%>' class="link-detalle">
+                                       
+                           <% if (usuario.Foto != null){%> 
+                               <img src="<%=usuarios[i].Foto%>" alt="foto de perfil" class="foto-perfil">
+                                <% } else {%>
+                                    <img src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-11.jpg" alt="Sin foto de perfil" class="foto-perfil">
+                                <%  } %>  
+                                       <h3 class="uk-text-center h3emprendio"><%=usuarios[i].NombreUsuario%></h3>
+                                   </a>
+                               </div>
+                              <% } %> 
+                              <% } %>
+                    
                     </div>
-                <% } %>
-                <% for( let i = 0; i < usuarios.length; i++ ) { %>
-                    <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center tarjetaemprendio ">
-                        <a href='/productos/detalle/<%=usuarios[i].id%>' class="link-detalle">
-                            <img src="<%=usuarios[i].Foto%>" alt="foto de perfil" class="fotoproducto">
-                            <h3 class="uk-text-center h3emprendio"><%=usuarios[i].NombreUsuario%></h3>
-                        </a>
-                    </div>
-                   <% } %> 
+               </section>
             </div>
         </div>
     </main>
