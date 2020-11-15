@@ -71,3 +71,7 @@ body{
     background-color: rgb(25, 110, 99);
 }
 
+a.loguito svg {
+    right: -16px;
+    position: relative;
+}
