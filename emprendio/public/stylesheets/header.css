@@ -39,6 +39,8 @@ header ul{
 header div.uk-navbar-center ul li{
     padding: 0 10px;
     border-right: 1px solid white;
+    right: 5%;
+    position: relative;
 }
 header div.uk-navbar-center ul li:nth-last-child(1){
     border-right: none;
