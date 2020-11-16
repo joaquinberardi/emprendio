@@ -12,6 +12,7 @@
                         <li><a href="/emprendedores">Emprendedores</a></li>
                         <li><a href="/productos">Productos</a></li>
                         <li><a href="/home/feed">Feed</a></li>
+                        <li>Hola <%= usuario.NombreUsuario %> !</li>
                         <% if(usuario.TipoUsuario_id == 2){ %>
                             <li><a href="/emprendedores/miperfil/<%= usuario.id%>" > <%= usuario.NombreUsuario %> </a></li>
                         <% } else if(usuario.TipoUsuario_id == 3){ %>

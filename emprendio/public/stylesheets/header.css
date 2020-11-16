@@ -24,6 +24,9 @@ header nav ul li a:hover{
 .logo a{
     color: white;
 }
+li {
+    color: white;
+}
 .logo a:hover {
     text-decoration: none;
     color: white;
